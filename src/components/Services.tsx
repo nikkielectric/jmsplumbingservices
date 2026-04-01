@@ -1,94 +1,96 @@
 import { motion } from "framer-motion";
-import {
-  Droplets,
-  Trash2,
-  Flame,
-  Wrench,
-  Home,
-  AlertTriangle,
-} from "lucide-react";
+import drainImg from "@/assets/service-drain.jpg";
+import gasImg from "@/assets/service-gas.jpg";
+import repairImg from "@/assets/service-repair.jpg";
+import remodelImg from "@/assets/service-remodel.jpg";
+import disposalImg from "@/assets/service-disposal.jpg";
+import emergencyImg from "@/assets/service-emergency.jpg";
 
 const services = [
   {
-    icon: Droplets,
+    img: drainImg,
     title: "Drain Cleaning",
-    description:
-      "Main lines, sinks, tubs, showers & kitchen drains cleared fast with professional-grade equipment.",
+    description: "Keep your drains functioning smoothly. From main lines to kitchen sinks, tubs & showers — we clear blockages fast with professional-grade equipment.",
   },
   {
-    icon: Trash2,
-    title: "Garbage Disposal",
-    description:
-      "Inspection, replacement & new installation of garbage disposal units for your kitchen.",
+    img: gasImg,
+    title: "Gas Line Services",
+    description: "Safe installation, repair & leak inspection of gas lines by certified professionals. Your family's safety is our top priority.",
   },
   {
-    icon: Flame,
-    title: "Gas Lines",
-    description:
-      "Safe installation, repair & leak inspection of gas lines by certified professionals.",
-  },
-  {
-    icon: Wrench,
+    img: repairImg,
     title: "Plumbing Repairs",
-    description:
-      "Faucets, spouts, water heaters — full repair & replacement for every fixture in your home.",
+    description: "Faucets, spouts, water heaters — full repair & replacement for every fixture. Our expert team handles it all with precision and care.",
   },
   {
-    icon: Home,
+    img: remodelImg,
     title: "Plumbing Remodels",
-    description:
-      "Complete remodels with blueprint planning. Transform your kitchen or bath from the ground up.",
+    description: "Complete bathroom & kitchen remodels with blueprint planning. We transform your space from the ground up with expert craftsmanship.",
   },
   {
-    icon: AlertTriangle,
+    img: disposalImg,
+    title: "Garbage Disposal",
+    description: "Professional inspection, replacement & new installation of garbage disposal units. Keeping your kitchen running efficiently.",
+  },
+  {
+    img: emergencyImg,
     title: "Emergency Plumbing",
-    description:
-      "After-hours, weekends & holidays — we're here when disaster strikes. Additional fees apply.",
+    description: "After-hours, weekends & holidays — we're here when disaster strikes. Fast response times to prevent further damage to your home.",
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="services" className="py-20 lg:py-28 bg-cream-light">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-14"
         >
-          <span className="text-primary font-semibold text-sm tracking-widest uppercase">
-            What We Do
+          <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
+            Comprehensive Solutions
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mt-3">
-            Our Services
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3">
+            Plumbing That Meets{" "}
+            <span className="text-primary italic">Your Needs</span>
           </h2>
-          <p className="text-muted-foreground font-body mt-4 max-w-xl mx-auto">
-            From routine maintenance to complex remodels, JMS Plumbing delivers
-            expert craftsmanship across South Florida.
+          <div className="w-20 h-1 bg-primary mx-auto mt-5" />
+          <p className="text-muted-foreground font-body mt-5 max-w-2xl mx-auto leading-relaxed">
+            At JMS Plumbing Services, we understand that every property has different plumbing needs.
+            We tailor every service to meet your system's unique demands.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Services grid - 3x2 like L&W */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group bg-cream rounded-xl p-8 border border-border hover:border-primary/40 transition-all hover:shadow-lg hover:shadow-primary/5"
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="group relative h-72 sm:h-80 rounded-xl overflow-hidden cursor-pointer"
             >
-              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-7 h-7 text-primary" />
+              <img
+                src={service.img}
+                alt={service.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+                width={800}
+                height={1024}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-xl font-display font-bold text-cream mb-1">{service.title}</h3>
+                <div className="w-10 h-0.5 bg-cream/50 mb-3" />
+                <p className="text-cream/70 text-sm font-body leading-relaxed line-clamp-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-xl font-display font-bold text-foreground mb-3">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground font-body text-sm leading-relaxed">
-                {service.description}
-              </p>
             </motion.div>
           ))}
         </div>
