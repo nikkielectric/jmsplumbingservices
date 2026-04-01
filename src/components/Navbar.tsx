@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
+  { label: "Reviews", href: "#reviews" },
   { label: "Service Area", href: "#area" },
   { label: "Contact", href: "#contact" },
 ];
@@ -13,36 +14,43 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
-        <a href="#" className="flex flex-col">
-          <span className="font-display text-xl font-bold text-primary tracking-tight">JMS Plumbing</span>
-          <span className="text-xs font-body text-muted-foreground tracking-widest uppercase">Services LLC</span>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-forest-deep/95 backdrop-blur-md border-b border-primary/20">
+      <div className="container mx-auto flex items-center justify-between py-3 px-4 lg:px-8">
+        <a href="#" className="flex flex-col leading-tight">
+          <span className="font-display text-xl font-bold text-cream tracking-tight">JMS Plumbing</span>
+          <span className="text-[10px] font-body text-steel/70 tracking-[0.2em] uppercase">Services LLC</span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium text-cream/80 hover:text-cream transition-colors"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-3">
+          <span className="text-cream/60 text-xs font-body hidden xl:block">Emergency? Available 24/7</span>
           <a
             href="tel:9549106883"
-            className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary/90 transition-colors"
+            className="flex items-center gap-2 border border-cream/30 text-cream px-4 py-2 rounded-lg font-semibold text-sm hover:bg-cream/10 transition-colors"
           >
             <Phone className="w-4 h-4" />
             (954) 910-6883
           </a>
+          <a
+            href="#contact"
+            className="flex items-center gap-2 bg-cream text-dark px-5 py-2 rounded-lg font-bold text-sm hover:bg-cream/90 transition-colors"
+          >
+            Get a Quote
+          </a>
         </div>
 
-        <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
+        <button onClick={() => setOpen(!open)} className="lg:hidden text-cream">
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
@@ -53,7 +61,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden bg-cream border-t border-border"
+            className="lg:hidden overflow-hidden bg-forest-deep border-t border-primary/20"
           >
             <div className="flex flex-col p-4 gap-4">
               {navLinks.map((link) => (
@@ -61,17 +69,23 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  className="text-sm font-medium text-cream/80 hover:text-cream transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
               <a
                 href="tel:9549106883"
-                className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-lg font-semibold text-sm"
+                className="flex items-center justify-center gap-2 border border-cream/30 text-cream px-5 py-3 rounded-lg font-semibold text-sm"
               >
                 <Phone className="w-4 h-4" />
                 (954) 910-6883
+              </a>
+              <a
+                href="#contact"
+                className="flex items-center justify-center gap-2 bg-cream text-dark px-5 py-3 rounded-lg font-bold text-sm"
+              >
+                Get a Quote
               </a>
             </div>
           </motion.div>

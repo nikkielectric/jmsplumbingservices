@@ -1,79 +1,150 @@
 import { motion } from "framer-motion";
-import { Shield, Heart, Star } from "lucide-react";
-
-const values = [
-  {
-    icon: Shield,
-    title: "Expert Craftsmanship",
-    text: "We consider plumbing a craft — a blending of expertise and artistry in every job.",
-  },
-  {
-    icon: Heart,
-    title: "Family Values",
-    text: "As a family-owned business, we treat every customer's home like our own.",
-  },
-  {
-    icon: Star,
-    title: "Customer First",
-    text: "Your satisfaction drives everything we do. We value your feedback and earn your trust.",
-  },
-];
+import { Phone, ArrowRight } from "lucide-react";
+import heroImg from "@/assets/hero-plumber.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-cream">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <span className="text-primary font-semibold text-sm tracking-widest uppercase">
-              About Us
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mt-3 mb-6">
-              A Growing Family,{" "}
-              <span className="text-primary italic">Built on Trust</span>
-            </h2>
-            <p className="text-muted-foreground font-body leading-relaxed mb-6">
-              JMS Plumbing Services LLC is a family-owned small business serving
-              the Tri-County area of South Florida from our home base in Sunrise, FL.
-              We're new and growing, but our commitment to premier customer service
-              and satisfaction is unwavering.
-            </p>
-            <blockquote className="border-l-4 border-primary pl-6 py-2 italic text-foreground font-display text-lg">
-              "I consider plumbing a craft — a blending of expertise and artistry."
-            </blockquote>
-          </motion.div>
+    <section id="about" className="relative overflow-hidden">
+      {/* Top section - about text + image */}
+      <div className="bg-cream py-20 lg:py-28">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
+                All our clients are treated as family
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
+                Looking for a Local Plumber in{" "}
+                <span className="text-primary italic">South Florida?</span>
+              </h2>
+              <div className="w-20 h-1 bg-primary mb-6" />
+              <p className="text-muted-foreground font-body leading-relaxed mb-6">
+                Look no further than JMS Plumbing Services! From maintenance and installations to repairs,
+                our solutions are here to safeguard your home or office. Providing prompt and efficient
+                assistance, both anytime and anywhere you need it.
+              </p>
+              <p className="text-muted-foreground font-body leading-relaxed mb-8">
+                As a family-owned small business based in Sunrise, FL, we take pride in offering
+                premier customer service. We consider plumbing a craft — a blending of expertise
+                and artistry in every job we do.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="tel:9549106883"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg font-bold text-sm hover:bg-primary hover:text-primary-foreground transition-all"
+                >
+                  <Phone className="w-4 h-4" />
+                  (954) 910-6883
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all"
+                >
+                  Get a Quote
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="space-y-6"
-          >
-            {values.map((v, i) => (
-              <div
-                key={i}
-                className="flex gap-5 bg-background rounded-xl p-6 border border-border"
-              >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <v.icon className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-display font-bold text-foreground mb-1">
-                    {v.title}
-                  </h3>
-                  <p className="text-muted-foreground font-body text-sm leading-relaxed">
-                    {v.text}
-                  </p>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={heroImg}
+                  alt="JMS Plumbing professional at work"
+                  className="w-full h-[350px] lg:h-[450px] object-cover"
+                  loading="lazy"
+                  width={1920}
+                  height={1080}
+                />
+              </div>
+              {/* Experience badge */}
+              <div className="absolute -bottom-6 -left-4 lg:-left-8 bg-primary rounded-xl px-6 py-4 shadow-lg">
+                <div className="text-center">
+                  <span className="text-cream font-display font-black text-3xl block">Family</span>
+                  <span className="text-cream/80 text-xs font-body uppercase tracking-widest">Owned & Operated</span>
                 </div>
               </div>
-            ))}
-          </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Emergency CTA band */}
+      <div className="relative bg-dark py-20 lg:py-28 overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-steel text-sm font-semibold tracking-widest uppercase font-body">
+                Fully equipped & ready to respond
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream mt-3 mb-6">
+                Providing 24/7{" "}
+                <span className="text-steel italic">Emergency Help</span>
+              </h2>
+              <div className="w-20 h-1 bg-steel/50 mb-6" />
+              <p className="text-cream/70 font-body leading-relaxed mb-6">
+                Plumbing emergencies can strike at any time. With every second that passes,
+                you risk more damage occurring to your home or office. Instead, opt for our
+                24-hour emergency plumbing services.
+              </p>
+              <p className="text-cream/70 font-body leading-relaxed mb-8">
+                We'll get to work diagnosing and resolving the problem, leaving you with
+                the comfort knowing that your plumbing is in the right hands. Remember that
+                our South Florida plumbers are just a call away.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="tel:9549106883"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-cream/40 text-cream px-6 py-3 rounded-lg font-bold text-sm hover:bg-cream/10 transition-all"
+                >
+                  <Phone className="w-4 h-4" />
+                  (954) 910-6883
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-6 py-3 rounded-lg font-bold text-sm hover:bg-cream/90 transition-all"
+                >
+                  Get a Quote
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="relative hidden lg:block"
+            >
+              <div className="rounded-2xl overflow-hidden shadow-2xl ring-4 ring-primary/20">
+                <img
+                  src={heroImg}
+                  alt="Emergency plumbing service"
+                  className="w-full h-[400px] object-cover"
+                  loading="lazy"
+                  width={1920}
+                  height={1080}
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
