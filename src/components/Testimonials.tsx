@@ -21,8 +21,22 @@ const reviews = [
     name: "David & Maria S.",
     initial: "D",
     rating: 5,
-    text: "We hired JMS for a full bathroom remodel and couldn't be happier. They walked us through the blueprint, stayed on schedule, and the finished result exceeded our expectations.",
+    text: "We hired JMS for a full bathroom remodel and couldn't be happier. They walked us through the whole process, stayed on schedule, and the finished result exceeded our expectations. True professionals.",
     service: "Plumbing Remodel",
+  },
+  {
+    name: "Carlos M.",
+    initial: "C",
+    rating: 5,
+    text: "Called them for an emergency leak at 10pm and they were at my door within the hour. Fixed the issue quickly and didn't overcharge. This is what real customer service looks like. Five stars all day!",
+    service: "Emergency Repair",
+  },
+  {
+    name: "Stephanie W.",
+    initial: "S",
+    rating: 5,
+    text: "James and his team replaced our old water heater and installed a new garbage disposal. Very clean work, explained everything clearly, and left the area spotless. Great family-owned business!",
+    service: "Water Heater & Disposal",
   },
 ];
 
