@@ -65,7 +65,7 @@ const Services = () => {
         </motion.div>
 
         {/* Services grid - 3x2 like L&W */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
@@ -73,7 +73,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative h-72 sm:h-80 rounded-xl overflow-hidden cursor-pointer"
+              className="group relative h-96 rounded-2xl overflow-hidden cursor-pointer"
             >
               <img
                 src={service.img}
@@ -83,11 +83,13 @@ const Services = () => {
                 width={800}
                 height={1024}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-[calc(100%-4.5rem)] group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                <h3 className="text-xl font-display font-bold text-cream mb-1">{service.title}</h3>
-                <div className="w-10 h-0.5 bg-cream/50 mb-3" />
-                <p className="text-cream/70 text-sm font-body leading-relaxed line-clamp-3">
+              {/* Blue overlay matching brand */}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20 transition-opacity duration-500" />
+              {/* Content pinned to bottom with slide-up animation */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-[calc(100%-5rem)] group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                <h3 className="text-2xl font-display font-bold text-white mb-2">{service.title}</h3>
+                <div className="w-12 h-0.5 bg-white/50 mb-3" />
+                <p className="text-white/80 text-sm font-body leading-relaxed">
                   {service.description}
                 </p>
               </div>
