@@ -89,6 +89,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="lg:order-last"
             >
               <span className="text-primary text-sm font-semibold tracking-widest uppercase font-body">
                 Fully equipped & ready to respond
@@ -131,7 +132,7 @@ const About = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="relative hidden lg:block"
+              className="relative hidden lg:block lg:order-first"
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl ring-4 ring-primary/20">
                 <img
