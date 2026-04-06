@@ -58,7 +58,7 @@ const googleMapsUrl =
 
 const Testimonials = () => {
   return (
-    <section id="reviews" className="bg-dark py-20 lg:py-28">
+    <section id="reviews" className="py-20 lg:py-28 bg-secondary">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* Left column - guarantee text */}
