@@ -25,7 +25,7 @@ const Hero = () => {
     <section className="relative pt-20 bg-secondary">
       {/* Main hero content */}
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-20">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-20">
           {/* Left column - text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
