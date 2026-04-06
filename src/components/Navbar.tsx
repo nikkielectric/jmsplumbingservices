@@ -3,10 +3,9 @@ import { Phone, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
+  { label: "Home", href: "#" },
   { label: "About", href: "#about" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Service Area", href: "#area" },
+  { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
 ];
 
