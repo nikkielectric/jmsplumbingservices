@@ -81,7 +81,7 @@ const About = () => {
       </div>
 
       {/* Emergency CTA band */}
-      <div className="relative bg-cream-light py-20 lg:py-28 overflow-hidden">
+      <div className="relative bg-cream-light py-20 lg:py-28 overflow-hidden" style={{ backgroundImage: 'radial-gradient(circle, hsl(var(--primary) / 0.07) 1px, transparent 1px)', backgroundSize: '24px 24px' }}>
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
