@@ -1,6 +1,6 @@
 import { Phone, ArrowRight, Star, Shield, Clock, DollarSign } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-plumber.jpg";
+import heroImg from "@/assets/hero-plumber.png";
 
 const valueProps = [
   {
