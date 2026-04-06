@@ -24,7 +24,7 @@ const Navbar = () => {
           </div>
         </a>
 
-        <div className="hidden lg:flex items-center gap-7">
+        <div className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -53,7 +53,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        <button onClick={() => setOpen(!open)} className="lg:hidden text-cream">
+        <button onClick={() => setOpen(!open)} className="md:hidden text-cream">
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden overflow-hidden bg-forest-deep border-t border-primary/20"
+            className="md:hidden overflow-hidden bg-forest-deep border-t border-primary/20"
           >
             <div className="flex flex-col p-4 gap-4">
               {navLinks.map((link) => (
