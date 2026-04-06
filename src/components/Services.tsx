@@ -84,10 +84,10 @@ const Services = () => {
                 height={1024}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-[calc(100%-4.5rem)] group-hover:translate-y-0 transition-transform duration-500 ease-out">
                 <h3 className="text-xl font-display font-bold text-cream mb-1">{service.title}</h3>
                 <div className="w-10 h-0.5 bg-cream/50 mb-3" />
-                <p className="text-cream/70 text-sm font-body leading-relaxed line-clamp-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-cream/70 text-sm font-body leading-relaxed line-clamp-3">
                   {service.description}
                 </p>
               </div>
