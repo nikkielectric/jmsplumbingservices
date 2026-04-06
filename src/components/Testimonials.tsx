@@ -93,11 +93,13 @@ const Testimonials = () => {
                 (954) 910-6883
               </a>
               <a
-                href="#contact"
+                href="https://www.google.com/search?q=jms+plumbing+south+florida#lrd=0x2ccb8ccb743c6cfb:0x109e4e624231af83,3,,,,"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-6 py-3 rounded-lg font-bold text-sm hover:bg-cream/90 transition-all"
               >
-                Get a Quote
-                <ArrowRight className="w-4 h-4" />
+                Leave a Review
+                <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </motion.div>
