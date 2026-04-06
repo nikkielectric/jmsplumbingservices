@@ -59,7 +59,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-dark rounded-2xl p-8 lg:p-10 flex flex-col justify-center"
+            className="rounded-2xl p-8 lg:p-10 flex flex-col justify-center bg-secondary"
           >
             <h3 className="text-2xl lg:text-3xl font-display font-black text-cream mb-4">
               Ready to Get Started?
