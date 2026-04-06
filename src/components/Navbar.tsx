@@ -53,7 +53,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        <button onClick={() => setOpen(!open)} className="lg:hidden text-cream">
+        <button onClick={() => setOpen(!open)} className="md:hidden text-cream">
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
