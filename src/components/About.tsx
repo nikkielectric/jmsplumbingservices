@@ -81,7 +81,7 @@ const About = () => {
       </div>
 
       {/* Emergency CTA band */}
-      <div className="relative bg-dark py-20 lg:py-28 overflow-hidden">
+      <div className="relative bg-cream-light py-20 lg:py-28 overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -90,20 +90,20 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-steel text-sm font-semibold tracking-widest uppercase font-body">
+              <span className="text-primary text-sm font-semibold tracking-widest uppercase font-body">
                 Fully equipped & ready to respond
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream mt-3 mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
                 Providing 24/7{" "}
-                <span className="text-steel italic">Emergency Help</span>
+                <span className="text-primary italic">Emergency Help</span>
               </h2>
-              <div className="w-20 h-1 bg-steel/50 mb-6" />
-              <p className="text-cream/70 font-body leading-relaxed mb-6">
+              <div className="w-20 h-1 bg-primary mb-6" />
+              <p className="text-muted-foreground font-body leading-relaxed mb-6">
                 Plumbing emergencies can strike at any time. With every second that passes,
                 you risk more damage occurring to your home or office. Instead, opt for our
                 24-hour emergency plumbing services.
               </p>
-              <p className="text-cream/70 font-body leading-relaxed mb-8">
+              <p className="text-muted-foreground font-body leading-relaxed mb-8">
                 We'll get to work diagnosing and resolving the problem, leaving you with
                 the comfort knowing that your plumbing is in the right hands. Remember that
                 our South Florida plumbers are just a call away.
@@ -111,14 +111,14 @@ const About = () => {
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href="tel:9549106883"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-cream/40 text-cream px-6 py-3 rounded-lg font-bold text-sm hover:bg-cream/10 transition-all"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-primary/40 text-primary px-6 py-3 rounded-lg font-bold text-sm hover:bg-primary/10 transition-all"
                 >
                   <Phone className="w-4 h-4" />
                   (954) 910-6883
                 </a>
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-6 py-3 rounded-lg font-bold text-sm hover:bg-cream/90 transition-all"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all"
                 >
                   Get a Quote
                   <ArrowRight className="w-4 h-4" />
