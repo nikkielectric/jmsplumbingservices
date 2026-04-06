@@ -24,7 +24,7 @@ const Navbar = () => {
           </div>
         </a>
 
-        <div className="hidden lg:flex items-center gap-7">
+        <div className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
               key={link.href}
