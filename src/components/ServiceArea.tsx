@@ -47,15 +47,18 @@ const ServiceArea = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="rounded-2xl overflow-hidden shadow-2xl"
+            className="rounded-2xl overflow-hidden shadow-2xl ring-4 ring-primary/20"
           >
-            <img
-              src={areaImg}
-              alt="Aerial view of South Florida neighborhoods with palm trees"
-              className="w-full h-80 lg:h-96 object-cover"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d57200!2d-80.27780045272723!3d26.16470198032312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1700000000000"
+              width="100%"
+              height="384"
+              style={{ border: 0 }}
+              allowFullScreen
               loading="lazy"
-              width={1280}
-              height={720}
+              referrerPolicy="no-referrer-when-downgrade"
+              title="JMS Plumbing service area map"
+              className="w-full h-80 lg:h-96"
             />
           </motion.div>
         </div>
