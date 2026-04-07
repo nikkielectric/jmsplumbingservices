@@ -167,7 +167,7 @@ const EmergencyCTA = () => {
                 {isSubmitting ? "Sending..." : "Send My Request"}
                 {!isSubmitting && <ArrowRight className="w-4 h-4" />}
               </button>
-              <p className="text-muted-foreground text-xs font-body text-center">
+              <p className="text-xs font-body text-center text-primary-foreground">
                 We typically respond within minutes during business hours and as fast as possible after hours.
               </p>
             </form>
