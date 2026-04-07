@@ -168,8 +168,7 @@ const Contact = () => {
 
             <div className="mt-6 pt-4 border-t border-cream/10">
               <p className="text-cream/50 text-xs font-body text-center">
-                Serving Sunrise, Plantation, Fort Lauderdale, Tamarac, Lauderhill,
-                Coral Springs, Weston & surrounding areas
+                Serving Sunrise, Plantation, Fort Lauderdale, Broward, Miami-Dade & Palm Beach Counties
               </p>
             </div>
           </motion.div>
