@@ -24,8 +24,8 @@ const PromiseBanner = () => {
     <section className="relative py-24 lg:py-32 overflow-hidden bg-primary">
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-cream/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cream/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
