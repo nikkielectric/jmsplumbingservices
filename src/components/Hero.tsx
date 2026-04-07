@@ -58,9 +58,9 @@ const Hero = () => {
             <div className="w-24 h-1 bg-cream/30 mb-6" />
 
             <p className="text-cream/70 font-body text-base lg:text-lg leading-relaxed mb-8 max-w-lg">
-              When looking for the right plumber, your search goes beyond just qualifications.
-              As a family-owned business in Sunrise, FL, we consider plumbing a craft — a blending
-              of expertise and artistry. Serving the Tri-County area with premier service.
+              We answer our phone. We arrive on time. We tell you the price before we touch a thing. 
+              JMS Plumbing Services is a family-owned, licensed plumber serving Broward, Miami-Dade, 
+              and Palm Beach Counties — and we treat your home like it's our own.
             </p>
 
             <div className="w-24 h-1 bg-cream/30 mb-8" />
