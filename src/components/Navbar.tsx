@@ -187,6 +187,13 @@ const Navbar = () => {
           </div>
 
           <a
+            href="/gallery"
+            className="text-xs font-body font-semibold text-cream/70 hover:text-cream tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+          >
+            Gallery
+          </a>
+
+          <a
             href="/contact"
             className="text-xs font-body font-semibold text-cream/70 hover:text-cream tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
           >
@@ -248,6 +255,14 @@ const Navbar = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
+
+              <a
+                href="/gallery"
+                onClick={() => setOpen(false)}
+                className="text-sm font-body font-semibold text-cream/80 hover:text-cream tracking-[0.15em] uppercase transition-colors"
+              >
+                Gallery
+              </a>
 
               <a
                 href="/contact"
