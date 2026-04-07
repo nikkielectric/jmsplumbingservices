@@ -20,7 +20,7 @@ const ServiceHero = ({ serviceCategory, h1, subtext, heroImage }: ServiceHeroPro
           src={bgImage}
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-top"
         />
         {/* Secondary color overlay */}
         <div className="absolute inset-0 bg-secondary/85" />
