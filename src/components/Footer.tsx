@@ -92,6 +92,12 @@ const Footer = () => {
           <p className="text-cream/30 text-xs font-body">
             © {new Date().getFullYear()} JMS Plumbing Services LLC. All Rights Reserved.
           </p>
+          <p className="text-cream/30 text-xs font-body">
+            Website Built By{" "}
+            <a href="https://www.wisdomstudios.co" target="_blank" rel="noopener noreferrer" className="text-cream/60 hover:text-cream transition-colors">
+              Wisdom Studios
+            </a>
+          </p>
           <div className="flex items-center gap-2 text-cream/40 text-xs font-body">
             <Phone className="w-3 h-3" />
             <span>Have An Emergency?</span>
