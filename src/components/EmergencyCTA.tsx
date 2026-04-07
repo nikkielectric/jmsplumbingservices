@@ -198,6 +198,7 @@ const EmergencyCTA = () => {
           </div>
         </div>
       </div>
+      <ThankYouModal open={showThankYou} onOpenChange={setShowThankYou} />
     </section>
   );
 };
