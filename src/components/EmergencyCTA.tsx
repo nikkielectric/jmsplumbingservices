@@ -162,7 +162,7 @@ const EmergencyCTA = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 bg-foreground text-background h-12 rounded-lg font-bold text-sm hover:bg-foreground/90 transition-all disabled:opacity-60"
+                className="w-full flex items-center justify-center gap-2 bg-background text-foreground h-12 rounded-lg font-bold text-sm hover:bg-background/90 transition-all disabled:opacity-60"
               >
                 {isSubmitting ? "Sending..." : "Send My Request"}
                 {!isSubmitting && <ArrowRight className="w-4 h-4" />}
