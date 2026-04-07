@@ -15,7 +15,6 @@ const serviceDropdownItems = [
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -197,6 +196,13 @@ const Navbar = () => {
               )}
             </AnimatePresence>
           </div>
+
+          <a
+            href="/#contact"
+            className="text-xs font-body font-semibold text-cream/70 hover:text-cream tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+          >
+            Contact
+          </a>
         </div>
       </div>
 
@@ -253,6 +259,14 @@ const Navbar = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
+
+              <a
+                href="/#contact"
+                onClick={() => setOpen(false)}
+                className="text-sm font-body font-semibold text-cream/80 hover:text-cream tracking-[0.15em] uppercase transition-colors"
+              >
+                Contact
+              </a>
 
               <div className="h-px bg-cream/10 my-1" />
               <a
