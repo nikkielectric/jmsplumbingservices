@@ -48,7 +48,7 @@ const PromiseBanner = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream text-center max-w-4xl mx-auto mb-5 leading-tight"
         >
-          We Show Up. We're Straight With You. We Do It Right.
+          Tired of Plumbers Who Don't Follow Through?
         </motion.h2>
 
         <motion.div
