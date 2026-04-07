@@ -27,7 +27,77 @@ const ContactPage = () => {
         "content",
         "Contact JMS Plumbing Services for plumbing repairs, drain cleaning, gas line services, and emergency plumbing throughout Broward, Miami-Dade, and Palm Beach Counties. Call (954) 910-6883."
       );
+
+    // Inject LocalBusiness JSON-LD
+    const jsonLd = document.createElement("script");
+    jsonLd.type = "application/ld+json";
+    jsonLd.id = "contact-jsonld";
+    jsonLd.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Plumber",
+      "name": "JMS Plumbing Services LLC",
+      "url": "https://jmsplumbingservicesllc.com",
+      "telephone": "+1-954-910-6883",
+      "email": "Jmsplumbingservicesllc@gmail.com",
+      "image": "https://jmsplumbingservicesllc.com/og-image.jpg",
+      "description": "Licensed and insured plumbing services in Sunrise, FL. Serving Broward, Miami-Dade, and Palm Beach Counties with honest work and upfront pricing.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sunrise",
+        "addressLocality": "Sunrise",
+        "addressRegion": "FL",
+        "postalCode": "33322",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 26.1668,
+        "longitude": -80.2561
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "16:00"
+        }
+      ],
+      "areaServed": [
+        { "@type": "County", "name": "Broward County", "containedInPlace": { "@type": "State", "name": "Florida" } },
+        { "@type": "County", "name": "Miami-Dade County", "containedInPlace": { "@type": "State", "name": "Florida" } },
+        { "@type": "County", "name": "Palm Beach County", "containedInPlace": { "@type": "State", "name": "Florida" } }
+      ],
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Credit Card, Check",
+      "slogan": "The Plumber That Actually Shows Up",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Plumbing Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drain Cleaning" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plumbing Repairs" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gas Line Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water Heater Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garbage Disposal" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plumbing Remodels" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Plumbing" } }
+        ]
+      }
+    });
+    document.head.appendChild(jsonLd);
+
     window.scrollTo(0, 0);
+
+    return () => {
+      const el = document.getElementById("contact-jsonld");
+      if (el) el.remove();
+    };
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
