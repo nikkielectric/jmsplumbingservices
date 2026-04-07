@@ -31,6 +31,66 @@ const ServicePage = () => {
         newMeta.content = data.metaDescription;
         document.head.appendChild(newMeta);
       }
+
+      // JSON-LD structured data
+      const jsonLdId = "service-jsonld";
+      let script = document.getElementById(jsonLdId) as HTMLScriptElement | null;
+      if (!script) {
+        script = document.createElement("script");
+        script.id = jsonLdId;
+        script.type = "application/ld+json";
+        document.head.appendChild(script);
+      }
+      const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": data.heroH1,
+        "description": data.metaDescription,
+        "url": `https://jmsplumbingservices.com/${data.slug}`,
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "JMS Plumbing Services LLC",
+          "telephone": "+1-954-910-6883",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sunrise",
+            "addressLocality": "Sunrise",
+            "addressRegion": "FL",
+            "postalCode": "33322",
+            "addressCountry": "US"
+          },
+          "url": "https://jmsplumbingservices.com",
+          "image": "https://jmsplumbingservices.com/og-image.jpg",
+          "priceRange": "$$",
+          "sameAs": []
+        },
+        "areaServed": [
+          { "@type": "County", "name": "Broward County, FL" },
+          { "@type": "County", "name": "Miami-Dade County, FL" },
+          { "@type": "County", "name": "Palm Beach County, FL" }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free estimates with upfront pricing — no hidden fees",
+          "availability": "https://schema.org/InStock"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": data.serviceCategory,
+          "itemListElement": data.signs.map((sign) => ({
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": sign }
+          }))
+        }
+      };
+      script.textContent = JSON.stringify(jsonLd);
+
+      return () => {
+        const el = document.getElementById(jsonLdId);
+        if (el) el.remove();
+      };
     }
   }, [data]);
 
