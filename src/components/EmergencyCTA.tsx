@@ -50,7 +50,7 @@ const EmergencyCTA = () => {
   };
 
   return (
-    <section className="bg-secondary py-20 lg:py-28">
+    <section className="bg-cream-light py-20 lg:py-28">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* LEFT SIDE — COPY */}
