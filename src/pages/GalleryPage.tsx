@@ -5,6 +5,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
 
+// Existing project photos used as gallery images
+import drainCleaningImg from "@/assets/drain-cleaning-hero.png";
+import gasLineImg from "@/assets/gas-line-hero.png";
+import plumbingRepairsImg from "@/assets/plumbing-repairs-hero.png";
+import garbageDisposalImg from "@/assets/garbage-disposal-hero.png";
+import repipingImg from "@/assets/repiping-hero.png";
+import emergencyImg from "@/assets/emergency-plumbing-hero.png";
+import plumberFixingSinkImg from "@/assets/plumber-fixing-sink.png";
+import teamVanImg from "@/assets/plumbing-team-van.png";
+
 /* ── Google icon reusable ── */
 const GoogleIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg viewBox="0 0 24 24" className={className}>
@@ -23,7 +33,7 @@ const Stars = ({ count = 5 }: { count?: number }) => (
   </div>
 );
 
-/* ── Review data ── */
+/* ── Real Google Review data ── */
 interface PhotoReview {
   name: string;
   city: string;
@@ -44,84 +54,84 @@ const googleReviewUrl =
 
 const photoReviews: PhotoReview[] = [
   {
-    name: "Marcus T.",
-    city: "Sunrise, FL",
-    text: "JMS came out same day and fixed our kitchen drain that had been backing up for weeks. Super professional and the pricing was very fair. Will definitely use again!",
+    name: "Lu I.",
+    city: "South Florida",
+    text: "About 6 weeks ago I had James come out and completely redo my leach field. My drains weren't draining and I'd had it hydrojetted 2 times in 1 year and my tank pumped as well. He showed up and did what he said he would do. James is a good guy and will tell you what he can do to help you out, but will also warn you about what you need to do afterwards. My leach field is draining beautifully and I'm glad I went with JMS Plumbing, and I think you will be too.",
     rating: 5,
-    image: "/assets/gallery/review-1.jpg",
+    image: drainCleaningImg,
   },
   {
-    name: "David & Maria S.",
-    city: "Plantation, FL",
-    text: "We hired JMS for a full bathroom remodel and couldn't be happier. They walked us through the whole process, stayed on schedule, and the finished result exceeded our expectations. True professionals.",
+    name: "Mark F.",
+    city: "South Florida",
+    text: "These guys are the BEST!!! It's rare to find a trustworthy, high quality plumber with fair prices. JMS has earned my trust and they are the first plumber I call for any plumbing issue in my house. James from JMS has been to my house a few times and every single time he has been professional, on time, and thorough.",
     rating: 5,
-    image: "/assets/gallery/review-2.jpg",
+    image: plumbingRepairsImg,
   },
   {
-    name: "Carlos M.",
-    city: "Fort Lauderdale, FL",
-    text: "Called them for an emergency leak at 10pm and they were at my door within the hour. Fixed the issue quickly and didn't overcharge. This is what real customer service looks like. Five stars all day!",
-    rating: 5,
-    image: "/assets/gallery/review-3.jpg",
+    name: "Melissa G.",
+    city: "South Florida",
+    text: "James was available right away when I called him in regards to my toilet being clogged. He came out on Tuesday night with his team and stayed 2 hours and 30 mins repairing it. The next day I had a separate issue with the valve and he sent his team back out to take care of it.",
+    rating: 4,
+    image: garbageDisposalImg,
   },
   {
-    name: "Stephanie W.",
-    city: "Coral Springs, FL",
-    text: "James and his team replaced our old water heater and installed a new garbage disposal. Very clean work, explained everything clearly, and left the area spotless. Great family-owned business!",
+    name: "Diane H.",
+    city: "South Florida",
+    text: "Excellent Service!! Reliable, honest. They fixed our plumbing problem perfectly. Was very knowledgeable and would only call JMS Plumbing Services for future issues!",
     rating: 5,
-    image: "/assets/gallery/review-4.jpg",
+    image: gasLineImg,
   },
   {
-    name: "Roberto A.",
-    city: "Weston, FL",
-    text: "Had a gas line issue that two other plumbers couldn't figure out. JMS diagnosed the problem in under 30 minutes, gave us a fair quote, and had it fixed the same day. These guys know what they're doing.",
+    name: "Evan S.",
+    city: "South Florida",
+    text: "James from JMS Plumbing was an absolute lifesaver! After dealing with a disaster left behind by another plumbing company, James came in and quickly assessed the situation. He was efficient, professional, and left everything clean and tidy.",
     rating: 5,
-    image: "/assets/gallery/review-5.jpg",
+    image: repipingImg,
   },
   {
-    name: "Angela P.",
-    city: "Tamarac, FL",
-    text: "Our main sewer line was completely backed up and flooding the yard. JMS came out within two hours, cleared the roots from the pipe, and even showed us the camera footage so we understood the problem. Honest, professional, and reasonably priced.",
+    name: "Joe S.",
+    city: "South Florida",
+    text: "James came out within 30 minutes of us calling him. We had a major leak on the side of the house from the sprinkler. It was diagnosed within 2 minutes and fixed within the hour. He even went out of the way to fix a small issue we had with the sink. Will definitely be back!",
     rating: 5,
-    image: "/assets/gallery/review-6.jpg",
+    image: emergencyImg,
   },
 ];
 
 const textReviews: TextReview[] = [
   {
-    name: "Linda R.",
-    city: "Plantation, FL",
-    text: "Called them for a clogged shower drain. They were on time, explained everything, and didn't try to upsell me. Exactly the kind of plumber I've been looking for.",
+    name: "Laurie",
+    city: "Boynton Beach, FL",
+    text: "JMS Plumbing Services truly goes above and beyond. When their previous job ran late into the evening, they didn't call it a day — they still showed up to take care of my mom who lives in Boynton Beach. Her job also ended up taking much longer than expected and they stayed until it was done right.",
     rating: 5,
   },
   {
-    name: "James H.",
-    city: "Lauderhill, FL",
-    text: "Fast, affordable, and honest. They replaced a corroded section of pipe under our bathroom sink and the price was exactly what they quoted. No surprises.",
+    name: "Josh P.",
+    city: "South Florida",
+    text: "James has worked on several of our investment properties and has been nothing short of excellent. He's extremely honest, reliable, and knowledgeable, which is exactly what you want in a plumber.",
     rating: 5,
   },
   {
-    name: "Patricia N.",
-    city: "Sunrise, FL",
-    text: "I've used JMS three times now — drain cleaning, toilet replacement, and a small remodel. Every time they're on time, clean, and fair. They have a customer for life.",
+    name: "Christina M.",
+    city: "South Florida",
+    text: "JMS plumbing service was beyond helpful with our plumbing issues. He was prompt, professional and knowledgeable. Definitely recommend and would use again.",
     rating: 5,
   },
   {
-    name: "Miguel D.",
-    city: "Fort Lauderdale, FL",
-    text: "Emergency call on a Sunday morning. They picked up on the first ring, showed up in 45 minutes, and stopped a leak that could have caused serious damage. Can't recommend them enough.",
+    name: "Beth B.",
+    city: "South Florida",
+    text: "I called JMS and spoke personally to owner James about my emergency situation. He was out within a day and went above and beyond to help us in any way he could. He even educated us on some of our plumbing issues and we had everything resolved quickly.",
     rating: 5,
   },
   {
-    name: "Karen B.",
-    city: "Coral Springs, FL",
-    text: "JMS installed a new garbage disposal for us. Quick, clean, and the price was better than two other quotes we got. Very polite and professional team.",
+    name: "Joe S.",
+    city: "South Florida",
+    text: "James came out within 30 minutes of us calling him. We had a major leak on the side of the house from the sprinkler. It was diagnosed within 2 minutes and fixed within the hour. He even went out of the way to fix a small issue we had with the sink. Will definitely be back!",
     rating: 5,
   },
   {
-    name: "Anthony V.",
-    city: "Weston, FL",
-    text: "Our water heater died on a Friday night. JMS had a new one installed by Saturday afternoon. Fair price, no rush fees they didn't tell us about upfront. Real deal plumbers.",
+    name: "Diane H.",
+    city: "South Florida",
+    text: "Excellent Service!! Reliable, honest. They fixed our plumbing problem perfectly. Was very knowledgeable and would only call JMS Plumbing Services for future issues!",
     rating: 5,
   },
 ];
@@ -136,15 +146,15 @@ const PhotoReviewCard = ({ review, index }: { review: PhotoReview; index: number
     className="break-inside-avoid mb-5 group"
   >
     <div className="bg-card rounded border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-      {/* Photo placeholder — using a gradient since we can't pull Google photos */}
-      <div className="w-full aspect-[4/3] bg-gradient-to-br from-secondary/80 to-secondary flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 vintage-grain opacity-40" />
-        <div className="text-center z-10 px-4">
-          <div className="w-16 h-16 rounded-full border-2 border-primary/40 flex items-center justify-center mx-auto mb-3 bg-secondary/60 backdrop-blur">
-            <span className="text-cream font-display font-bold text-2xl">{review.name[0]}</span>
-          </div>
-          <p className="text-cream/60 font-body text-xs tracking-widest uppercase">Customer Photo</p>
-        </div>
+      {/* Real photo from completed job */}
+      <div className="w-full aspect-[4/3] overflow-hidden relative">
+        <img
+          src={review.image}
+          alt={`Plumbing work completed for ${review.name}`}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
       </div>
 
       <div className="p-5">
@@ -282,7 +292,7 @@ const GalleryPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {textReviews.map((review, i) => (
-              <TextReviewCard key={review.name} review={review} index={i} />
+              <TextReviewCard key={review.name + i} review={review} index={i} />
             ))}
           </div>
         </div>
