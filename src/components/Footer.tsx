@@ -25,9 +25,9 @@ const Footer = () => {
               <span className="text-steel/50 text-xs ml-1 font-body">Services LLC</span>
             </div>
             <p className="text-cream/50 text-sm font-body leading-relaxed mb-6">
-              Family-owned plumbing services in Sunrise, FL.
-              Serving South Florida's Tri-County area with
-              premier customer service and expert craftsmanship.
+              Licensed & insured plumbing services based in Sunrise, FL. 
+              Serving Broward, Miami-Dade, and Palm Beach Counties with 
+              honest work and upfront pricing.
             </p>
             <div className="flex flex-col gap-2">
               <a href="tel:9549106883" className="flex items-center gap-2 text-cream/70 text-sm font-body hover:text-cream transition-colors">
