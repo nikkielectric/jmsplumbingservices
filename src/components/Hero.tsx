@@ -52,9 +52,7 @@ const Hero = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-black text-cream leading-[1.1] mb-6">
-              Your Trusted{" "}
-              <span className="text-steel">Local Plumber</span>{" "}
-              in South Florida
+              South Florida's <span className="text-steel">Plumber</span> That Actually Shows Up
             </h1>
 
             <div className="w-24 h-1 bg-cream/30 mb-6" />
