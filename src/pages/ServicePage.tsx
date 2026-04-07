@@ -74,6 +74,11 @@ const ServicePage = () => {
             "postalCode": "33322",
             "addressCountry": "US"
           },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 26.1668,
+            "longitude": -80.2561
+          },
           "url": "https://jmsplumbingservices.com",
           "image": "https://jmsplumbingservices.com/og-image.jpg",
           "priceRange": "$$",

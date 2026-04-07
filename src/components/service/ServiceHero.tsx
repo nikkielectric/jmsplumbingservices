@@ -18,7 +18,7 @@ const ServiceHero = ({ serviceCategory, h1, subtext, heroImage }: ServiceHeroPro
       <div className="absolute inset-0">
         <img
           src={bgImage}
-          alt=""
+          alt={`${h1} — JMS Plumbing Services in South Florida`}
           aria-hidden="true"
           className="w-full h-full object-cover object-top"
         />

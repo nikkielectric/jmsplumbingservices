@@ -54,6 +54,51 @@ const AboutPage = () => {
     document.title = "About JMS Plumbing Services | Family-Owned Plumber in Sunrise, FL";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", "Meet the family behind JMS Plumbing Services. Licensed, insured, and based in Sunrise, FL — serving Broward, Miami-Dade, and Palm Beach Counties with honest work and upfront pricing.");
+
+    // AboutPage JSON-LD
+    const jsonLdId = "about-jsonld";
+    let script = document.getElementById(jsonLdId) as HTMLScriptElement | null;
+    if (!script) {
+      script = document.createElement("script");
+      script.id = jsonLdId;
+      script.type = "application/ld+json";
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About JMS Plumbing Services",
+      "description": "Meet the family behind JMS Plumbing Services. Licensed, insured, and based in Sunrise, FL.",
+      "url": "https://jmsplumbingservices.com/about",
+      "mainEntity": {
+        "@type": "Plumber",
+        "@id": "https://jmsplumbingservices.com/#business",
+        "name": "JMS Plumbing Services LLC",
+        "url": "https://jmsplumbingservices.com",
+        "telephone": "+1-954-910-6883",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sunrise",
+          "addressRegion": "FL",
+          "postalCode": "33322",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 26.1668,
+          "longitude": -80.2561
+        },
+        "areaServed": [
+          { "@type": "County", "name": "Broward County", "containedInPlace": { "@type": "State", "name": "Florida" } },
+          { "@type": "County", "name": "Miami-Dade County", "containedInPlace": { "@type": "State", "name": "Florida" } },
+          { "@type": "County", "name": "Palm Beach County", "containedInPlace": { "@type": "State", "name": "Florida" } }
+        ]
+      }
+    });
+
+    return () => {
+      document.getElementById(jsonLdId)?.remove();
+    };
   }, []);
 
   return (
