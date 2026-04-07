@@ -111,7 +111,7 @@ const Navbar = () => {
             </a>
 
             <a
-              href="#contact"
+              href="/contact"
               className="ml-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded font-display font-bold text-sm tracking-wide uppercase transition-colors shadow-lg shadow-primary/20"
             >
               Get a Quote
@@ -277,7 +277,7 @@ const Navbar = () => {
                 (954) 910-6883
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded font-bold text-sm uppercase tracking-wide"
               >
                 Get a Quote
