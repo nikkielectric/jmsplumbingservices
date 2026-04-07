@@ -120,8 +120,11 @@ const ContactPage = () => {
 
       {/* ═══ SECTION 1 — PAGE HERO ═══ */}
       <section className="relative pt-36 lg:pt-44 bg-secondary vintage-grain vintage-vignette pb-10 lg:pb-14">
-        {/* Decorative top accent line */}
-        <div className="absolute top-[140px] lg:top-[176px] left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent z-10" />
+        {/* Decorative corner flourishes */}
+        <div className="absolute top-[140px] lg:top-[176px] left-6 lg:left-12 w-16 h-16 border-t-2 border-l-2 border-primary/25 rounded-tl-sm" />
+        <div className="absolute top-[140px] lg:top-[176px] right-6 lg:right-12 w-16 h-16 border-t-2 border-r-2 border-primary/25 rounded-tr-sm" />
+        <div className="absolute bottom-6 left-6 lg:left-12 w-16 h-16 border-b-2 border-l-2 border-primary/25 rounded-bl-sm" />
+        <div className="absolute bottom-6 right-6 lg:right-12 w-16 h-16 border-b-2 border-r-2 border-primary/25 rounded-br-sm" />
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
@@ -159,12 +162,8 @@ const ContactPage = () => {
           </motion.div>
         </div>
 
-        {/* Bottom decorative border */}
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
-
-        {/* Side decorative vertical lines */}
-        <div className="hidden lg:block absolute top-1/4 left-8 w-px h-1/2 bg-gradient-to-b from-transparent via-primary/30 to-transparent" />
-        <div className="hidden lg:block absolute top-1/4 right-8 w-px h-1/2 bg-gradient-to-b from-transparent via-primary/30 to-transparent" />
+        {/* Subtle dot pattern overlay for texture */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
       </section>
 
       {/* ═══ SECTION 2 — MAIN CONTACT SECTION ═══ */}
