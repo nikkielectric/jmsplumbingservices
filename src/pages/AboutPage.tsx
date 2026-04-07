@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Phone, ArrowRight, Clock, DollarSign, Shield, PhoneCall, MessageSquare, Wrench, Sparkles, MapPin, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -47,6 +48,12 @@ const expectItems = [
 ];
 
 const AboutPage = () => {
+  useEffect(() => {
+    document.title = "About JMS Plumbing Services | Family-Owned Plumber in Sunrise, FL";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", "Meet the family behind JMS Plumbing Services. Licensed, insured, and based in Sunrise, FL — serving Broward, Miami-Dade, and Palm Beach Counties with honest work and upfront pricing.");
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />
