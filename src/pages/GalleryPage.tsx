@@ -7,6 +7,7 @@ import VintageOrnament from "@/components/VintageOrnament";
 
 // Existing project photos used as gallery images
 import drainCleaningImg from "@/assets/drain-cleaning-hero.png";
+import galleryReview1Img from "@/assets/gallery-review-1.png";
 import gasLineImg from "@/assets/gas-line-hero.png";
 import plumbingRepairsImg from "@/assets/plumbing-repairs-hero.png";
 import garbageDisposalImg from "@/assets/garbage-disposal-hero.png";
@@ -58,7 +59,7 @@ const photoReviews: PhotoReview[] = [
     city: "South Florida",
     text: "About 6 weeks ago I had James come out and completely redo my leach field. My drains weren't draining and I'd had it hydrojetted 2 times in 1 year and my tank pumped as well. He showed up and did what he said he would do. James is a good guy and will tell you what he can do to help you out, but will also warn you about what you need to do afterwards. My leach field is draining beautifully and I'm glad I went with JMS Plumbing, and I think you will be too.",
     rating: 5,
-    image: drainCleaningImg,
+    image: galleryReview1Img,
   },
   {
     name: "Mark F.",
