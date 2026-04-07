@@ -31,7 +31,7 @@ const Footer = () => {
                 <Phone className="w-4 h-4" /> (954) 910-6883
               </a>
               <a href="mailto:Jmsplumbingservicesllc@gmail.com" className="flex items-center gap-2 text-cream/70 text-sm font-body hover:text-cream transition-colors">
-                <Mail className="w-4 h-4" /> Email Us
+                <Mail className="w-4 h-4" /> jmsplumbingservicesllc@gmail.com
               </a>
               <span className="flex items-center gap-2 text-cream/70 text-sm font-body">
                 <MapPin className="w-4 h-4" /> Sunrise, FL 33322
