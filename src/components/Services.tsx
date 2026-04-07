@@ -60,8 +60,7 @@ const Services = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mt-5" />
           <p className="text-muted-foreground font-body mt-5 max-w-2xl mx-auto leading-relaxed">
-            At JMS Plumbing Services, we understand that every property has different plumbing needs.
-            We tailor every service to meet your system's unique demands.
+            Hard water. Cast iron pipes. Slab construction. Humidity that turns a small leak into a mold problem in 48 hours. South Florida plumbing isn't like anywhere else — and cookie-cutter fixes don't cut it here. JMS handles it all, with the expertise your home actually needs.
           </p>
         </motion.div>
 
