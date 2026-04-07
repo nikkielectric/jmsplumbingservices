@@ -4,10 +4,12 @@ import { Phone, Mail, Clock, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
 import VintageOrnament from "./VintageOrnament";
 import { submitToFormspree } from "@/lib/formspree";
+import ThankYouModal from "./ThankYouModal";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
   const [sending, setSending] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,8 +28,8 @@ const Contact = () => {
         Service: form.service,
         Message: form.message,
       });
-      toast.success("Quote request sent! We'll get back to you shortly.");
       setForm({ name: "", email: "", phone: "", service: "", message: "" });
+      setShowThankYou(true);
     } catch (err) {
       console.error('Form submission error:', err);
       toast.error("Something went wrong. Please call us at (954) 910-6883.");
@@ -195,6 +197,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </div>
+      <ThankYouModal open={showThankYou} onOpenChange={setShowThankYou} />
     </section>
   );
 };

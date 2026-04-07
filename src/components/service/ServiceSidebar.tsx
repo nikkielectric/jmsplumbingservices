@@ -3,7 +3,7 @@ import { Send, Star, Shield, Users } from "lucide-react";
 import { toast } from "sonner";
 import type { ServiceTestimonial } from "@/data/servicePages";
 import { submitToFormspree } from "@/lib/formspree";
-
+import ThankYouModal from "@/components/ThankYouModal";
 interface ServiceSidebarProps {
   defaultService: string;
   testimonials: ServiceTestimonial[];
@@ -18,6 +18,7 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
     description: "",
   });
   const [sending, setSending] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,8 +37,8 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
         Service: form.service,
         Description: form.description,
       });
-      toast.success("Quote request sent! We'll call you back shortly.");
       setForm({ name: "", phone: "", zip: "", service: defaultService, description: "" });
+      setShowThankYou(true);
     } catch (err) {
       console.error('Form submission error:', err);
       toast.error("Something went wrong. Please call us at (954) 910-6883.");
@@ -180,6 +181,7 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
           </div>
         </div>
       ))}
+      <ThankYouModal open={showThankYou} onOpenChange={setShowThankYou} />
     </div>
   );
 };
