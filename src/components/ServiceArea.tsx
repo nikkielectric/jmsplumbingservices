@@ -24,18 +24,9 @@ const ServiceArea = () => {
             <p className="text-muted-foreground font-body leading-relaxed mb-6">
               We're based in Sunrise, but our trucks roll across all three counties — Broward, Miami-Dade, and Palm Beach. Whether you're dealing with a burst pipe in Coral Springs or a backed-up drain in Boca Raton, we know these neighborhoods, these homes, and these pipes.
             </p>
-            <p className="text-muted-foreground font-body leading-relaxed mb-8">
+            <p className="text-muted-foreground font-body leading-relaxed">
               No long waits. No "we don't service that area." If you're in South Florida, we're your plumber.
             </p>
-            <div className="flex items-start gap-3 bg-card rounded-xl p-5 border border-border shadow-sm">
-              <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-              <div>
-                <p className="font-semibold text-foreground font-body">Communities We Serve</p>
-                <p className="text-sm text-muted-foreground font-body whitespace-pre-line">
-                  {"Broward County\nSunrise · Fort Lauderdale · Plantation · Tamarac · Lauderhill · Coral Springs · Weston · Davie · Pembroke Pines · Hollywood · Miramar · Deerfield Beach · Pompano Beach · Lauderdale Lakes · North Lauderdale · Margate · Coconut Creek · Hallandale Beach · Oakland Park · Wilton Manors · Dania Beach · Southwest Ranches\n\n\nMiami-Dade County\nMiami · Hialeah · Miami Gardens · Homestead · North Miami · North Miami Beach · Aventura · Doral · Kendall · Cutler Bay · Palmetto Bay · Pinecrest · Coral Gables · Miami Lakes · Opa-locka · Miami Springs · Sweetwater · Florida City\n\n\nPalm Beach County\nWest Palm Beach · Boca Raton · Boynton Beach · Delray Beach · Lake Worth Beach · Wellington · Greenacres · Royal Palm Beach · Palm Beach Gardens · Jupiter · Riviera Beach · Lantana · Loxahatchee"}
-                </p>
-              </div>
-            </div>
           </motion.div>
 
           <motion.div
@@ -58,6 +49,22 @@ const ServiceArea = () => {
             />
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex items-start gap-3 bg-card rounded-xl p-5 border border-border shadow-sm mt-12"
+        >
+          <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+          <div>
+            <p className="font-semibold text-foreground font-body">Communities We Serve</p>
+            <p className="text-sm text-muted-foreground font-body whitespace-pre-line">
+              {"Broward County\nSunrise · Fort Lauderdale · Plantation · Tamarac · Lauderhill · Coral Springs · Weston · Davie · Pembroke Pines · Hollywood · Miramar · Deerfield Beach · Pompano Beach · Lauderdale Lakes · North Lauderdale · Margate · Coconut Creek · Hallandale Beach · Oakland Park · Wilton Manors · Dania Beach · Southwest Ranches\n\n\nMiami-Dade County\nMiami · Hialeah · Miami Gardens · Homestead · North Miami · North Miami Beach · Aventura · Doral · Kendall · Cutler Bay · Palmetto Bay · Pinecrest · Coral Gables · Miami Lakes · Opa-locka · Miami Springs · Sweetwater · Florida City\n\n\nPalm Beach County\nWest Palm Beach · Boca Raton · Boynton Beach · Delray Beach · Lake Worth Beach · Wellington · Greenacres · Royal Palm Beach · Palm Beach Gardens · Jupiter · Riviera Beach · Lantana · Loxahatchee"}
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
