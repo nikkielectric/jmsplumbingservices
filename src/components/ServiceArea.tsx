@@ -55,14 +55,24 @@ const ServiceArea = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex items-start gap-3 bg-card rounded-xl p-5 border border-border shadow-sm mt-12"
+          className="relative mt-12 rounded-2xl bg-secondary p-8 shadow-xl overflow-hidden"
         >
-          <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-          <div>
-            <p className="font-semibold text-foreground font-body">Communities We Serve</p>
-            <p className="text-sm text-muted-foreground font-body whitespace-pre-line">
-              {"Broward · Miami-Dade · Palm Beach Counties · Sunrise · Plantation · Fort Lauderdale · Tamarac · Lauderhill · Coral Springs · Weston"}
-            </p>
+          {/* Decorative accent */}
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-primary/60 to-transparent" />
+          <div className="absolute -top-12 -right-12 w-40 h-40 bg-primary/10 rounded-full blur-2xl" />
+
+          <div className="relative flex items-start gap-4">
+            <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+              <MapPin className="w-6 h-6 text-primary" />
+            </div>
+            <div>
+              <p className="font-display font-bold text-lg text-secondary-foreground mb-2">
+                Communities We Serve
+              </p>
+              <p className="text-sm text-secondary-foreground/70 font-body leading-relaxed tracking-wide">
+                Broward · Miami-Dade · Palm Beach Counties · Sunrise · Plantation · Fort Lauderdale · Tamarac · Lauderhill · Coral Springs · Weston
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
