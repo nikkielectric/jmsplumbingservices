@@ -3,23 +3,39 @@ import { motion } from "framer-motion";
 import { Phone, Mail, Clock, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
 import VintageOrnament from "./VintageOrnament";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       toast.error("Please fill in all required fields.");
       return;
     }
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
+    try {
+      const { error } = await supabase.functions.invoke('send-form-email', {
+        body: {
+          formSource: 'Homepage — Request a Free Quote',
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          service: form.service,
+          message: form.message,
+        },
+      });
+      if (error) throw error;
       toast.success("Quote request sent! We'll get back to you shortly.");
       setForm({ name: "", email: "", phone: "", service: "", message: "" });
-    }, 1200);
+    } catch (err) {
+      console.error('Form submission error:', err);
+      toast.error("Something went wrong. Please call us at (954) 910-6883.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (

@@ -2,6 +2,7 @@ import { Phone, CheckCircle, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import VintageOrnament from "./VintageOrnament";
+import { supabase } from "@/integrations/supabase/client";
 
 const trustBullets = [
   "We answer 24/7 — a real person, every time",
@@ -30,7 +31,7 @@ const EmergencyCTA = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone || !formData.cityZip || !formData.issue) {
       toast({
@@ -40,14 +41,33 @@ const EmergencyCTA = () => {
       return;
     }
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      const { error } = await supabase.functions.invoke('send-form-email', {
+        body: {
+          formSource: 'Emergency Service Request',
+          name: formData.name,
+          phone: formData.phone,
+          cityZip: formData.cityZip,
+          issue: formData.issue,
+          message: formData.description,
+        },
+      });
+      if (error) throw error;
       toast({
         title: "Request Sent!",
         description: "We'll call you back as soon as possible.",
       });
       setFormData({ name: "", phone: "", cityZip: "", issue: "", description: "" });
+    } catch (err) {
+      console.error('Form submission error:', err);
+      toast({
+        title: "Something went wrong",
+        description: "Please call us directly at (954) 910-6883.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
