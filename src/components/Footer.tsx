@@ -19,6 +19,7 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
+            <img src={jmsLogoFooter} alt="JMS Plumbing Logo" className="w-16 h-16 mb-3" />
             <div className="mb-4">
               <span className="font-display text-xl font-bold text-cream">JMS Plumbing</span>
               <span className="text-steel/50 text-xs ml-1 font-body">Services LLC</span>
