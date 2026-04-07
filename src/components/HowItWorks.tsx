@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { Phone, CalendarCheck, Clock, ClipboardList, Sparkles } from "lucide-react";
 import VintageOrnament from "./VintageOrnament";
 
@@ -36,6 +37,9 @@ const steps = [
 ];
 
 const HowItWorks = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+
   return (
     <section className="relative bg-cream-light py-20 lg:py-28 overflow-hidden vintage-grain">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -61,9 +65,35 @@ const HowItWorks = () => {
         </motion.div>
 
         {/* Steps */}
-        <div className="relative">
-          {/* Connecting line – desktop only */}
-          <div className="hidden lg:block absolute top-[52px] left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-border to-transparent z-0" />
+        <div className="relative" ref={sectionRef}>
+          {/* Animated connecting line – desktop only */}
+          <div className="hidden lg:block absolute top-[52px] left-[10%] right-[10%] h-px z-0">
+            <motion.div
+              className="h-full bg-gradient-to-r from-primary/40 via-primary to-primary/40"
+              initial={{ scaleX: 0 }}
+              animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+              transition={{ duration: 1.5, ease: "easeInOut", delay: 0.3 }}
+              style={{ transformOrigin: "left center" }}
+            />
+            {/* Animated dot that travels along the line */}
+            <motion.div
+              className="absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_hsl(var(--primary)/0.6)]"
+              initial={{ left: "0%" }}
+              animate={isInView ? { left: ["0%", "100%"] } : { left: "0%" }}
+              transition={{ duration: 2, ease: "easeInOut", delay: 0.3 }}
+            />
+          </div>
+
+          {/* Animated connecting line – mobile only (vertical) */}
+          <div className="lg:hidden absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px z-0">
+            <motion.div
+              className="w-full bg-gradient-to-b from-primary/40 via-primary to-primary/40"
+              initial={{ scaleY: 0, height: "100%" }}
+              animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
+              transition={{ duration: 2, ease: "easeInOut", delay: 0.3 }}
+              style={{ transformOrigin: "top center" }}
+            />
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6 relative z-10">
             {steps.map((step, i) => {
@@ -74,17 +104,27 @@ const HowItWorks = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.12 }}
+                  transition={{ duration: 0.5, delay: i * 0.15 + 0.3 }}
                   className="flex flex-col items-center text-center"
                 >
-                  {/* Number circle */}
+                  {/* Icon square */}
                   <div className="relative mb-4">
                     <div className="w-[104px] h-[104px] rounded-sm border-2 border-border bg-card flex items-center justify-center shadow-md">
                       <Icon className="w-8 h-8 text-primary" />
                     </div>
-                    <span className="absolute -top-2 -right-2 w-9 h-9 rounded-full bg-primary text-primary-foreground font-display font-black text-sm flex items-center justify-center shadow-lg">
+                    <motion.span
+                      className="absolute -top-2 -right-2 w-9 h-9 rounded-full bg-primary text-primary-foreground font-display font-black text-sm flex items-center justify-center shadow-lg"
+                      initial={{ scale: 0 }}
+                      animate={isInView ? { scale: 1 } : { scale: 0 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 15,
+                        delay: i * 0.3 + 0.5,
+                      }}
+                    >
                       {step.num}
-                    </span>
+                    </motion.span>
                   </div>
 
                   <h3 className="font-display font-bold text-foreground text-base mb-2 leading-snug">
