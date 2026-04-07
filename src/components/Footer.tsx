@@ -2,12 +2,12 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import jmsLogoFooter from "@/assets/jms-logo-footer.png";
 
 const services = [
-  "Drain Cleaning",
-  "Gas Line Services",
-  "Plumbing Repairs",
-  "Plumbing Remodels",
-  "Garbage Disposal",
-  "Emergency Plumbing",
+  { name: "Drain Cleaning", href: "/drain-cleaning" },
+  { name: "Gas Line Services", href: "/gas-line-services" },
+  { name: "Plumbing Repairs", href: "/plumbing-repairs" },
+  { name: "Plumbing Remodels", href: "/plumbing-remodels" },
+  { name: "Garbage Disposal", href: "/garbage-disposal" },
+  { name: "Emergency Plumbing", href: "/emergency-plumbing" },
 ];
 
 const Footer = () => {
@@ -44,9 +44,9 @@ const Footer = () => {
             <h4 className="font-display font-bold text-cream text-base mb-5">Our Services</h4>
             <ul className="space-y-2.5">
               {services.map((s) => (
-                <li key={s}>
-                  <a href="#services" className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
-                    {s}
+                <li key={s.name}>
+                  <a href={s.href} className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
+                    {s.name}
                   </a>
                 </li>
               ))}
