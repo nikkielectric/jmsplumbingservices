@@ -87,6 +87,7 @@ export const servicePages: ServicePageData[] = [
     diyParagraphs: [
       "Chemical drain cleaners work by dissolving whatever is sitting right at the surface of the blockage. If your clog is caused by something deeper — mineral scale lining the inside of your pipe, a tree root that's worked its way through a joint, or a section of cast iron that's collapsed inward — the chemical never reaches it. You get a few days of decent drainage, then the backup returns. This cycle can go on for months or years before a homeowner realizes the product isn't solving the actual problem.",
       "There's also a real risk to your pipes. Liquid drain cleaners are caustic — they generate heat as they work, which can soften PVC joints and accelerate corrosion in already-weakened cast iron. If your home has older plumbing, repeated chemical treatments may be quietly making a manageable pipe problem into an expensive one.",
+      "A professional drain cleaning gets to the actual source of the blockage — not just the surface symptoms. More importantly, it tells you whether what you're dealing with is a simple clog or the beginning of a bigger pipe problem. That difference is worth knowing before it turns into an emergency.",
     ],
     expectHeading: "What Happens When You Call JMS for Drain Cleaning",
     steps: [
