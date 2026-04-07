@@ -63,12 +63,9 @@ const ServiceRelated = ({ services }: ServiceRelatedProps) => {
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-[calc(100%-5rem)] group-hover:translate-y-0 transition-transform duration-500 ease-out">
                 <h3 className="text-2xl font-display font-bold text-white mb-2">{service.title}</h3>
                 <div className="w-12 h-0.5 bg-white/50 mb-3" />
-                <p className="text-white/80 text-sm font-body leading-relaxed mb-3">
+                <p className="text-white/80 text-sm font-body leading-relaxed">
                   {service.description}
                 </p>
-                <span className="inline-flex items-center gap-1 text-white font-body text-sm font-semibold">
-                  Learn More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
               </div>
             </motion.a>
           ))}
