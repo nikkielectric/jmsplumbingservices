@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Phone, ArrowRight, Clock, DollarSign, Shield, PhoneCall, MessageSquare, Wrench, Sparkles, MapPin, CheckCircle } from "lucide-react";
+import { Phone, ArrowRight, Clock, DollarSign, Shield, PhoneCall, MessageSquare, Wrench, Sparkles, MapPin, CheckCircle, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
