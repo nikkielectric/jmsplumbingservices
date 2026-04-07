@@ -115,7 +115,7 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ SECTION 2 — OUR STORY ═══ */}
-      <section className="bg-cream py-20 lg:py-28 vintage-grain relative">
+      <section className="bg-cream-light py-20 lg:py-28 vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -179,7 +179,7 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ SECTION 3 — WHY CHOOSE JMS ═══ */}
-      <section className="bg-secondary py-20 lg:py-28 vintage-grain vintage-vignette relative">
+      <section className="bg-cream py-20 lg:py-28 vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -191,11 +191,11 @@ const AboutPage = () => {
             <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
               WHY JMS
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream mt-3 mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-4">
               What Makes Us Different From Every Other{" "}
-              <span className="text-steel italic">Plumber in South Florida</span>
+              <span className="text-primary italic">Plumber in South Florida</span>
             </h2>
-            <VintageOrnament className="max-w-xs mx-auto [&_div]:bg-gradient-to-r [&_div]:from-transparent [&_div]:via-cream/30 [&_div]:to-transparent [&_svg]:text-cream/40" />
+            <VintageOrnament className="max-w-xs mx-auto" />
           </motion.div>
 
           <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
@@ -207,13 +207,13 @@ const AboutPage = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-cream/5 backdrop-blur-sm border border-cream/10 rounded p-6 lg:p-8 hover:bg-cream/10 transition-colors"
+                className="bg-card border border-border rounded p-6 lg:p-8 hover:shadow-lg transition-shadow"
               >
                 <div className="w-12 h-12 rounded-full border-2 border-primary/30 flex items-center justify-center mb-4">
                   <card.icon className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="font-display font-bold text-cream text-lg mb-2">{card.title}</h3>
-                <p className="text-cream/60 text-sm font-body leading-relaxed">{card.desc}</p>
+                <h3 className="font-display font-bold text-foreground text-lg mb-2">{card.title}</h3>
+                <p className="text-muted-foreground text-sm font-body leading-relaxed">{card.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -221,7 +221,7 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ SECTION 4 — PERSONAL GUARANTEE ═══ */}
-      <section className="bg-cream py-20 lg:py-28 vintage-grain relative">
+      <section className="bg-cream-light py-20 lg:py-28 vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -333,7 +333,7 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ SECTION 6 — SERVICE AREA CALLOUT ═══ */}
-      <section className="bg-cream py-20 lg:py-28 vintage-grain relative">
+      <section className="bg-cream-light py-20 lg:py-28 vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
