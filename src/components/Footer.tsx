@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer className="bg-dark-deep pt-16 pb-6 bg-secondary">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 lg:gap-20 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-[2.5fr_1fr_1fr_1fr] gap-10 lg:gap-24 mb-12">
           {/* Brand */}
           <div>
             <img src={jmsLogoFooter} alt="JMS Plumbing Logo" className="w-24 h-24 mb-3" />
