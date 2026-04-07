@@ -160,7 +160,7 @@ const AboutPage = () => {
             >
               <div className="rounded overflow-hidden shadow-2xl vintage-border vintage-sepia">
                 <img
-                  src={heroImg}
+                  src={teamVanImg}
                   alt="JMS Plumbing team on the job in South Florida"
                   className="w-full h-[350px] lg:h-[450px] object-cover"
                   loading="lazy"
