@@ -34,11 +34,14 @@ const Navbar = () => {
           <span className="text-cream/70 tracking-wide">Licensed &amp; Insured Plumbing Services</span>
 
           <div className="flex items-center gap-1.5 text-cream/60">
+            <Clock className="w-3 h-3 text-primary" />
+            <span>24/7 Emergency Service</span>
+          </div>
+
+          <div className="flex items-center gap-1.5 text-cream/60">
             <MapPin className="w-3 h-3 text-primary" />
             <span>Sunrise, FL 33322</span>
           </div>
-
-          <span className="text-cream/60">24/7 Emergency Service</span>
         </div>
       </div>
 
