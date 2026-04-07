@@ -204,6 +204,7 @@ const Navbar = () => {
             Contact
           </a>
         </div>
+      </div>
 
       {/* ── Mobile menu ── */}
       <AnimatePresence>
