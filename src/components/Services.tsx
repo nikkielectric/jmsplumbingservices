@@ -10,32 +10,32 @@ const services = [
   {
     img: drainImg,
     title: "Drain Cleaning",
-    description: "Keep your drains functioning smoothly. From main lines to kitchen sinks, tubs & showers — we clear blockages fast with professional-grade equipment.",
+    description: "Slow or fully blocked — we clear main lines, sinks, tubs, and showers fast. And we tell you why it happened.",
   },
   {
     img: gasImg,
     title: "Gas Line Services",
-    description: "Safe installation, repair & leak inspection of gas lines by certified professionals. Your family's safety is our top priority.",
+    description: "Installations, repairs, and leak inspections. Licensed, insured, and done right the first time.",
   },
   {
     img: repairImg,
     title: "Plumbing Repairs",
-    description: "Faucets, spouts, water heaters — full repair & replacement for every fixture. Our expert team handles it all with precision and care.",
+    description: "We fix what actually needs fixing. No unnecessary replacements, no upsells. Honest work at a fair price.",
   },
   {
     img: remodelImg,
     title: "Plumbing Remodels",
-    description: "Complete bathroom & kitchen remodels with blueprint planning. We transform your space from the ground up with expert craftsmanship.",
+    description: "From blueprint to final install — precise, clean plumbing work that's built to last.",
   },
   {
     img: disposalImg,
     title: "Garbage Disposal",
-    description: "Professional inspection, replacement & new installation of garbage disposal units. Keeping your kitchen running efficiently.",
+    description: "Jammed, leaking, or dead? We inspect, repair, and install — usually same day.",
   },
   {
     img: emergencyImg,
     title: "Emergency Plumbing",
-    description: "After-hours, weekends & holidays — we're here when disaster strikes. Fast response times to prevent further damage to your home.",
+    description: "Nights, weekends, holidays — we pick up. After-hours fees always disclosed upfront.",
   },
 ];
 
