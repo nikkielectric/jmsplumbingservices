@@ -1,4 +1,4 @@
-import { Phone, ArrowRight, Star, Shield, Clock, DollarSign } from "lucide-react";
+import { Phone, ArrowRight, Shield, Clock, DollarSign } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-plumber.png";
 import VintageOrnament from "./VintageOrnament";
