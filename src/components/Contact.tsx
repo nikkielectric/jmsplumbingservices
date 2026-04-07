@@ -161,7 +161,7 @@ const Contact = () => {
                 disabled={sending}
                 className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold text-base hover:bg-primary/90 transition-all w-full disabled:opacity-60"
               >
-                {sending ? "Sending..." : "Send Quote Request"}
+                {sending ? "Sending..." : "Send My Request"}
                 {!sending && <Send className="w-4 h-4" />}
               </button>
             </form>
