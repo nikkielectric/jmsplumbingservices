@@ -56,7 +56,7 @@ const PromiseBanner = () => {
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="w-16 h-1 bg-primary mx-auto mb-10 rounded-full origin-center"
+          className="w-16 h-1 bg-cream/30 mx-auto mb-10 rounded-full origin-center"
         />
 
         {/* Body copy */}
