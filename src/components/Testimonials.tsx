@@ -141,9 +141,7 @@ const Testimonials = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-cream/70 font-body leading-relaxed mt-6 max-w-2xl"
         >
-          At JMS Plumbing Services, we value the importance of plumbing that leaves you with
-          peace of mind. Our 100% satisfaction guarantee means we work closely alongside you
-          from start to finish.
+          Every plumber promises good work. We let our customers tell you what actually happened — how fast we showed up, how clearly we communicated, and whether the price matched what we quoted. That's the standard we hold ourselves to on every single job in Broward, Miami-Dade, and Palm Beach County.
         </motion.p>
       </div>
 
