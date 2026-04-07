@@ -15,7 +15,7 @@ interface ServiceFAQProps {
 
 const ServiceFAQ = ({ heading, faqs }: ServiceFAQProps) => {
   return (
-    <section className="py-20 lg:py-28 bg-cream-light vintage-grain relative">
+    <section className="py-14 lg:py-20 bg-cream-light vintage-grain relative">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
