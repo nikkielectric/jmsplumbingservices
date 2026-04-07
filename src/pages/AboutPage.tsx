@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
-import heroImg from "@/assets/plumbing-team-van.png";
+import heroImg from "@/assets/plumbing-team.png";
+import teamVanImg from "@/assets/plumbing-team-van.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
