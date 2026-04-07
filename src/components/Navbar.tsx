@@ -15,7 +15,6 @@ const serviceDropdownItems = [
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
