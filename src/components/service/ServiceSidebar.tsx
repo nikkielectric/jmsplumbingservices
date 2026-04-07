@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Send, Star, Shield, Users } from "lucide-react";
 import { toast } from "sonner";
 import type { ServiceTestimonial } from "@/data/servicePages";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ServiceSidebarProps {
   defaultService: string;
@@ -18,18 +19,33 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
   });
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.phone.trim() || !form.zip.trim()) {
       toast.error("Please fill in all required fields.");
       return;
     }
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
+    try {
+      const { error } = await supabase.functions.invoke('send-form-email', {
+        body: {
+          formSource: `Service Page — ${defaultService}`,
+          name: form.name,
+          phone: form.phone,
+          cityZip: form.zip,
+          service: form.service,
+          message: form.description,
+        },
+      });
+      if (error) throw error;
       toast.success("Quote request sent! We'll call you back shortly.");
       setForm({ name: "", phone: "", zip: "", service: defaultService, description: "" });
-    }, 1200);
+    } catch (err) {
+      console.error('Form submission error:', err);
+      toast.error("Something went wrong. Please call us at (954) 910-6883.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
