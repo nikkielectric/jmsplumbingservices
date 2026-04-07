@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import VintageOrnament from "./VintageOrnament";
 import drainImg from "@/assets/service-drain.jpg";
 import gasImg from "@/assets/service-gas.jpg";
@@ -12,31 +13,37 @@ const services = [
     img: drainImg,
     title: "Drain Cleaning",
     description: "Slow or fully blocked — we clear main lines, sinks, tubs, and showers fast. And we tell you why it happened.",
+    href: "/drain-cleaning",
   },
   {
     img: gasImg,
     title: "Gas Line Services",
     description: "Installations, repairs, and leak inspections. Licensed, insured, and done right the first time.",
+    href: "/gas-line-services",
   },
   {
     img: repairImg,
     title: "Plumbing Repairs",
     description: "We fix what actually needs fixing. No unnecessary replacements, no upsells. Honest work at a fair price.",
+    href: "/plumbing-repairs",
   },
   {
     img: remodelImg,
     title: "Plumbing Remodels",
     description: "From blueprint to final install — precise, clean plumbing work that's built to last.",
+    href: "/plumbing-remodels",
   },
   {
     img: disposalImg,
     title: "Garbage Disposal",
     description: "Jammed, leaking, or dead? We inspect, repair, and install — usually same day.",
+    href: "/garbage-disposal",
   },
   {
     img: emergencyImg,
     title: "Emergency Plumbing",
     description: "Nights, weekends, holidays — we pick up. After-hours fees always disclosed upfront.",
+    href: "/emergency-plumbing",
   },
 ];
 
