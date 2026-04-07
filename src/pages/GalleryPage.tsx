@@ -125,19 +125,25 @@ const textReviews: TextReview[] = [
   {
     name: "Beth B.",
     city: "South Florida",
-    text: "I called JMS and spoke personally to owner James about my emergency situation. He was out within a day and went above and beyond to help us in any way he could. He even educated us on some of our plumbing issues and we had everything resolved quickly.",
+    text: "I called JSM and spoke personal to owner James about my emergency situation. He was out within a day and went above and beyond to help us in any way he could. He even educated us on some of our plumbing issues and we had everything resolved within a day and a half. He was easy to communicate with and his pricing was more than fair and reasonable. He was clean and the quality of his work is very professional. Thank you JSM for helping us, and thank you James. We will definitely use you again and we highly recommend you to others.",
     rating: 5,
   },
   {
-    name: "Joe S.",
+    name: "Wayne S.",
     city: "South Florida",
-    text: "James came out within 30 minutes of us calling him. We had a major leak on the side of the house from the sprinkler. It was diagnosed within 2 minutes and fixed within the hour. He even went out of the way to fix a small issue we had with the sink. Will definitely be back!",
+    text: "JMS Plumbing repaired an underground main water pipe to my home that had split. The service was fast professional and at a reasonable price. If you need any plumbing work done this should be your guy.",
     rating: 5,
   },
   {
-    name: "Diane H.",
+    name: "Andrea D.",
     city: "South Florida",
-    text: "Excellent Service!! Reliable, honest. They fixed our plumbing problem perfectly. Was very knowledgeable and would only call JMS Plumbing Services for future issues!",
+    text: "Quickest service ever. I called him day of and my shower was fixed!!! Recommend for any plumbing needs!!",
+    rating: 5,
+  },
+  {
+    name: "Robert D.",
+    city: "South Florida",
+    text: "Did a great job installing a new septic tank at my parents house. Very efficient.",
     rating: 5,
   },
 ];
