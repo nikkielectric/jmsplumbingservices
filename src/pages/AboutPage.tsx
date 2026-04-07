@@ -84,7 +84,7 @@ const AboutPage = () => {
                   (954) 910-6883
                 </a>
                 <a
-                  href="/#contact"
+                  href="/contact"
                   className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-7 py-3.5 rounded font-bold text-sm hover:bg-cream/90 transition-all"
                 >
                   Get a Free Quote
@@ -472,7 +472,7 @@ const AboutPage = () => {
                 </div>
 
                 <a
-                  href="/#contact"
+                  href="/contact"
                   className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded font-bold text-base hover:bg-primary/90 transition-all w-full"
                 >
                   Send My Request

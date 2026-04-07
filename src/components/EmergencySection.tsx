@@ -42,7 +42,7 @@ const EmergencySection = () => {
                 (954) 910-6883
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded font-bold text-sm hover:bg-primary/90 transition-all"
               >
                 Get a Free Quote

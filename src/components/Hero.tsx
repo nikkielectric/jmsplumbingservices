@@ -73,7 +73,7 @@ const Hero = () => {
                 (954) 910-6883
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-7 py-3.5 rounded font-bold text-sm hover:bg-cream/90 transition-all"
               >
                 Get a Free Quote
