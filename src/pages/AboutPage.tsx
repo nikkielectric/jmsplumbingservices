@@ -358,7 +358,7 @@ const AboutPage = () => {
               infrastructure, and its climate — and we bring that local knowledge to every job.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-4">
               {["Broward County", "Miami-Dade County", "Palm Beach County"].map((county) => (
                 <div
                   key={county}
@@ -367,6 +367,16 @@ const AboutPage = () => {
                   <MapPin className="w-4 h-4 text-primary" />
                   <span className="text-foreground font-display font-bold text-sm">{county}</span>
                 </div>
+              ))}
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              {["Sunrise", "Fort Lauderdale", "Plantation", "Tamarac", "Lauderhill", "Coral Springs", "Weston"].map((city) => (
+                <span
+                  key={city}
+                  className="text-muted-foreground font-body text-sm border border-border rounded px-4 py-2"
+                >
+                  {city}
+                </span>
               ))}
             </div>
           </motion.div>
