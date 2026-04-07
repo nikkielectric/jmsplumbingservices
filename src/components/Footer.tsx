@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-bold text-cream text-base mb-5">Quick Links</h4>
+            <h4 className="font-display font-bold text-cream text-base mb-5">Company</h4>
             <ul className="space-y-2.5">
               {[
                 { label: "Home", href: "#" },
