@@ -35,7 +35,7 @@ const PromiseBanner = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase text-center mb-5"
+          className="text-cream/60 font-body font-semibold text-xs tracking-[0.2em] uppercase text-center mb-5"
         >
           Our Commitment to Every Customer
         </motion.p>
