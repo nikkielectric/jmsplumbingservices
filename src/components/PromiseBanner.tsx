@@ -102,29 +102,6 @@ const PromiseBanner = () => {
           ))}
         </div>
 
-        {/* CTA buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.85 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
-        >
-          <a
-            href="tel:9549106883"
-            className="inline-flex items-center justify-center gap-2 border-2 border-cream/30 text-cream px-8 py-4 rounded-xl font-bold text-sm hover:bg-cream/10 hover:border-cream/50 transition-all duration-300"
-          >
-            <Phone className="w-4 h-4" />
-            (954) 910-6883
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center gap-2 bg-primary text-cream px-8 py-4 rounded-xl font-bold text-sm hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/25"
-          >
-            Get a Free Quote
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </motion.div>
       </div>
     </section>
   );
