@@ -22,21 +22,17 @@ const ServiceArea = () => {
             </h2>
             <div className="w-20 h-1 bg-primary mb-6" />
             <p className="text-muted-foreground font-body leading-relaxed mb-6">
-              Based in Sunrise, FL 33322, we proudly serve homeowners and
-              businesses across Broward, Miami-Dade, and Palm Beach counties.
-              No project is too small or too large for our skilled team.
+              We're based in Sunrise, but our trucks roll across all three counties — Broward, Miami-Dade, and Palm Beach. Whether you're dealing with a burst pipe in Coral Springs or a backed-up drain in Boca Raton, we know these neighborhoods, these homes, and these pipes.
             </p>
             <p className="text-muted-foreground font-body leading-relaxed mb-8">
-              We proudly serve Sunrise, Plantation, Fort Lauderdale, Tamarac, Lauderhill,
-              Coral Springs, Weston, and surrounding communities. From routine maintenance
-              to complex installations, we're ready to help.
+              No long waits. No "we don't service that area." If you're in South Florida, we're your plumber.
             </p>
             <div className="flex items-start gap-3 bg-card rounded-xl p-5 border border-border shadow-sm">
               <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-foreground font-body">Sunrise, FL 33322</p>
-                <p className="text-sm text-muted-foreground font-body">
-                  Broward · Miami-Dade · Palm Beach Counties
+                <p className="font-semibold text-foreground font-body">Communities We Serve</p>
+                <p className="text-sm text-muted-foreground font-body whitespace-pre-line">
+                  {"Broward County\nSunrise · Fort Lauderdale · Plantation · Tamarac · Lauderhill · Coral Springs · Weston · Davie · Pembroke Pines · Hollywood · Miramar · Deerfield Beach · Pompano Beach · Lauderdale Lakes · North Lauderdale · Margate · Coconut Creek · Hallandale Beach · Oakland Park · Wilton Manors · Dania Beach · Southwest Ranches\n\n\nMiami-Dade County\nMiami · Hialeah · Miami Gardens · Homestead · North Miami · North Miami Beach · Aventura · Doral · Kendall · Cutler Bay · Palmetto Bay · Pinecrest · Coral Gables · Miami Lakes · Opa-locka · Miami Springs · Sweetwater · Florida City\n\n\nPalm Beach County\nWest Palm Beach · Boca Raton · Boynton Beach · Delray Beach · Lake Worth Beach · Wellington · Greenacres · Royal Palm Beach · Palm Beach Gardens · Jupiter · Riviera Beach · Lantana · Loxahatchee"}
                 </p>
               </div>
             </div>
