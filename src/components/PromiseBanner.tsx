@@ -13,18 +13,18 @@ const PromiseBanner = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream mb-6">
-            Our Plumbing Promise to You
+            We Show Up. We're Straight With You. We Do It Right.
           </h2>
           <div className="w-20 h-1 bg-cream/30 mx-auto mb-6" />
           <p className="text-cream/80 font-body leading-relaxed mb-4">
-            As a family-owned and operated business, we pride ourselves on servicing the Tri-County
-            area of South Florida. Our plumbers are committed to ensuring safe and operational plumbing
-            for the community. All our solutions meet the highest standards.
+            That's not a marketing line — it's how we operate on every single job. 
+            As a family-owned business, our reputation is built one home at a time. 
+            We don't have a corporate office covering for bad work. 
+            When we leave your property, our name goes with us.
           </p>
           <p className="text-cream/80 font-body leading-relaxed mb-10">
-            We don't believe in surprise fees — only plumbing that's convenient for you.
-            Upon your inquiry, you can expect honest quotes for your service. Trust JMS Plumbing
-            for all your plumbing needs.
+            You'll get a real price before we start. You'll know exactly what we're doing and why. 
+            And when the job is done, we clean up and follow up — because that's what we'd want if it were our home.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
@@ -38,7 +38,7 @@ const PromiseBanner = () => {
               href="#contact"
               className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-7 py-3.5 rounded-lg font-bold text-sm hover:bg-cream/90 transition-all"
             >
-              Get a Quote
+              Get a Free Quote
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
