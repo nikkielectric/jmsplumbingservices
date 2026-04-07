@@ -58,10 +58,10 @@ const EmergencyCTA = () => {
             <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase font-body">
               Available 24/7 — Nights, Weekends &amp; Holidays
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-secondary-foreground mt-4 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-4 mb-6 leading-tight">
               Got a Plumbing Emergency in South Florida?
             </h2>
-            <p className="text-steel font-body leading-relaxed mb-8 text-base lg:text-lg">
+            <p className="text-muted-foreground font-body leading-relaxed mb-8 text-base lg:text-lg">
               Don't wait. In South Florida's climate, a burst pipe or active leak can cause
               serious water damage and mold within 24–48 hours. We answer our phone around
               the clock — no voicemail, no runaround.
