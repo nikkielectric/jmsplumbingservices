@@ -113,8 +113,8 @@ export const servicePages: ServicePageData[] = [
       { title: "Emergency Plumbing", description: "Nights, weekends, holidays — we pick up. After-hours fees always disclosed upfront.", href: "/emergency-plumbing" },
       { title: "Garbage Disposal", description: "Jammed, leaking, or dead? We inspect, repair, and install — usually same day.", href: "/garbage-disposal" },
     ],
-    ctaHeading: "Need Drain Cleaning in South Florida? We're Ready.",
-    ctaSubtext: "Call now or request a free quote online. Upfront pricing, no hidden fees, and a plumber who actually shows up.",
+    ctaHeading: "Drain Backing Up in South Florida? Don't Wait.",
+    ctaSubtext: "In South Florida's climate, a slow drain today can become water damage and mold within 48 hours. Call JMS now or request a quote online — we'll give you a straight answer and a fair price before we touch anything.",
   },
   {
     slug: "gas-line-services",
