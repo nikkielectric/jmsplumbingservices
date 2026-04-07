@@ -164,7 +164,7 @@ export const servicePages: ServicePageData[] = [
       { question: "What does a gas line repair cost in Broward County?", answer: "Gas line repair costs vary significantly depending on where the leak or damage is located, how accessible the line is, and whether any section of pipe needs to be replaced versus repaired. A fitting replacement at an accessible connection point is a very different job than repairing a buried line. At JMS, we assess the situation fully and give you an upfront price before any work begins — no inflated emergency pricing, no surprise charges. Call us at (954) 910-6883 for a straight answer." },
     ],
     relatedServices: [
-      { title: "Water Heater Services", description: "Many South Florida water heaters run on gas. If your water heater is failing, leaking, or needs replacement, we handle the full job — gas line and all.", href: "/plumbing-repairs" },
+      { title: "Garbage Disposal", description: "Jammed, leaking, or dead? We inspect, repair, and install — usually same day.", href: "/garbage-disposal" },
       { title: "Plumbing Repairs", description: "From corroded fittings to failed valves, we repair what actually needs repairing — no unnecessary replacements, no upsell.", href: "/plumbing-repairs" },
       { title: "Emergency Plumbing", description: "Gas line emergencies don't follow business hours. We answer nights, weekends, and holidays — after-hours fees always disclosed upfront.", href: "/emergency-plumbing" },
     ],
