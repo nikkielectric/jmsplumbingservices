@@ -9,7 +9,6 @@ const services = [
   "Plumbing Remodels",
   "Emergency Plumbing",
   "Water Heater Service",
-  "Faucet Replacement",
 ];
 
 const Footer = () => {
