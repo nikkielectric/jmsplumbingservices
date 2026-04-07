@@ -12,6 +12,7 @@ import gasLineImg from "@/assets/gas-line-hero.png";
 import galleryReview2Img from "@/assets/gallery-review-2.png";
 import plumbingRepairsImg from "@/assets/plumbing-repairs-hero.png";
 import garbageDisposalImg from "@/assets/garbage-disposal-hero.png";
+import galleryReview3Img from "@/assets/gallery-review-3.png";
 import repipingImg from "@/assets/repiping-hero.png";
 import emergencyImg from "@/assets/emergency-plumbing-hero.png";
 import plumberFixingSinkImg from "@/assets/plumber-fixing-sink.png";
@@ -74,7 +75,7 @@ const photoReviews: PhotoReview[] = [
     city: "South Florida",
     text: "James was available right away when I called him in regards to my toilet being clogged. He came out on Tuesday night with his team and stayed 2 hours and 30 mins repairing it. The next day I had a separate issue with the valve and he sent his team back out to take care of it.",
     rating: 4,
-    image: garbageDisposalImg,
+    image: galleryReview3Img,
   },
   {
     name: "Diane H.",
