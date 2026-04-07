@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Phone, ArrowRight, Clock, DollarSign, Shield, PhoneCall, MessageSquare, Wrench, Sparkles, MapPin, CheckCircle } from "lucide-react";
+import { Phone, ArrowRight, Clock, DollarSign, Shield, PhoneCall, MessageSquare, Wrench, Sparkles, MapPin, CheckCircle, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -372,42 +372,121 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ SECTION 7 — FINAL CTA ═══ */}
-      <section className="bg-secondary py-20 lg:py-28 vintage-grain vintage-vignette relative">
+      <section className="bg-cream-light py-20 lg:py-28 vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream mb-4">
-              Ready to Work With a Plumber You Can{" "}
-              <span className="text-steel italic">Actually Trust?</span>
-            </h2>
-            <VintageOrnament className="max-w-xs mx-auto mb-6 [&_div]:bg-gradient-to-r [&_div]:from-transparent [&_div]:via-cream/30 [&_div]:to-transparent [&_svg]:text-cream/40" />
-            <p className="text-cream/70 font-body text-base lg:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Call us today or request a free quote online. We'll get back to you fast — with a
-              straight answer and a fair price.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Left - text & contact info */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
+                LET'S GET STARTED
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
+                Ready to Work With a Plumber You Can{" "}
+                <span className="text-primary italic">Actually Trust?</span>
+              </h2>
+              <VintageOrnament className="max-w-xs mb-6" />
+              <p className="text-muted-foreground font-body leading-relaxed mb-8">
+                Call us today or request a free quote online. We'll get back to you fast — with a
+                straight answer and a fair price.
+              </p>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-3">
-              <a
-                href="tel:9549106883"
-                className="inline-flex items-center justify-center gap-2 border-2 border-cream/40 text-cream px-7 py-3.5 rounded font-bold text-sm hover:bg-cream/10 transition-all"
-              >
-                <Phone className="w-4 h-4" />
-                Call (954) 910-6883
-              </a>
-              <a
-                href="/#contact"
-                className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-7 py-3.5 rounded font-bold text-sm hover:bg-cream/90 transition-all"
-              >
+              <div className="space-y-4">
+                {[
+                  { icon: Phone, label: "Call Us", value: "(954) 910-6883", href: "tel:9549106883" },
+                  { icon: Mail, label: "Email", value: "Jmsplumbingservicesllc@gmail.com", href: "mailto:Jmsplumbingservicesllc@gmail.com" },
+                  { icon: MapPin, label: "Location", value: "Sunrise, FL 33322" },
+                  { icon: Clock, label: "Emergency", value: "Available 24/7" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-4">
+                    <div className="w-11 h-11 rounded-full border-2 border-primary/20 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-widest text-muted-foreground font-body">{item.label}</p>
+                      {item.href ? (
+                        <a href={item.href} className="text-sm font-semibold text-foreground hover:text-primary transition-colors font-body">
+                          {item.value}
+                        </a>
+                      ) : (
+                        <p className="text-sm font-semibold text-foreground font-body">{item.value}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Right - Quote Form */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="rounded p-8 lg:p-10 bg-secondary vintage-border relative"
+            >
+              {/* Decorative corners */}
+              <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-cream/15 rounded-tl" />
+              <div className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-cream/15 rounded-tr" />
+              <div className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-cream/15 rounded-bl" />
+              <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-cream/15 rounded-br" />
+
+              <h3 className="text-2xl lg:text-3xl font-display font-black text-cream mb-2">
                 Request a Free Quote
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          </motion.div>
+              </h3>
+              <p className="text-cream/60 font-body text-sm mb-6">
+                We'll review your request and call you back — usually within minutes.
+              </p>
+
+              <form className="space-y-4">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Name *</label>
+                    <input
+                      type="text"
+                      className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Phone *</label>
+                    <input
+                      type="tel"
+                      className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
+                      placeholder="(954) 000-0000"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Message *</label>
+                  <textarea
+                    rows={4}
+                    className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors resize-none"
+                    placeholder="Describe your plumbing issue or project..."
+                  />
+                </div>
+
+                <a
+                  href="/#contact"
+                  className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded font-bold text-base hover:bg-primary/90 transition-all w-full"
+                >
+                  Send My Request
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </form>
+
+              <div className="mt-6 pt-4 border-t border-cream/10">
+                <p className="text-cream/50 text-xs font-body text-center">
+                  Serving Sunrise, Plantation, Fort Lauderdale, Broward, Miami-Dade & Palm Beach Counties
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
