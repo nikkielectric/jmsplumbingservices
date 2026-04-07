@@ -91,7 +91,7 @@ const EmergencyCTA = () => {
           </div>
 
           {/* RIGHT SIDE — FORM */}
-          <div className="bg-card rounded-2xl p-6 lg:p-8 shadow-xl">
+          <div className="rounded-2xl p-6 lg:p-8 shadow-xl bg-primary">
             <h3 className="text-xl font-display font-bold text-foreground mb-6">
               Request Emergency Service
             </h3>
