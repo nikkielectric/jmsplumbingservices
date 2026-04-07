@@ -84,7 +84,7 @@ const Contact = () => {
               Request a Free Quote
             </h3>
             <p className="text-cream/60 font-body text-sm mb-6">
-              Fill out the form below and we'll get back to you as soon as possible.
+              We'll review your request and call you back — usually within minutes.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
