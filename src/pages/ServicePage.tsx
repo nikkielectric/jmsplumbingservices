@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import drainCleaningHero from "@/assets/drain-cleaning-hero.png";
 import gasLineHero from "@/assets/gas-line-hero.png";
+import garbageDisposalHero from "@/assets/garbage-disposal-hero.png";
 import { servicePages } from "@/data/servicePages";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -129,7 +130,7 @@ const ServicePage = () => {
         serviceCategory={data.serviceCategory}
         h1={data.heroH1}
         subtext={data.heroSubtext}
-        heroImage={data.slug === "drain-cleaning" ? drainCleaningHero : data.slug === "gas-line-services" ? gasLineHero : undefined}
+        heroImage={data.slug === "drain-cleaning" ? drainCleaningHero : data.slug === "gas-line-services" ? gasLineHero : data.slug === "garbage-disposal" ? garbageDisposalHero : undefined}
       />
 
       {/* Section 2: Main Content + Sticky Sidebar */}
