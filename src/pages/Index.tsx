@@ -20,8 +20,8 @@ const Index = () => {
       <EmergencyCTA />
       
       <ServiceArea />
-      <Contact />
       <PromiseBanner />
+      <Contact />
       <Footer />
     </div>
   );
