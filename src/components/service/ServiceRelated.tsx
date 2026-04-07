@@ -3,13 +3,29 @@ import { ArrowRight } from "lucide-react";
 import VintageOrnament from "@/components/VintageOrnament";
 import type { RelatedService } from "@/data/servicePages";
 
+import drainImg from "@/assets/service-drain.jpg";
+import gasImg from "@/assets/service-gas.jpg";
+import repairImg from "@/assets/service-repair.jpg";
+import remodelImg from "@/assets/service-remodel.jpg";
+import disposalImg from "@/assets/service-disposal.jpg";
+import emergencyImg from "@/assets/service-emergency.jpg";
+
+const imageMap: Record<string, string> = {
+  "/drain-cleaning": drainImg,
+  "/gas-line-services": gasImg,
+  "/plumbing-repairs": repairImg,
+  "/plumbing-remodels": remodelImg,
+  "/garbage-disposal": disposalImg,
+  "/emergency-plumbing": emergencyImg,
+};
+
 interface ServiceRelatedProps {
   services: RelatedService[];
 }
 
 const ServiceRelated = ({ services }: ServiceRelatedProps) => {
   return (
-    <section className="py-20 lg:py-28 bg-background vintage-grain relative">
+    <section className="py-20 lg:py-28 bg-cream-light vintage-grain relative">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,17 +49,27 @@ const ServiceRelated = ({ services }: ServiceRelatedProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group rounded p-6 bg-card border border-border hover:border-primary/40 transition-all hover:shadow-lg"
+              className="group relative h-96 rounded overflow-hidden cursor-pointer vintage-border"
             >
-              <h3 className="text-lg font-display font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground font-body text-sm leading-relaxed mb-4">
-                {service.description}
-              </p>
-              <span className="inline-flex items-center gap-1 text-primary font-body text-sm font-semibold">
-                Learn More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
+              <img
+                src={imageMap[service.href]}
+                alt={service.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 vintage-sepia"
+                loading="lazy"
+                width={800}
+                height={1024}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-[calc(100%-5rem)] group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                <h3 className="text-2xl font-display font-bold text-white mb-2">{service.title}</h3>
+                <div className="w-12 h-0.5 bg-white/50 mb-3" />
+                <p className="text-white/80 text-sm font-body leading-relaxed mb-3">
+                  {service.description}
+                </p>
+                <span className="inline-flex items-center gap-1 text-white font-body text-sm font-semibold">
+                  Learn More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
             </motion.a>
           ))}
         </div>
