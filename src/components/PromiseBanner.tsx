@@ -21,11 +21,11 @@ const promises = [
 
 const PromiseBanner = () => {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden bg-primary">
+    <section className="relative bg-secondary py-24 lg:py-32 overflow-hidden">
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-cream/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cream/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -35,7 +35,7 @@ const PromiseBanner = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-cream/60 font-body font-semibold text-xs tracking-[0.2em] uppercase text-center mb-5"
+          className="text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase text-center mb-5"
         >
           Our Commitment to Every Customer
         </motion.p>
@@ -56,7 +56,7 @@ const PromiseBanner = () => {
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="w-16 h-1 bg-cream/30 mx-auto mb-10 rounded-full origin-center"
+          className="w-16 h-1 bg-primary mx-auto mb-10 rounded-full origin-center"
         />
 
         {/* Body copy */}
@@ -90,8 +90,8 @@ const PromiseBanner = () => {
               transition={{ duration: 0.5, delay: 0.4 + i * 0.15 }}
               className="group bg-cream/[0.04] backdrop-blur-sm border border-cream/10 rounded-2xl p-8 text-center hover:bg-cream/[0.08] hover:border-cream/20 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-cream/10 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-cream/20 transition-colors duration-300">
-                <promise.icon className="w-7 h-7 text-cream" />
+              <div className="w-14 h-14 bg-primary/15 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/25 transition-colors duration-300">
+                <promise.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="font-display font-bold text-cream text-lg mb-3">
                 {promise.title}
@@ -120,7 +120,7 @@ const PromiseBanner = () => {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 bg-cream text-primary px-8 py-4 rounded-xl font-bold text-sm hover:bg-cream/90 transition-all duration-300 shadow-lg shadow-black/10"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-cream px-8 py-4 rounded-xl font-bold text-sm hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/25"
           >
             Get a Free Quote
             <ArrowRight className="w-4 h-4" />
