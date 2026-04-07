@@ -18,7 +18,7 @@ const steps = [
   {
     num: "03",
     icon: Clock,
-    title: "On-Time Arrival, Every Time",
+    title: "On-Time Arrival",
     desc: "We arrive within your scheduled window. No sitting around wondering if someone's coming.",
   },
   {
