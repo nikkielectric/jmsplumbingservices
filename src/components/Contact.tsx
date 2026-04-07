@@ -133,12 +133,13 @@ const Contact = () => {
                     className="w-full bg-cream/10 border border-cream/20 rounded-lg px-4 py-3 text-cream text-sm font-body focus:outline-none focus:border-primary transition-colors appearance-none"
                   >
                     <option value="" className="bg-secondary text-cream">Select a service</option>
-                    <option value="general" className="bg-secondary text-cream">General Plumbing</option>
-                    <option value="emergency" className="bg-secondary text-cream">Emergency Repair</option>
-                    <option value="water-heater" className="bg-secondary text-cream">Water Heater</option>
                     <option value="drain" className="bg-secondary text-cream">Drain Cleaning</option>
-                    <option value="leak" className="bg-secondary text-cream">Leak Detection</option>
+                    <option value="repairs" className="bg-secondary text-cream">Plumbing Repairs & Replacements</option>
+                    <option value="gas" className="bg-secondary text-cream">Gas Line Services</option>
+                    <option value="water-heater" className="bg-secondary text-cream">Water Heater</option>
+                    <option value="garbage-disposal" className="bg-secondary text-cream">Garbage Disposal</option>
                     <option value="remodel" className="bg-secondary text-cream">Bathroom/Kitchen Remodel</option>
+                    <option value="emergency" className="bg-secondary text-cream">Emergency Repair</option>
                     <option value="other" className="bg-secondary text-cream">Other</option>
                   </select>
                 </div>
