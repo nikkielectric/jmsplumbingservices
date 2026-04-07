@@ -17,8 +17,8 @@ const ServiceArea = () => {
               Where We Serve
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
-              Serving South Florida's{" "}
-              <span className="text-primary italic">Tri-County Area</span>
+              We Come to You{" "}
+              <span className="text-primary italic">Anywhere in South Florida's Tri-County Area</span>
             </h2>
             <div className="w-20 h-1 bg-primary mb-6" />
             <p className="text-muted-foreground font-body leading-relaxed mb-6">
