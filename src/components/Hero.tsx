@@ -6,17 +6,17 @@ const valueProps = [
   {
     icon: Shield,
     title: "Licensed & Insured",
-    desc: "Fully licensed professionals ensuring safe, code-compliant plumbing for your home or business.",
+    desc: "Florida-licensed and fully insured. Every job is done right, to code — protecting your home and your wallet.",
   },
   {
     icon: Clock,
     title: "24/7 Emergency Service",
-    desc: "After-hours, weekends & holidays — we're here when disaster strikes. Fast response times.",
+    desc: "Burst pipe at midnight? No water on a Sunday? We pick up the phone when other plumbers don't. We're here when it counts.",
   },
   {
     icon: DollarSign,
     title: "Upfront & Fair Pricing",
-    desc: "Honest quotes with no hidden fees. We believe in transparent, affordable plumbing solutions.",
+    desc: "You'll know the price before we start — every time. No hidden fees, no shock invoices. Just honest work at a fair rate.",
   },
 ];
 
