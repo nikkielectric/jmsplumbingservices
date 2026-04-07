@@ -79,7 +79,7 @@ const HowItWorks = () => {
                 >
                   {/* Number circle */}
                   <div className="relative mb-4">
-                    <div className="w-[104px] h-[104px] rounded-full border-2 border-border bg-card flex items-center justify-center shadow-md">
+                    <div className="w-[104px] h-[104px] rounded-sm border-2 border-border bg-card flex items-center justify-center shadow-md">
                       <Icon className="w-8 h-8 text-primary" />
                     </div>
                     <span className="absolute -top-2 -right-2 w-9 h-9 rounded-full bg-primary text-primary-foreground font-display font-black text-sm flex items-center justify-center shadow-lg">
