@@ -1,5 +1,7 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import jmsLogoFooter from "@/assets/jms-logo-footer.png";
+import yelpIcon from "@/assets/yelp-icon.webp";
+import angiIcon from "@/assets/angi-icon.webp";
 
 const services = [
   { name: "Drain Cleaning", href: "/drain-cleaning" },
