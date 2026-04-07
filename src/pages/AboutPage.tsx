@@ -28,7 +28,7 @@ const whyCards = [
   },
   {
     icon: DollarSign,
-    title: "Upfront Pricing, Always",
+    title: "Upfront Pricing",
     desc: "You'll know the exact price before we start. No hidden fees, no surprise charges, no pressure to approve work on the spot. Clear pricing from the start.",
   },
   {
