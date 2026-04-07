@@ -15,8 +15,8 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
-      {/* ── Tier 1: Top accent strip ── */}
-      <div className="hidden md:block bg-forest-deep border-b border-primary/15">
+      {/* ── Tier 1: Top accent strip — darkest ── */}
+      <div className="hidden md:block bg-[hsl(200,30%,12%)] border-b border-cream/5">
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-center py-1.5 gap-2 text-xs font-body">
           <span className="text-cream font-semibold tracking-wide">
             Family Owned &amp; Operated
