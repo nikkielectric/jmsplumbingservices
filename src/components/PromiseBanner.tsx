@@ -79,7 +79,7 @@ const PromiseBanner = () => {
         </motion.div>
 
         {/* Promise cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-14">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {promises.map((promise, i) => (
             <motion.div
               key={promise.title}
