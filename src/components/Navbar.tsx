@@ -1,21 +1,44 @@
-import { useState } from "react";
-import { Phone, Menu, X, MapPin, Clock, Star } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { Phone, Menu, X, MapPin, Clock, ChevronDown, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import jmsLogo from "@/assets/jms-logo.png";
+
+const serviceDropdownItems = [
+  { label: "Drain Cleaning", href: "/drain-cleaning" },
+  { label: "Gas Line Services", href: "/gas-line-services" },
+  { label: "Plumbing Repairs", href: "/plumbing-repairs" },
+  { label: "Plumbing Remodels", href: "/plumbing-remodels" },
+  { label: "Garbage Disposal", href: "/garbage-disposal" },
+  { label: "Emergency Plumbing", href: "/emergency-plumbing" },
+];
 
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/#services" },
-  { label: "Drain Cleaning", href: "/drain-cleaning" },
-  { label: "Gas Lines", href: "/gas-line-services" },
-  { label: "Repairs", href: "/plumbing-repairs" },
-  { label: "Remodels", href: "/plumbing-remodels" },
   { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setServicesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => setServicesOpen(false), 150);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
@@ -69,9 +92,8 @@ const Navbar = () => {
             </div>
           </a>
 
-          {/* Desktop right side: phone + hours + CTA */}
+          {/* Desktop right side: phone + CTA */}
           <div className="hidden md:flex items-center gap-5">
-            {/* Call Now */}
             <a
               href="tel:9549106883"
               className="flex items-center gap-3 group"
@@ -89,8 +111,6 @@ const Navbar = () => {
               </div>
             </a>
 
-
-            {/* CTA Button */}
             <a
               href="#contact"
               className="ml-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded font-display font-bold text-sm tracking-wide uppercase transition-colors shadow-lg shadow-primary/20"
@@ -121,6 +141,62 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+
+          {/* Services dropdown */}
+          <div
+            ref={dropdownRef}
+            className="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button
+              className="flex items-center gap-1 text-xs font-body font-semibold text-cream/70 hover:text-cream tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+              onClick={() => setServicesOpen(!servicesOpen)}
+            >
+              Services
+              <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            <AnimatePresence>
+              {servicesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-full left-0 mt-[10px] w-72 rounded border border-primary/20 bg-[hsl(200,30%,14%)] shadow-2xl shadow-black/40 overflow-hidden"
+                >
+                  {/* Decorative top border */}
+                  <div className="h-0.5 bg-gradient-to-r from-primary/0 via-primary to-primary/0" />
+
+                  <div className="py-2">
+                    {serviceDropdownItems.map((item, i) => (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setServicesOpen(false)}
+                        className="group flex items-center justify-between px-5 py-3 text-sm font-body text-cream/80 hover:text-cream hover:bg-cream/5 transition-all"
+                      >
+                        <span className="font-semibold tracking-wide">{item.label}</span>
+                        <ArrowRight className="w-4 h-4 text-cream/30 group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                      </a>
+                    ))}
+                  </div>
+
+                  {/* Bottom divider + view all */}
+                  <div className="border-t border-cream/10 px-5 py-3">
+                    <a
+                      href="/#services"
+                      onClick={() => setServicesOpen(false)}
+                      className="text-xs font-body font-semibold text-primary hover:text-primary/80 tracking-wider uppercase transition-colors"
+                    >
+                      View All Services →
+                    </a>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
 
@@ -144,6 +220,40 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+
+              {/* Mobile services accordion */}
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="flex items-center justify-between text-sm font-body font-semibold text-cream/80 hover:text-cream tracking-[0.15em] uppercase transition-colors"
+              >
+                Services
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+              </button>
+              <AnimatePresence>
+                {mobileServicesOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="flex flex-col gap-2 pl-4 border-l-2 border-primary/30">
+                      {serviceDropdownItems.map((item) => (
+                        <a
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => { setOpen(false); setMobileServicesOpen(false); }}
+                          className="flex items-center justify-between text-sm font-body text-cream/60 hover:text-cream transition-colors py-1"
+                        >
+                          <span>{item.label}</span>
+                          <ArrowRight className="w-3 h-3 text-cream/30" />
+                        </a>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
               <div className="h-px bg-cream/10 my-1" />
               <a
                 href="tel:9549106883"
