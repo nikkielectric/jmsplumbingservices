@@ -197,6 +197,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </div>
+      <ThankYouModal open={showThankYou} onOpenChange={setShowThankYou} />
     </section>
   );
 };

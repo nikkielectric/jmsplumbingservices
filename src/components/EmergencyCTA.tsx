@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import VintageOrnament from "./VintageOrnament";
 import { submitToFormspree } from "@/lib/formspree";
-
+import ThankYouModal from "./ThankYouModal";
 const trustBullets = [
   "We answer 24/7 — a real person, every time",
   "Upfront pricing before any work begins",
@@ -30,6 +30,7 @@ const EmergencyCTA = () => {
     description: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,11 +52,8 @@ const EmergencyCTA = () => {
         Issue: formData.issue,
         Description: formData.description,
       });
-      toast({
-        title: "Request Sent!",
-        description: "We'll call you back as soon as possible.",
-      });
       setFormData({ name: "", phone: "", cityZip: "", issue: "", description: "" });
+      setShowThankYou(true);
     } catch (err) {
       console.error('Form submission error:', err);
       toast({
