@@ -160,7 +160,11 @@ const ContactPage = () => {
         </div>
 
         {/* Bottom decorative border */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-30" />
+        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-60" />
+
+        {/* Side decorative vertical lines */}
+        <div className="hidden lg:block absolute top-1/4 left-8 w-px h-1/2 bg-gradient-to-b from-transparent via-primary/30 to-transparent" />
+        <div className="hidden lg:block absolute top-1/4 right-8 w-px h-1/2 bg-gradient-to-b from-transparent via-primary/30 to-transparent" />
       </section>
 
       {/* ═══ SECTION 2 — MAIN CONTACT SECTION ═══ */}
