@@ -9,6 +9,7 @@ import VintageOrnament from "@/components/VintageOrnament";
 import drainCleaningImg from "@/assets/drain-cleaning-hero.png";
 import galleryReview1Img from "@/assets/gallery-review-1.png";
 import gasLineImg from "@/assets/gas-line-hero.png";
+import galleryReview2Img from "@/assets/gallery-review-2.png";
 import plumbingRepairsImg from "@/assets/plumbing-repairs-hero.png";
 import garbageDisposalImg from "@/assets/garbage-disposal-hero.png";
 import repipingImg from "@/assets/repiping-hero.png";
@@ -66,7 +67,7 @@ const photoReviews: PhotoReview[] = [
     city: "South Florida",
     text: "These guys are the BEST!!! It's rare to find a trustworthy, high quality plumber with fair prices. JMS has earned my trust and they are the first plumber I call for any plumbing issue in my house. James from JMS has been to my house a few times and every single time he has been professional, on time, and thorough.",
     rating: 5,
-    image: plumbingRepairsImg,
+    image: galleryReview2Img,
   },
   {
     name: "Melissa G.",
