@@ -87,9 +87,32 @@ const ServicePage = () => {
       };
       script.textContent = JSON.stringify(jsonLd);
 
+      // FAQPage JSON-LD
+      const faqLdId = "faq-jsonld";
+      let faqScript = document.getElementById(faqLdId) as HTMLScriptElement | null;
+      if (!faqScript) {
+        faqScript = document.createElement("script");
+        faqScript.id = faqLdId;
+        faqScript.type = "application/ld+json";
+        document.head.appendChild(faqScript);
+      }
+      const faqLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": data.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      };
+      faqScript.textContent = JSON.stringify(faqLd);
+
       return () => {
-        const el = document.getElementById(jsonLdId);
-        if (el) el.remove();
+        document.getElementById(jsonLdId)?.remove();
+        document.getElementById(faqLdId)?.remove();
       };
     }
   }, [data]);
