@@ -149,7 +149,7 @@ const EmergencyCTA = () => {
               </div>
               <div>
                 <label className="block text-sm font-body font-medium text-foreground mb-1.5">
-                  Brief description <span className="text-destructive-foreground">(optional)</span>
+                  Brief description <span className="text-foreground">(optional)</span>
                 </label>
                 <textarea
                   value={formData.description}
