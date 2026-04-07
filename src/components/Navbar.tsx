@@ -257,6 +257,14 @@ const Navbar = () => {
               </AnimatePresence>
 
               <a
+                href="/gallery"
+                onClick={() => setOpen(false)}
+                className="text-sm font-body font-semibold text-cream/80 hover:text-cream tracking-[0.15em] uppercase transition-colors"
+              >
+                Gallery
+              </a>
+
+              <a
                 href="/contact"
                 onClick={() => setOpen(false)}
                 className="text-sm font-body font-semibold text-cream/80 hover:text-cream tracking-[0.15em] uppercase transition-colors"
