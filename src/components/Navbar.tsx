@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import jmsLogo from "@/assets/jms-logo.png";
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/#services" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
