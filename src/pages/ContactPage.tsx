@@ -517,6 +517,7 @@ const ContactPage = () => {
       </section>
 
       <Footer />
+      <ThankYouModal open={showThankYou} onOpenChange={setShowThankYou} />
     </div>
   );
 };
