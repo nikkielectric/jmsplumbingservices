@@ -102,8 +102,8 @@ const Testimonials = () => {
             transition={{ duration: 0.7 }}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream leading-tight">
-              Our Satisfaction{" "}
-              <span className="text-steel italic">Guarantee</span>
+              We Don't Just Say It. Our Customers{" "}
+              <span className="text-steel italic">Do.</span>
             </h2>
             <div className="w-20 h-1 bg-steel/50 mt-6" />
           </motion.div>
