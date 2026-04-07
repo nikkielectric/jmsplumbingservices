@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
 import heroImg from "@/assets/plumbing-team.png";
 import teamVanImg from "@/assets/plumbing-team-van2.png";
+import plumberSinkImg from "@/assets/plumber-fixing-sink.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -278,8 +279,8 @@ const AboutPage = () => {
             >
               <div className="rounded overflow-hidden shadow-2xl vintage-border vintage-sepia">
                 <img
-                  src={heroImg}
-                  alt="JMS Plumbing owner standing by the company van"
+                  src={plumberSinkImg}
+                  alt="JMS Plumbing professional fixing a sink"
                   className="w-full h-[350px] lg:h-[450px] object-cover"
                   loading="lazy"
                   width={1920}
