@@ -20,7 +20,7 @@ const Footer = () => {
           <div>
             <img src={jmsLogoFooter} alt="JMS Plumbing Logo" className="w-24 h-24 mb-3" />
             <div className="mb-4">
-              <span className="font-display text-xl font-bold text-cream">JMS Plumbing</span>
+              <span className="font-display text-xl font-bold text-cream">JMS Plumbing Services LLC</span>
               
             </div>
             <p className="text-cream/50 text-sm font-body leading-relaxed mb-6">
