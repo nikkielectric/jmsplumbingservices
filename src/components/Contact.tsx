@@ -34,17 +34,16 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
-              Don't Delay
+              GET IN TOUCH
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
-              Get Your Quote{" "}
-              <span className="text-primary italic">Today!</span>
+              Ready For A Plumber Who{" "}
+              <span className="text-primary italic">Actually Shows Up?</span>
             </h2>
             <div className="w-20 h-1 bg-primary mb-6" />
             <p className="text-muted-foreground font-body leading-relaxed mb-8">
-              For a trusted South Florida plumber, simply give us a call or send us a message.
-              Our friendly team is always here to offer the help you need. Providing upfront
-              quotes with no hidden fees!
+              Call us or fill out the form and we'll get back to you fast — with a real answer 
+              and a fair quote. No runaround, no voicemail maze, no surprise fees.
             </p>
 
             <div className="space-y-4">
