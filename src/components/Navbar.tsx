@@ -111,7 +111,7 @@ const Navbar = () => {
             </a>
 
             <a
-              href="#contact"
+              href="/contact"
               className="ml-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded font-display font-bold text-sm tracking-wide uppercase transition-colors shadow-lg shadow-primary/20"
             >
               Get a Quote
@@ -198,7 +198,7 @@ const Navbar = () => {
           </div>
 
           <a
-            href="/#contact"
+            href="/contact"
             className="text-xs font-body font-semibold text-cream/70 hover:text-cream tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
           >
             Contact
@@ -261,7 +261,7 @@ const Navbar = () => {
               </AnimatePresence>
 
               <a
-                href="/#contact"
+                href="/contact"
                 onClick={() => setOpen(false)}
                 className="text-sm font-body font-semibold text-cream/80 hover:text-cream tracking-[0.15em] uppercase transition-colors"
               >
@@ -277,7 +277,7 @@ const Navbar = () => {
                 (954) 910-6883
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded font-bold text-sm uppercase tracking-wide"
               >
                 Get a Quote

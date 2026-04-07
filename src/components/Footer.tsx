@@ -61,7 +61,7 @@ const Footer = () => {
                 { label: "Home", href: "/" },
                 { label: "About", href: "/about" },
                 { label: "Services", href: "/#services" },
-                { label: "Contact", href: "/#contact" },
+                { label: "Contact", href: "/contact" },
               ].map((l) => (
                 <li key={l.label}>
                   <a href={l.href} className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
