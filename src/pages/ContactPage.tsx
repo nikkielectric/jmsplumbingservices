@@ -48,29 +48,48 @@ const ContactPage = () => {
       <Navbar />
 
       {/* ═══ SECTION 1 — PAGE HERO ═══ */}
-      <section className="relative pt-36 lg:pt-44 bg-secondary vintage-grain vintage-vignette pb-16 lg:pb-24">
+      <section className="relative pt-36 lg:pt-44 bg-secondary vintage-grain vintage-vignette pb-10 lg:pb-14">
+        {/* Decorative top accent line */}
+        <div className="absolute top-[140px] lg:top-[176px] left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent z-10" />
+
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="max-w-3xl py-12 lg:py-16"
+            className="text-center max-w-3xl mx-auto py-10 lg:py-14"
           >
-            <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
+            {/* Stamp-style badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotate: -8 }}
+              animate={{ opacity: 1, scale: 1, rotate: -6 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="inline-flex items-center justify-center w-20 h-20 rounded-full border-[3px] double border-primary/40 mb-6"
+            >
+              <div className="text-center">
+                <Phone className="w-6 h-6 text-primary mx-auto mb-0.5" />
+                <span className="text-cream/60 text-[8px] font-body uppercase tracking-widest">Talk to Us</span>
+              </div>
+            </motion.div>
+
+            <span className="block text-primary font-semibold text-sm tracking-widest uppercase font-body mb-3">
               GET IN TOUCH
             </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream leading-[1.1] mt-3 mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream leading-[1.1] mb-5">
               Let's Talk. We'll Give You a Straight Answer{" "}
               <span className="text-steel italic">and a Fair Price.</span>
             </h1>
-            <VintageOrnament className="max-w-xs mb-6 [&_div]:bg-gradient-to-r [&_div]:from-transparent [&_div]:via-cream/30 [&_div]:to-transparent [&_svg]:text-cream/40" />
-            <p className="text-cream/70 font-body text-base lg:text-lg leading-relaxed max-w-2xl">
+            <VintageOrnament className="max-w-xs mx-auto mb-5 [&_div]:bg-gradient-to-r [&_div]:from-transparent [&_div]:via-cream/30 [&_div]:to-transparent [&_svg]:text-cream/40" />
+            <p className="text-cream/70 font-body text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
               No voicemail maze. No runaround. Call us directly or fill out the form below and a real
               person will get back to you fast. We serve homeowners and businesses throughout Broward,
               Miami-Dade, and Palm Beach Counties.
             </p>
           </motion.div>
         </div>
+
+        {/* Bottom decorative border */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-30" />
       </section>
 
       {/* ═══ SECTION 2 — MAIN CONTACT SECTION ═══ */}
