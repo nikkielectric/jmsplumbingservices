@@ -61,7 +61,7 @@ const ServiceArea = () => {
           <div>
             <p className="font-semibold text-foreground font-body">Communities We Serve</p>
             <p className="text-sm text-muted-foreground font-body whitespace-pre-line">
-              {"Broward County\nSunrise · Fort Lauderdale · Plantation · Tamarac · Lauderhill · Coral Springs · Weston · Davie · Pembroke Pines · Hollywood · Miramar · Deerfield Beach · Pompano Beach · Lauderdale Lakes · North Lauderdale · Margate · Coconut Creek · Hallandale Beach · Oakland Park · Wilton Manors · Dania Beach · Southwest Ranches\n\n\nMiami-Dade County\nMiami · Hialeah · Miami Gardens · Homestead · North Miami · North Miami Beach · Aventura · Doral · Kendall · Cutler Bay · Palmetto Bay · Pinecrest · Coral Gables · Miami Lakes · Opa-locka · Miami Springs · Sweetwater · Florida City\n\n\nPalm Beach County\nWest Palm Beach · Boca Raton · Boynton Beach · Delray Beach · Lake Worth Beach · Wellington · Greenacres · Royal Palm Beach · Palm Beach Gardens · Jupiter · Riviera Beach · Lantana · Loxahatchee"}
+              {"Broward · Miami-Dade · Palm Beach Counties · Sunrise · Plantation · Fort Lauderdale · Tamarac · Lauderhill · Coral Springs · Weston"}
             </p>
           </div>
         </motion.div>
