@@ -120,7 +120,7 @@ const PromiseBanner = () => {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 bg-primary text-cream px-8 py-4 rounded-xl font-bold text-sm hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/25"
+            className="inline-flex items-center justify-center gap-2 bg-cream text-primary px-8 py-4 rounded-xl font-bold text-sm hover:bg-cream/90 transition-all duration-300 shadow-lg shadow-black/10"
           >
             Get a Free Quote
             <ArrowRight className="w-4 h-4" />
