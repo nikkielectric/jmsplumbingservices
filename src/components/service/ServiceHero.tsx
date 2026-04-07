@@ -10,7 +10,7 @@ interface ServiceHeroProps {
 
 const ServiceHero = ({ serviceCategory, h1, subtext }: ServiceHeroProps) => {
   return (
-    <section className="relative pt-36 lg:pt-44 pb-16 lg:pb-24 bg-secondary vintage-grain vintage-vignette">
+    <section className="relative pt-44 lg:pt-52 pb-16 lg:pb-24 bg-secondary vintage-grain vintage-vignette">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div
