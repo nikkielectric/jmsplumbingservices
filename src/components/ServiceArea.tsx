@@ -49,7 +49,7 @@ const ServiceArea = () => {
               className="w-full h-80 lg:h-96"
             />
             {/* Logo pin overlay on Sunrise */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+            <div className="absolute top-[40%] left-[53%] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
               <motion.div
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
