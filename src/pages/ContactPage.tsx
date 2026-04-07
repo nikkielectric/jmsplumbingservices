@@ -121,7 +121,7 @@ const ContactPage = () => {
       {/* ═══ SECTION 1 — PAGE HERO ═══ */}
       <section className="relative pt-36 lg:pt-44 bg-secondary vintage-grain vintage-vignette pb-10 lg:pb-14">
         {/* Decorative top accent line */}
-        <div className="absolute top-[140px] lg:top-[176px] left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent z-10" />
+        <div className="absolute top-[140px] lg:top-[176px] left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent z-10" />
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
