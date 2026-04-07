@@ -260,6 +260,14 @@ const Navbar = () => {
                 )}
               </AnimatePresence>
 
+              <a
+                href="/#contact"
+                onClick={() => setOpen(false)}
+                className="text-sm font-body font-semibold text-cream/80 hover:text-cream tracking-[0.15em] uppercase transition-colors"
+              >
+                Contact
+              </a>
+
               <div className="h-px bg-cream/10 my-1" />
               <a
                 href="tel:9549106883"
