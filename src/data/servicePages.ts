@@ -155,7 +155,11 @@ export const servicePages: ServicePageData[] = [
     ],
     faqHeading: "What South Florida Homeowners Ask Us About Gas Line Services",
     faqs: [
-...
+      { question: "How much does gas line installation cost in Broward County?", answer: "Costs depend on the length of the run, pipe material, and appliance being connected. JMS provides a clear upfront quote before any work begins." },
+      { question: "How do I know if I have a gas leak in my home?", answer: "The most common sign is a sulfur or rotten egg smell. You may also hear hissing, notice dead plants near gas lines, or see unexplained spikes in your gas bill." },
+      { question: "Is gas line work required to be permitted in South Florida?", answer: "Yes. Gas line installations and major repairs require permits and inspections in Broward, Miami-Dade, and Palm Beach Counties. JMS handles the permitting process for you." },
+      { question: "Can you install a gas line for a pool heater in Sunrise, FL?", answer: "Absolutely. We regularly install gas lines for pool heaters, outdoor kitchens, generators, and other appliances throughout Sunrise and the Tri-County area." },
+      { question: "How long does a gas line installation take?", answer: "Most residential gas line installations are completed in a single day. We'll give you a clear timeline during your estimate." },
       { question: "Do you offer gas leak detection in Broward County?", answer: "Yes. We use professional-grade detection equipment to locate gas leaks accurately and provide immediate repair solutions." },
     ],
     relatedServices: [
