@@ -1,10 +1,10 @@
+import { createClient } from 'npm:@supabase/supabase-js@2'
+import { z } from 'npm:zod@3.25.76'
+
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version',
 }
-import { z } from 'npm:zod@3.25.76'
-
-const RECIPIENT_EMAIL = 'Jmsplumbingservicesllc@gmail.com'
 
 const FormSchema = z.object({
   formSource: z.string().min(1).max(100),
@@ -35,75 +35,28 @@ Deno.serve(async (req) => {
 
     const data = parsed.data
 
-    // Build a clean HTML email with all submitted fields
-    const fields: [string, string][] = [
-      ['Form Source', data.formSource],
-      ['Name', data.name],
-      ['Phone', data.phone],
-      ['Email', data.email],
-      ['City / Zip', data.cityZip],
-      ['Service Needed', data.service],
-      ['Issue', data.issue],
-      ['How They Heard About Us', data.hearAbout],
-      ['Message / Description', data.message],
-    ].filter(([_, val]) => val && val.trim() !== '') as [string, string][]
+    // Store in database using service role
+    const supabase = createClient(
+      Deno.env.get('SUPABASE_URL')!,
+      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
+    )
 
-    const rowsHtml = fields
-      .map(([label, value]) => `
-        <tr>
-          <td style="padding:10px 14px;font-weight:bold;color:#1a3a2a;border-bottom:1px solid #e5e5e5;white-space:nowrap;vertical-align:top;">${escapeHtml(label)}</td>
-          <td style="padding:10px 14px;color:#333;border-bottom:1px solid #e5e5e5;vertical-align:top;">${escapeHtml(value)}</td>
-        </tr>`)
-      .join('')
-
-    const html = `
-      <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
-        <div style="background:#1a3a2a;padding:20px 24px;border-radius:8px 8px 0 0;">
-          <h1 style="margin:0;color:#c8a96e;font-size:20px;">New Lead from JMS Plumbing Website</h1>
-          <p style="margin:4px 0 0;color:#a0b8a8;font-size:13px;">${escapeHtml(data.formSource)}</p>
-        </div>
-        <div style="border:1px solid #e5e5e5;border-top:none;border-radius:0 0 8px 8px;overflow:hidden;">
-          <table style="width:100%;border-collapse:collapse;">
-            ${rowsHtml}
-          </table>
-        </div>
-        <p style="color:#999;font-size:11px;margin-top:16px;text-align:center;">
-          This message was sent from jmsplumbingservices.com
-        </p>
-      </div>
-    `
-
-    const subject = `New Lead: ${data.name} — ${data.formSource}`
-
-    // Send via Resend (free tier allows sending to your own email)
-    const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY')
-    if (!RESEND_API_KEY) {
-      console.error('RESEND_API_KEY is not configured')
-      return new Response(
-        JSON.stringify({ error: 'Email service not configured' }),
-        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      )
-    }
-
-    const emailRes = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
-      },
-      body: JSON.stringify({
-        from: 'JMS Plumbing Website <onboarding@resend.dev>',
-        to: [RECIPIENT_EMAIL],
-        subject,
-        html,
-      }),
+    const { error: dbError } = await supabase.from('form_submissions').insert({
+      form_source: data.formSource,
+      name: data.name,
+      phone: data.phone,
+      email: data.email,
+      city_zip: data.cityZip,
+      service: data.service,
+      message: data.message,
+      hear_about: data.hearAbout,
+      issue: data.issue,
     })
 
-    if (!emailRes.ok) {
-      const errText = await emailRes.text()
-      console.error(`Resend API error [${emailRes.status}]: ${errText}`)
+    if (dbError) {
+      console.error('Database insert error:', dbError)
       return new Response(
-        JSON.stringify({ error: 'Failed to send email' }),
+        JSON.stringify({ error: 'Failed to save submission' }),
         { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
@@ -120,11 +73,3 @@ Deno.serve(async (req) => {
     )
   }
 })
-
-function escapeHtml(str: string): string {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-}
