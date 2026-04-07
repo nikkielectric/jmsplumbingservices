@@ -75,31 +75,32 @@ const Services = () => {
         {/* Services grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative h-96 rounded overflow-hidden cursor-pointer vintage-border"
-            >
-              <img
-                src={service.img}
-                alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 vintage-sepia"
-                loading="lazy"
-                width={800}
-                height={1024}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20 transition-opacity duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-[calc(100%-5rem)] group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                <h3 className="text-2xl font-display font-bold text-white mb-2">{service.title}</h3>
-                <div className="w-12 h-0.5 bg-white/50 mb-3" />
-                <p className="text-white/80 text-sm font-body leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </motion.div>
+            <Link key={service.title} to={service.href}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="group relative h-96 rounded overflow-hidden cursor-pointer vintage-border"
+              >
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 vintage-sepia"
+                  loading="lazy"
+                  width={800}
+                  height={1024}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-[calc(100%-5rem)] group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                  <h3 className="text-2xl font-display font-bold text-white mb-2">{service.title}</h3>
+                  <div className="w-12 h-0.5 bg-white/50 mb-3" />
+                  <p className="text-white/80 text-sm font-body leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </div>
