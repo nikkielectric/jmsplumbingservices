@@ -28,8 +28,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* ── Tier 2: Info bar ── */}
-      <div className="hidden lg:block bg-forest-deep/95 border-b border-primary/10">
+      {/* ── Tier 2: Info bar — slightly lighter ── */}
+      <div className="hidden lg:block bg-[hsl(200,30%,15%)] border-b border-cream/8">
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between py-1.5 text-xs font-body">
           <span className="text-cream/70 tracking-wide">Licensed &amp; Insured Plumbing Services</span>
 
@@ -51,8 +51,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* ── Tier 3: Main bar (logo + phone + CTA) ── */}
-      <div className="bg-forest-deep/95 backdrop-blur-md border-b border-primary/20">
+      {/* ── Tier 3: Main bar (logo + phone + CTA) — brand dark ── */}
+      <div className="bg-forest-deep backdrop-blur-md border-b border-cream/10">
         <div className="container mx-auto flex items-center justify-between py-3 px-4 lg:px-8">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
@@ -128,8 +128,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* ── Tier 4: Navigation links bar (desktop) ── */}
-      <div className="hidden md:block bg-forest-deep/90 backdrop-blur-sm border-b border-primary/10">
+      {/* ── Tier 4: Navigation links bar — lightest tier with primary accent ── */}
+      <div className="hidden md:block bg-[hsl(200,28%,20%)] border-b-2 border-primary/40 shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
         <div className="container mx-auto px-4 lg:px-8 flex items-center gap-8 py-2.5">
           {navLinks.map((link) => (
             <a
