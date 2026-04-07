@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import VintageOrnament from "./VintageOrnament";
 import drainImg from "@/assets/service-drain.jpg";
 import gasImg from "@/assets/service-gas.jpg";
@@ -12,31 +13,37 @@ const services = [
     img: drainImg,
     title: "Drain Cleaning",
     description: "Slow or fully blocked — we clear main lines, sinks, tubs, and showers fast. And we tell you why it happened.",
+    href: "/drain-cleaning",
   },
   {
     img: gasImg,
     title: "Gas Line Services",
     description: "Installations, repairs, and leak inspections. Licensed, insured, and done right the first time.",
+    href: "/gas-line-services",
   },
   {
     img: repairImg,
     title: "Plumbing Repairs",
     description: "We fix what actually needs fixing. No unnecessary replacements, no upsells. Honest work at a fair price.",
+    href: "/plumbing-repairs",
   },
   {
     img: remodelImg,
     title: "Plumbing Remodels",
     description: "From blueprint to final install — precise, clean plumbing work that's built to last.",
+    href: "/plumbing-remodels",
   },
   {
     img: disposalImg,
     title: "Garbage Disposal",
     description: "Jammed, leaking, or dead? We inspect, repair, and install — usually same day.",
+    href: "/garbage-disposal",
   },
   {
     img: emergencyImg,
     title: "Emergency Plumbing",
     description: "Nights, weekends, holidays — we pick up. After-hours fees always disclosed upfront.",
+    href: "/emergency-plumbing",
   },
 ];
 
@@ -68,31 +75,32 @@ const Services = () => {
         {/* Services grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative h-96 rounded overflow-hidden cursor-pointer vintage-border"
-            >
-              <img
-                src={service.img}
-                alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 vintage-sepia"
-                loading="lazy"
-                width={800}
-                height={1024}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20 transition-opacity duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-[calc(100%-5rem)] group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                <h3 className="text-2xl font-display font-bold text-white mb-2">{service.title}</h3>
-                <div className="w-12 h-0.5 bg-white/50 mb-3" />
-                <p className="text-white/80 text-sm font-body leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </motion.div>
+            <Link key={service.title} to={service.href}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="group relative h-96 rounded overflow-hidden cursor-pointer vintage-border"
+              >
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 vintage-sepia"
+                  loading="lazy"
+                  width={800}
+                  height={1024}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-[calc(100%-5rem)] group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                  <h3 className="text-2xl font-display font-bold text-white mb-2">{service.title}</h3>
+                  <div className="w-12 h-0.5 bg-white/50 mb-3" />
+                  <p className="text-white/80 text-sm font-body leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </div>
