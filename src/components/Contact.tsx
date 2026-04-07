@@ -34,17 +34,16 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
-              Don't Delay
+              GET IN TOUCH
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
-              Get Your Quote{" "}
-              <span className="text-primary italic">Today!</span>
+              Ready For A Plumber Who{" "}
+              <span className="text-primary italic">Actually Shows Up?</span>
             </h2>
             <div className="w-20 h-1 bg-primary mb-6" />
             <p className="text-muted-foreground font-body leading-relaxed mb-8">
-              For a trusted South Florida plumber, simply give us a call or send us a message.
-              Our friendly team is always here to offer the help you need. Providing upfront
-              quotes with no hidden fees!
+              Call us or fill out the form and we'll get back to you fast — with a real answer 
+              and a fair quote. No runaround, no voicemail maze, no surprise fees.
             </p>
 
             <div className="space-y-4">
@@ -85,7 +84,7 @@ const Contact = () => {
               Request a Free Quote
             </h3>
             <p className="text-cream/60 font-body text-sm mb-6">
-              Fill out the form below and we'll get back to you as soon as possible.
+              We'll review your request and call you back — usually within minutes.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -162,15 +161,14 @@ const Contact = () => {
                 disabled={sending}
                 className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold text-base hover:bg-primary/90 transition-all w-full disabled:opacity-60"
               >
-                {sending ? "Sending..." : "Send Quote Request"}
+                {sending ? "Sending..." : "Send My Request"}
                 {!sending && <Send className="w-4 h-4" />}
               </button>
             </form>
 
             <div className="mt-6 pt-4 border-t border-cream/10">
               <p className="text-cream/50 text-xs font-body text-center">
-                Serving Sunrise, Plantation, Fort Lauderdale, Tamarac, Lauderhill,
-                Coral Springs, Weston & surrounding areas
+                Serving Sunrise, Plantation, Fort Lauderdale, Broward, Miami-Dade & Palm Beach Counties
               </p>
             </div>
           </motion.div>
