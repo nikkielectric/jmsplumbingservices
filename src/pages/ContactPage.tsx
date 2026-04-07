@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
-import { supabase } from "@/integrations/supabase/client";
+import { submitToFormspree } from "@/lib/formspree";
 
 const ContactPage = () => {
   const [form, setForm] = useState({
@@ -109,19 +109,17 @@ const ContactPage = () => {
     }
     setSending(true);
     try {
-      const { error } = await supabase.functions.invoke('send-form-email', {
-        body: {
-          formSource: 'Contact Page — Request a Free Quote',
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-          cityZip: form.cityZip,
-          service: form.service,
-          hearAbout: form.hearAbout,
-          message: form.message,
-        },
+      await submitToFormspree({
+        _subject: 'New Lead — Contact Page',
+        "Form Source": 'Contact Page — Request a Free Quote',
+        Name: form.name,
+        Email: form.email,
+        Phone: form.phone,
+        "City/Zip": form.cityZip,
+        Service: form.service,
+        "How did you hear about us?": form.hearAbout,
+        Message: form.message,
       });
-      if (error) throw error;
       toast.success("Quote request sent! We'll get back to you shortly.");
       setForm({ name: "", phone: "", email: "", cityZip: "", service: "", hearAbout: "", message: "" });
     } catch (err) {

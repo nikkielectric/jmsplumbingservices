@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Phone, Mail, Clock, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
 import VintageOrnament from "./VintageOrnament";
-import { supabase } from "@/integrations/supabase/client";
+import { submitToFormspree } from "@/lib/formspree";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
@@ -17,17 +17,15 @@ const Contact = () => {
     }
     setSending(true);
     try {
-      const { error } = await supabase.functions.invoke('send-form-email', {
-        body: {
-          formSource: 'Homepage — Request a Free Quote',
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-          service: form.service,
-          message: form.message,
-        },
+      await submitToFormspree({
+        _subject: 'New Lead — Homepage Quote Form',
+        "Form Source": 'Homepage — Request a Free Quote',
+        Name: form.name,
+        Email: form.email,
+        Phone: form.phone,
+        Service: form.service,
+        Message: form.message,
       });
-      if (error) throw error;
       toast.success("Quote request sent! We'll get back to you shortly.");
       setForm({ name: "", email: "", phone: "", service: "", message: "" });
     } catch (err) {
