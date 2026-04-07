@@ -77,7 +77,7 @@ const Hero = () => {
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-7 py-3.5 rounded-lg font-bold text-sm hover:bg-cream/90 transition-all"
               >
-                Get a Quote
+                Get a Free Quote
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
