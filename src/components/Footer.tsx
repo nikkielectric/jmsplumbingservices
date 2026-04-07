@@ -3,12 +3,11 @@ import jmsLogoFooter from "@/assets/jms-logo-footer.png";
 
 const services = [
   "Drain Cleaning",
-  "Garbage Disposal",
   "Gas Line Services",
   "Plumbing Repairs",
   "Plumbing Remodels",
+  "Garbage Disposal",
   "Emergency Plumbing",
-  "Water Heater Service",
 ];
 
 const Footer = () => {
