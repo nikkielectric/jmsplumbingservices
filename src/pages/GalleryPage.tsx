@@ -13,6 +13,7 @@ import galleryReview2Img from "@/assets/gallery-review-2.png";
 import plumbingRepairsImg from "@/assets/plumbing-repairs-hero.png";
 import garbageDisposalImg from "@/assets/garbage-disposal-hero.png";
 import galleryReview3Img from "@/assets/gallery-review-3.png";
+import galleryReview4Img from "@/assets/gallery-review-4.png";
 import repipingImg from "@/assets/repiping-hero.png";
 import emergencyImg from "@/assets/emergency-plumbing-hero.png";
 import plumberFixingSinkImg from "@/assets/plumber-fixing-sink.png";
@@ -89,7 +90,7 @@ const photoReviews: PhotoReview[] = [
     city: "South Florida",
     text: "James from JMS Plumbing was an absolute lifesaver! After dealing with a disaster left behind by another plumbing company, James came in and quickly assessed the situation. He was efficient, professional, and left everything clean and tidy.",
     rating: 5,
-    image: repipingImg,
+    image: galleryReview4Img,
   },
   {
     name: "Joe S.",
