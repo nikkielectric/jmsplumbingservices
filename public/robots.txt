@@ -14,4 +14,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://jmsplumbingservices.com/sitemap.xml
-Allow: /
