@@ -115,7 +115,7 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ SECTION 2 — OUR STORY ═══ */}
-      <section className="bg-cream py-20 lg:py-28 vintage-grain relative">
+      <section className="bg-cream-light py-20 lg:py-28 vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -179,7 +179,7 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ SECTION 3 — WHY CHOOSE JMS ═══ */}
-      <section className="bg-secondary py-20 lg:py-28 vintage-grain vintage-vignette relative">
+      <section className="bg-cream py-20 lg:py-28 vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -221,7 +221,7 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ SECTION 4 — PERSONAL GUARANTEE ═══ */}
-      <section className="bg-cream py-20 lg:py-28 vintage-grain relative">
+      <section className="bg-cream-light py-20 lg:py-28 vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -333,7 +333,7 @@ const AboutPage = () => {
       </section>
 
       {/* ═══ SECTION 6 — SERVICE AREA CALLOUT ═══ */}
-      <section className="bg-cream py-20 lg:py-28 vintage-grain relative">
+      <section className="bg-cream-light py-20 lg:py-28 vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
