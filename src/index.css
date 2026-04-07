@@ -6,74 +6,74 @@
 
 @layer base {
   :root {
-    --background: 220 25% 96%;
-    --foreground: 0 0% 13%;
+    --background: 38 25% 93%;
+    --foreground: 30 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 13%;
+    --card: 40 30% 96%;
+    --card-foreground: 30 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 13%;
+    --popover: 40 30% 96%;
+    --popover-foreground: 30 15% 15%;
 
     --primary: 184 72% 38%;
-    --primary-foreground: 0 0% 100%;
+    --primary-foreground: 40 30% 96%;
 
-    --secondary: 196 63% 17%;
-    --secondary-foreground: 220 25% 96%;
+    --secondary: 200 30% 18%;
+    --secondary-foreground: 38 25% 93%;
 
-    --muted: 0 0% 46%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 30 10% 50%;
+    --muted-foreground: 30 10% 42%;
 
-    --accent: 220 25% 96%;
-    --accent-foreground: 0 0% 13%;
+    --accent: 38 25% 90%;
+    --accent-foreground: 30 15% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 15% 85%;
-    --input: 210 15% 85%;
+    --border: 32 20% 78%;
+    --input: 32 20% 78%;
     --ring: 184 72% 38%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --olive: 0 0% 46%;
+    --olive: 30 10% 46%;
     --forest: 184 72% 38%;
-    --forest-deep: 196 63% 17%;
-    --steel: 200 25% 88%;
-    --cream: 220 25% 96%;
-    --cream-light: 220 30% 98%;
-    --dark: 0 0% 13%;
-    --dark-deep: 0 0% 8%;
+    --forest-deep: 200 30% 18%;
+    --steel: 35 15% 82%;
+    --cream: 38 35% 94%;
+    --cream-light: 40 35% 96%;
+    --dark: 30 15% 15%;
+    --dark-deep: 30 15% 10%;
 
-    --sidebar-background: 220 25% 96%;
-    --sidebar-foreground: 0 0% 13%;
+    --sidebar-background: 38 25% 93%;
+    --sidebar-foreground: 30 15% 15%;
     --sidebar-primary: 184 72% 38%;
-    --sidebar-primary-foreground: 220 25% 96%;
-    --sidebar-accent: 196 63% 17%;
-    --sidebar-accent-foreground: 220 25% 96%;
-    --sidebar-border: 210 15% 80%;
+    --sidebar-primary-foreground: 38 25% 93%;
+    --sidebar-accent: 200 30% 18%;
+    --sidebar-accent-foreground: 38 25% 93%;
+    --sidebar-border: 32 20% 75%;
     --sidebar-ring: 184 72% 38%;
   }
 
   .dark {
-    --background: 0 0% 13%;
-    --foreground: 220 25% 96%;
-    --card: 0 0% 18%;
-    --card-foreground: 220 25% 96%;
-    --popover: 0 0% 18%;
-    --popover-foreground: 220 25% 96%;
+    --background: 30 15% 12%;
+    --foreground: 38 25% 93%;
+    --card: 30 15% 16%;
+    --card-foreground: 38 25% 93%;
+    --popover: 30 15% 16%;
+    --popover-foreground: 38 25% 93%;
     --primary: 184 72% 45%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 196 50% 25%;
-    --secondary-foreground: 220 25% 96%;
-    --muted: 0 0% 30%;
-    --muted-foreground: 0 0% 60%;
-    --accent: 0 0% 22%;
-    --accent-foreground: 220 25% 96%;
+    --primary-foreground: 40 30% 96%;
+    --secondary: 200 25% 22%;
+    --secondary-foreground: 38 25% 93%;
+    --muted: 30 10% 30%;
+    --muted-foreground: 30 10% 55%;
+    --accent: 30 10% 20%;
+    --accent-foreground: 38 25% 93%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 0 0% 25%;
-    --input: 0 0% 25%;
+    --border: 30 10% 25%;
+    --input: 30 10% 25%;
     --ring: 184 72% 45%;
   }
 }
@@ -89,5 +89,62 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
+  }
+}
+
+/* Vintage paper texture overlay */
+@layer utilities {
+  .vintage-grain {
+    position: relative;
+  }
+  .vintage-grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+  }
+
+  .vintage-vignette::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(ellipse at center, transparent 50%, hsl(30 15% 15% / 0.15) 100%);
+  }
+
+  .vintage-sepia {
+    filter: sepia(0.08) saturate(0.92) contrast(1.02);
+  }
+
+  .vintage-border {
+    border: 2px solid hsl(var(--border));
+    box-shadow: inset 0 0 0 1px hsl(var(--border) / 0.5), 0 2px 8px hsl(30 15% 15% / 0.08);
+  }
+
+  .vintage-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .vintage-ornament::before,
+  .vintage-ornament::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+  }
+
+  .stamp-badge {
+    border: 3px double hsl(var(--primary));
+    border-radius: 50%;
+    padding: 1rem;
+    transform: rotate(-6deg);
   }
 }

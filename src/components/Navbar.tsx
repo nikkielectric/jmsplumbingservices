@@ -20,7 +20,7 @@ const Navbar = () => {
           <img src={jmsLogo} alt="JMS Plumbing Services LLC" className="h-14 w-auto" />
           <div className="flex flex-col leading-tight">
             <span className="font-display text-xl font-bold text-cream tracking-tight">JMS Plumbing</span>
-            <span className="text-[10px] font-body text-steel/70 tracking-[0.2em] uppercase">Services LLC</span>
+            <span className="text-[10px] font-body text-steel/70 tracking-[0.25em] uppercase">Services LLC</span>
           </div>
         </a>
 
@@ -29,7 +29,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-cream/80 hover:text-cream transition-colors"
+              className="text-sm font-medium text-cream/80 hover:text-cream transition-colors font-body tracking-wide"
             >
               {link.label}
             </a>
@@ -40,14 +40,14 @@ const Navbar = () => {
           <span className="text-cream/60 text-xs font-body hidden xl:block">Emergency? Available 24/7</span>
           <a
             href="tel:9549106883"
-            className="flex items-center gap-2 border border-cream/30 text-cream px-4 py-2 rounded-lg font-semibold text-sm hover:bg-cream/10 transition-colors"
+            className="flex items-center gap-2 border border-cream/30 text-cream px-4 py-2 rounded font-semibold text-sm hover:bg-cream/10 transition-colors"
           >
             <Phone className="w-4 h-4" />
             (954) 910-6883
           </a>
           <a
             href="#contact"
-            className="flex items-center gap-2 bg-cream text-dark px-5 py-2 rounded-lg font-bold text-sm hover:bg-cream/90 transition-colors"
+            className="flex items-center gap-2 bg-cream text-dark px-5 py-2 rounded font-bold text-sm hover:bg-cream/90 transition-colors"
           >
             Get a Quote
           </a>
@@ -79,14 +79,14 @@ const Navbar = () => {
               ))}
               <a
                 href="tel:9549106883"
-                className="flex items-center justify-center gap-2 border border-cream/30 text-cream px-5 py-3 rounded-lg font-semibold text-sm"
+                className="flex items-center justify-center gap-2 border border-cream/30 text-cream px-5 py-3 rounded font-semibold text-sm"
               >
                 <Phone className="w-4 h-4" />
                 (954) 910-6883
               </a>
               <a
                 href="#contact"
-                className="flex items-center justify-center gap-2 bg-cream text-dark px-5 py-3 rounded-lg font-bold text-sm"
+                className="flex items-center justify-center gap-2 bg-cream text-dark px-5 py-3 rounded font-bold text-sm"
               >
                 Get a Quote
               </a>

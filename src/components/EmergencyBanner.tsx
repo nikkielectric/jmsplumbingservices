@@ -13,7 +13,7 @@ const EmergencyBanner = () => {
         >
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
-              <div className="bg-cream/10 rounded-lg px-3 py-2 flex items-center gap-2">
+              <div className="bg-cream/10 rounded px-3 py-2 flex items-center gap-2 border border-cream/15">
                 <Clock className="w-5 h-5 text-cream" />
                 <span className="font-display font-black text-cream text-lg">24/7</span>
               </div>
@@ -27,7 +27,7 @@ const EmergencyBanner = () => {
 
           <a
             href="tel:9549106883"
-            className="inline-flex items-center gap-2 bg-cream text-dark px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-cream/90 transition-all"
+            className="inline-flex items-center gap-2 bg-cream text-dark px-6 py-2.5 rounded font-bold text-sm hover:bg-cream/90 transition-all"
           >
             <Phone className="w-4 h-4" />
             Request A Call Back
