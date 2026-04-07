@@ -33,13 +33,6 @@ const Navbar = () => {
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-evenly py-1.5 text-xs font-body">
           <span className="text-cream/70 tracking-wide">Licensed &amp; Insured Plumbing Services</span>
 
-          <div className="flex items-center gap-1.5 text-amber-400">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-3 h-3 fill-current" />
-            ))}
-            <span className="text-cream/80 ml-1 font-semibold">5.0 Rating</span>
-          </div>
-
           <div className="flex items-center gap-1.5 text-cream/60">
             <MapPin className="w-3 h-3 text-primary" />
             <span>Sunrise, FL 33322</span>
