@@ -2,7 +2,7 @@ import { Phone, CheckCircle, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import VintageOrnament from "./VintageOrnament";
-import { supabase } from "@/integrations/supabase/client";
+import { submitToFormspree } from "@/lib/formspree";
 
 const trustBullets = [
   "We answer 24/7 — a real person, every time",
@@ -42,17 +42,15 @@ const EmergencyCTA = () => {
     }
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.functions.invoke('send-form-email', {
-        body: {
-          formSource: 'Emergency Service Request',
-          name: formData.name,
-          phone: formData.phone,
-          cityZip: formData.cityZip,
-          issue: formData.issue,
-          message: formData.description,
-        },
+      await submitToFormspree({
+        _subject: 'EMERGENCY — New Lead',
+        "Form Source": 'Emergency Service Request',
+        Name: formData.name,
+        Phone: formData.phone,
+        "City/Zip": formData.cityZip,
+        Issue: formData.issue,
+        Description: formData.description,
       });
-      if (error) throw error;
       toast({
         title: "Request Sent!",
         description: "We'll call you back as soon as possible.",

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Send, Star, Shield, Users } from "lucide-react";
 import { toast } from "sonner";
 import type { ServiceTestimonial } from "@/data/servicePages";
-import { supabase } from "@/integrations/supabase/client";
+import { submitToFormspree } from "@/lib/formspree";
 
 interface ServiceSidebarProps {
   defaultService: string;
@@ -27,17 +27,15 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
     }
     setSending(true);
     try {
-      const { error } = await supabase.functions.invoke('send-form-email', {
-        body: {
-          formSource: `Service Page — ${defaultService}`,
-          name: form.name,
-          phone: form.phone,
-          cityZip: form.zip,
-          service: form.service,
-          message: form.description,
-        },
+      await submitToFormspree({
+        _subject: `New Lead — ${defaultService}`,
+        "Form Source": `Service Page — ${defaultService}`,
+        Name: form.name,
+        Phone: form.phone,
+        "City/Zip": form.zip,
+        Service: form.service,
+        Description: form.description,
       });
-      if (error) throw error;
       toast.success("Quote request sent! We'll call you back shortly.");
       setForm({ name: "", phone: "", zip: "", service: defaultService, description: "" });
     } catch (err) {
