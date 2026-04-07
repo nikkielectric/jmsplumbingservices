@@ -15,6 +15,7 @@ import garbageDisposalImg from "@/assets/garbage-disposal-hero.png";
 import galleryReview3Img from "@/assets/gallery-review-3.png";
 import galleryReview4Img from "@/assets/gallery-review-4.png";
 import galleryReview5Img from "@/assets/gallery-review-5.png";
+import galleryReview6Img from "@/assets/gallery-review-6.png";
 import repipingImg from "@/assets/repiping-hero.png";
 import emergencyImg from "@/assets/emergency-plumbing-hero.png";
 import plumberFixingSinkImg from "@/assets/plumber-fixing-sink.png";
@@ -84,7 +85,7 @@ const photoReviews: PhotoReview[] = [
     city: "South Florida",
     text: "Excellent Service!! Reliable, honest. They fixed our plumbing problem perfectly. Was very knowledgeable and would only call JMS Plumbing Services for future issues!",
     rating: 5,
-    image: gasLineImg,
+    image: galleryReview6Img,
   },
   {
     name: "Evan S.",
