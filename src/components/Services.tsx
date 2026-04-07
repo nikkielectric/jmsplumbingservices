@@ -51,7 +51,7 @@ const Services = () => {
           className="text-center mb-14"
         >
           <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
-            OUR SERVICES
+            WHAT WE DO
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3">
             Plumbing That Meets{" "}
