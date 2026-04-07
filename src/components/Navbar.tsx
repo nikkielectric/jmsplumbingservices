@@ -49,7 +49,7 @@ const Navbar = () => {
       <div className="bg-forest-deep backdrop-blur-md border-b border-cream/10">
         <div className="container mx-auto flex items-center justify-between py-3 px-4 lg:px-8">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-3">
             <img
               src={jmsLogo}
               alt="JMS Plumbing Services LLC"
