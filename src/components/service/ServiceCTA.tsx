@@ -50,7 +50,7 @@ const ServiceCTA = ({ heading, subtext }: ServiceCTAProps) => {
               Call (954) 910-6883
             </a>
             <a
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded font-bold text-sm hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
             >
               Get a Free Quote
