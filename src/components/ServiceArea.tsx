@@ -22,10 +22,10 @@ const ServiceArea = () => {
             </h2>
             <div className="w-20 h-1 bg-primary mb-6" />
             <p className="text-muted-foreground font-body leading-relaxed mb-6">
-              We're based in Sunrise, but our trucks roll across all three counties — Broward, Miami-Dade, and Palm Beach. Whether you're dealing with a burst pipe in Coral Springs or a backed-up drain in Boca Raton, we know these neighborhoods, these homes, and these pipes.
+              Based in Sunrise, our trucks serve communities across Broward, Miami-Dade, and Palm Beach Counties. We know South Florida's homes, its aging pipes, and its climate — and we bring that local knowledge to every job.
             </p>
             <p className="text-muted-foreground font-body leading-relaxed">
-              No long waits. No "we don't service that area." If you're in South Florida, we're your plumber.
+              Don't see your city listed? Call us. If you're in the Tri-County area, there's a good chance we can get to you.
             </p>
           </motion.div>
 
