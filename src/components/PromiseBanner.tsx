@@ -90,8 +90,8 @@ const PromiseBanner = () => {
               transition={{ duration: 0.5, delay: 0.4 + i * 0.15 }}
               className="group bg-cream/[0.04] backdrop-blur-sm border border-cream/10 rounded-2xl p-8 text-center hover:bg-cream/[0.08] hover:border-cream/20 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-primary/15 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/25 transition-colors duration-300">
-                <promise.icon className="w-7 h-7 text-primary" />
+              <div className="w-14 h-14 bg-cream/10 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-cream/20 transition-colors duration-300">
+                <promise.icon className="w-7 h-7 text-cream" />
               </div>
               <h3 className="font-display font-bold text-cream text-lg mb-3">
                 {promise.title}
