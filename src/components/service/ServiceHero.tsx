@@ -6,9 +6,10 @@ interface ServiceHeroProps {
   serviceCategory: string;
   h1: string;
   subtext: string;
+  heroImage?: string;
 }
 
-const ServiceHero = ({ serviceCategory, h1, subtext }: ServiceHeroProps) => {
+const ServiceHero = ({ serviceCategory, h1, subtext, heroImage }: ServiceHeroProps) => {
   return (
     <section className="relative pt-44 lg:pt-52 pb-16 lg:pb-24 bg-secondary vintage-grain vintage-vignette">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -53,7 +54,7 @@ const ServiceHero = ({ serviceCategory, h1, subtext }: ServiceHeroProps) => {
           >
             <div className="rounded overflow-hidden shadow-2xl vintage-border vintage-sepia">
               <img
-                src={heroImg}
+                src={heroImage || heroImg}
                 alt={`${serviceCategory} plumbing service`}
                 className="w-full h-[350px] lg:h-[450px] object-cover object-[center_25%]"
                 width={1920}
