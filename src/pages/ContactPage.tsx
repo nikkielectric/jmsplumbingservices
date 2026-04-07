@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
 import { submitToFormspree } from "@/lib/formspree";
-
+import ThankYouModal from "@/components/ThankYouModal";
 const ContactPage = () => {
   const [form, setForm] = useState({
     name: "",
@@ -19,6 +19,7 @@ const ContactPage = () => {
     message: "",
   });
   const [sending, setSending] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
 
   useEffect(() => {
     document.title = "Contact JMS Plumbing Services | Licensed Plumber in Sunrise, FL";
@@ -120,8 +121,8 @@ const ContactPage = () => {
         "How did you hear about us?": form.hearAbout,
         Message: form.message,
       });
-      toast.success("Quote request sent! We'll get back to you shortly.");
       setForm({ name: "", phone: "", email: "", cityZip: "", service: "", hearAbout: "", message: "" });
+      setShowThankYou(true);
     } catch (err) {
       console.error('Form submission error:', err);
       toast.error("Something went wrong. Please call us at (954) 910-6883.");

@@ -181,6 +181,7 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
           </div>
         </div>
       ))}
+      <ThankYouModal open={showThankYou} onOpenChange={setShowThankYou} />
     </div>
   );
 };
