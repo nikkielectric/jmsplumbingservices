@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import areaImg from "@/assets/service-area.jpg";
+import jmsLogoPin from "@/assets/jms-logo-pin.png";
 
 const ServiceArea = () => {
   return (
@@ -34,7 +35,7 @@ const ServiceArea = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="rounded-2xl overflow-hidden shadow-2xl ring-4 ring-primary/20"
+            className="relative rounded-2xl overflow-hidden shadow-2xl ring-4 ring-primary/20"
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d57200!2d-80.27780045272723!3d26.16470198032312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1700000000000"
@@ -47,6 +48,23 @@ const ServiceArea = () => {
               title="JMS Plumbing service area map"
               className="w-full h-80 lg:h-96"
             />
+            {/* Logo pin overlay on Sunrise */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+              <motion.div
+                initial={{ y: -20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.8, type: "spring", bounce: 0.4 }}
+                className="flex flex-col items-center"
+              >
+                <img
+                  src={jmsLogoPin}
+                  alt="JMS Plumbing location"
+                  className="w-12 h-12 lg:w-16 lg:h-16 drop-shadow-lg"
+                />
+                <div className="w-2 h-2 rounded-full bg-secondary shadow-md mt-1" />
+              </motion.div>
+            </div>
           </motion.div>
         </div>
 
