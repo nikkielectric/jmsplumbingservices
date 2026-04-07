@@ -16,22 +16,22 @@ const About = () => {
               transition={{ duration: 0.7 }}
             >
               <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
-                All our clients are treated as family
+                FAMILY OWNED & OPERATED IN SUNRISE, FL
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
-                Looking for a Local Plumber in{" "}
-                <span className="text-primary italic">South Florida?</span>
+                You're Not a Ticket Number.{" "}
+                <span className="text-primary italic">You're A Neighbor.</span>
               </h2>
               <div className="w-20 h-1 bg-primary mb-6" />
               <p className="text-muted-foreground font-body leading-relaxed mb-6">
-                Look no further than JMS Plumbing Services! From maintenance and installations to repairs,
-                our solutions are here to safeguard your home or office. Providing prompt and efficient
-                assistance, both anytime and anywhere you need it.
+                Most plumbing companies send whoever's available, charge whatever they want, and move on. 
+                That's not how we operate. At JMS, the owner is personally invested in every job — 
+                because our name and our reputation are on the line every single time we pull up to your door.
               </p>
               <p className="text-muted-foreground font-body leading-relaxed mb-8">
-                As a family-owned small business based in Sunrise, FL, we take pride in offering
-                premier customer service. We consider plumbing a craft — a blending of expertise
-                and artistry in every job we do.
+                We're based right here in Sunrise and we serve Broward, Miami-Dade, and Palm Beach Counties. 
+                We know these pipes, this water, and these homes. When you call us, you'll get a straight answer, 
+                a fair price, and a plumber who actually shows up.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
@@ -45,7 +45,7 @@ const About = () => {
                   href="#contact"
                   className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all"
                 >
-                  Get a Quote
+                  Get a Free Quote
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -121,7 +121,7 @@ const About = () => {
                   href="#contact"
                   className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all"
                 >
-                  Get a Quote
+                  Get a Free Quote
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
