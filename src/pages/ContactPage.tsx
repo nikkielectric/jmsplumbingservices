@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactPage = () => {
   const [form, setForm] = useState({
@@ -100,18 +101,35 @@ const ContactPage = () => {
     };
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.phone.trim() || !form.email.trim() || !form.cityZip.trim() || !form.service) {
       toast.error("Please fill in all required fields.");
       return;
     }
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
+    try {
+      const { error } = await supabase.functions.invoke('send-form-email', {
+        body: {
+          formSource: 'Contact Page — Request a Free Quote',
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          cityZip: form.cityZip,
+          service: form.service,
+          hearAbout: form.hearAbout,
+          message: form.message,
+        },
+      });
+      if (error) throw error;
       toast.success("Quote request sent! We'll get back to you shortly.");
       setForm({ name: "", phone: "", email: "", cityZip: "", service: "", hearAbout: "", message: "" });
-    }, 1200);
+    } catch (err) {
+      console.error('Form submission error:', err);
+      toast.error("Something went wrong. Please call us at (954) 910-6883.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
