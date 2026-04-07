@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { Phone, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-plumber.png";
+import VintageOrnament from "./VintageOrnament";
 
 const EmergencySection = () => {
   return (
-    <div className="relative bg-cream-light py-20 lg:py-28 overflow-hidden" style={{ backgroundImage: 'radial-gradient(circle, hsl(var(--primary) / 0.07) 1px, transparent 1px)', backgroundSize: '24px 24px' }}>
-      <div className="container mx-auto px-4 lg:px-8">
+    <div className="relative bg-cream-light py-20 lg:py-28 overflow-hidden vintage-grain">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -21,7 +22,7 @@ const EmergencySection = () => {
               Providing 24/7{" "}
               <span className="text-primary italic">Emergency Help</span>
             </h2>
-            <div className="w-20 h-1 bg-primary mb-6" />
+            <VintageOrnament className="max-w-xs mb-6" />
             <p className="text-muted-foreground font-body leading-relaxed mb-6">
               Plumbing emergencies can strike at any time. With every second that passes,
               you risk more damage occurring to your home or office. Instead, opt for our
@@ -35,14 +36,14 @@ const EmergencySection = () => {
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="tel:9549106883"
-                className="inline-flex items-center justify-center gap-2 border-2 border-primary/40 text-primary px-6 py-3 rounded-lg font-bold text-sm hover:bg-primary/10 transition-all"
+                className="inline-flex items-center justify-center gap-2 border-2 border-primary/40 text-primary px-6 py-3 rounded font-bold text-sm hover:bg-primary/10 transition-all"
               >
                 <Phone className="w-4 h-4" />
                 (954) 910-6883
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded font-bold text-sm hover:bg-primary/90 transition-all"
               >
                 Get a Free Quote
                 <ArrowRight className="w-4 h-4" />
@@ -57,7 +58,7 @@ const EmergencySection = () => {
             transition={{ duration: 0.7 }}
             className="relative hidden lg:block lg:order-first"
           >
-            <div className="rounded-2xl overflow-hidden shadow-2xl ring-4 ring-primary/20">
+            <div className="rounded overflow-hidden shadow-2xl vintage-border vintage-sepia">
               <img
                 src={heroImg}
                 alt="Emergency plumbing service"

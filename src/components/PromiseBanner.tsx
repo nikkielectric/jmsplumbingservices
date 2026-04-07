@@ -1,5 +1,6 @@
-import { Phone, ArrowRight, Clock, MessageCircle, ShieldCheck } from "lucide-react";
+import { Clock, MessageCircle, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import VintageOrnament from "./VintageOrnament";
 
 const promises = [
   {
@@ -21,15 +22,13 @@ const promises = [
 
 const PromiseBanner = () => {
   return (
-    <section className="relative bg-secondary py-24 lg:py-32 overflow-hidden">
+    <section className="relative bg-secondary py-24 lg:py-32 overflow-hidden vintage-grain vintage-vignette">
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        {/* Eyebrow */}
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +39,6 @@ const PromiseBanner = () => {
           Our Commitment to Every Customer
         </motion.p>
 
-        {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,15 +49,8 @@ const PromiseBanner = () => {
           Tired of Plumbers Who Don't Follow Through?
         </motion.h2>
 
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-          className="w-16 h-1 bg-primary mx-auto mb-10 rounded-full origin-center"
-        />
+        <VintageOrnament className="max-w-xs mx-auto mb-10 [&_div]:bg-gradient-to-r [&_div]:from-transparent [&_div]:via-cream/20 [&_div]:to-transparent [&_svg]:text-cream/30" />
 
-        {/* Body copy */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,9 +78,15 @@ const PromiseBanner = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 + i * 0.15 }}
-              className="group bg-cream/[0.04] backdrop-blur-sm border border-cream/10 rounded-2xl p-8 text-center hover:bg-cream/[0.08] hover:border-cream/20 transition-all duration-300"
+              className="group bg-cream/[0.04] border-2 border-cream/10 rounded p-8 text-center hover:bg-cream/[0.08] hover:border-cream/20 transition-all duration-300 relative"
             >
-              <div className="w-14 h-14 bg-primary/15 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/25 transition-colors duration-300">
+              {/* Decorative corners */}
+              <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-cream/15 rounded-tl" />
+              <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-cream/15 rounded-tr" />
+              <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-cream/15 rounded-bl" />
+              <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-cream/15 rounded-br" />
+              
+              <div className="w-14 h-14 border-2 border-primary/30 rounded-full flex items-center justify-center mx-auto mb-5 group-hover:border-primary/50 transition-colors duration-300">
                 <promise.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="font-display font-bold text-cream text-lg mb-3">
@@ -101,7 +98,6 @@ const PromiseBanner = () => {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

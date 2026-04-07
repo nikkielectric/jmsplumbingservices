@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, Clock, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
+import VintageOrnament from "./VintageOrnament";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
@@ -14,7 +15,6 @@ const Contact = () => {
       return;
     }
     setSending(true);
-    // Simulate submission
     setTimeout(() => {
       setSending(false);
       toast.success("Quote request sent! We'll get back to you shortly.");
@@ -23,8 +23,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-cream-light py-20 lg:py-28">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="contact" className="bg-cream-light py-20 lg:py-28 vintage-grain relative">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left - text & contact info */}
           <motion.div
@@ -40,7 +40,7 @@ const Contact = () => {
               Ready For A Plumber Who{" "}
               <span className="text-primary italic">Actually Shows Up?</span>
             </h2>
-            <div className="w-20 h-1 bg-primary mb-6" />
+            <VintageOrnament className="max-w-xs mb-6" />
             <p className="text-muted-foreground font-body leading-relaxed mb-8">
               Call us or fill out the form and we'll get back to you fast — with a real answer 
               and a fair quote. No runaround, no voicemail maze, no surprise fees.
@@ -54,7 +54,7 @@ const Contact = () => {
                 { icon: Clock, label: "Emergency", value: "Available 24/7" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-11 h-11 rounded-full border-2 border-primary/20 flex items-center justify-center flex-shrink-0">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -78,8 +78,14 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-2xl p-8 lg:p-10 bg-secondary"
+            className="rounded p-8 lg:p-10 bg-secondary vintage-border relative"
           >
+            {/* Decorative corners */}
+            <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-cream/15 rounded-tl" />
+            <div className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-cream/15 rounded-tr" />
+            <div className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-cream/15 rounded-bl" />
+            <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-cream/15 rounded-br" />
+
             <h3 className="text-2xl lg:text-3xl font-display font-black text-cream mb-2">
               Request a Free Quote
             </h3>
@@ -96,7 +102,7 @@ const Contact = () => {
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     maxLength={100}
-                    className="w-full bg-cream/10 border border-cream/20 rounded-lg px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
                     placeholder="Your name"
                   />
                 </div>
@@ -107,7 +113,7 @@ const Contact = () => {
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     maxLength={255}
-                    className="w-full bg-cream/10 border border-cream/20 rounded-lg px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -121,7 +127,7 @@ const Contact = () => {
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
                     maxLength={20}
-                    className="w-full bg-cream/10 border border-cream/20 rounded-lg px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
                     placeholder="(555) 123-4567"
                   />
                 </div>
@@ -130,7 +136,7 @@ const Contact = () => {
                   <select
                     value={form.service}
                     onChange={(e) => setForm({ ...form, service: e.target.value })}
-                    className="w-full bg-cream/10 border border-cream/20 rounded-lg px-4 py-3 text-cream text-sm font-body focus:outline-none focus:border-primary transition-colors appearance-none"
+                    className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body focus:outline-none focus:border-primary transition-colors appearance-none"
                   >
                     <option value="" className="bg-secondary text-cream">Select a service</option>
                     <option value="drain" className="bg-secondary text-cream">Drain Cleaning</option>
@@ -152,7 +158,7 @@ const Contact = () => {
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   maxLength={1000}
                   rows={4}
-                  className="w-full bg-cream/10 border border-cream/20 rounded-lg px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors resize-none"
+                  className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors resize-none"
                   placeholder="Describe your plumbing issue or project..."
                 />
               </div>
@@ -160,7 +166,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={sending}
-                className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold text-base hover:bg-primary/90 transition-all w-full disabled:opacity-60"
+                className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded font-bold text-base hover:bg-primary/90 transition-all w-full disabled:opacity-60"
               >
                 {sending ? "Sending..." : "Send My Request"}
                 {!sending && <Send className="w-4 h-4" />}

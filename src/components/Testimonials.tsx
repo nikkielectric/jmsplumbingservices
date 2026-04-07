@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Star, ExternalLink, Phone } from "lucide-react";
+import VintageOrnament from "./VintageOrnament";
 
 const reviews = [
   {
@@ -56,9 +57,13 @@ const googleMapsUrl =
   "https://www.google.com/maps/place/JMS+Plumbing+Services+LLC/@26.147967,-80.2959248,13.03z/data=!4m6!3m5!1s0x2ccb8ccb743c6cfb:0x109e4e624231af83!8m2!3d26.1479841!4d-80.296254!16s%2Fg%2F11lzdt02kt";
 
 const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
-  <div className="bg-forest-deep rounded-xl p-6 border border-primary/20 w-[340px] min-w-[340px] flex-shrink-0">
+  <div className="bg-forest-deep rounded border-2 border-cream/10 p-6 w-[340px] min-w-[340px] flex-shrink-0 relative">
+    {/* Decorative corner */}
+    <div className="absolute top-2 right-2 w-6 h-6 border-t-2 border-r-2 border-cream/15 rounded-tr" />
+    <div className="absolute bottom-2 left-2 w-6 h-6 border-b-2 border-l-2 border-cream/15 rounded-bl" />
+    
     <div className="flex items-center gap-3 mb-4">
-      <div className="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-cream font-bold font-body text-sm">
+      <div className="w-10 h-10 rounded-full border-2 border-primary/40 flex items-center justify-center text-cream font-bold font-display text-sm">
         {review.initial}
       </div>
       <div>
@@ -66,8 +71,8 @@ const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
         <Stars count={review.rating} />
       </div>
     </div>
-    <p className="text-cream/80 font-body text-sm leading-relaxed mb-4">
-      {review.text}
+    <p className="text-cream/80 font-body text-sm leading-relaxed mb-4 italic">
+      "{review.text}"
     </p>
     <a
       href={googleMapsUrl}
@@ -87,13 +92,11 @@ const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
 );
 
 const Testimonials = () => {
-  // Duplicate reviews for seamless infinite scroll
   const duplicated = [...reviews, ...reviews];
 
   return (
-    <section id="reviews" className="py-20 lg:py-28 bg-secondary" style={{ backgroundImage: 'radial-gradient(circle, hsl(var(--primary) / 0.07) 1px, transparent 1px)', backgroundSize: '24px 24px' }}>
-      {/* Header row */}
-      <div className="container mx-auto px-4 lg:px-8 mb-12">
+    <section id="reviews" className="py-20 lg:py-28 bg-secondary vintage-grain relative">
+      <div className="container mx-auto px-4 lg:px-8 mb-12 relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -105,7 +108,7 @@ const Testimonials = () => {
               We Don't Just Say It. Our Customers{" "}
               <span className="text-steel italic">Do.</span>
             </h2>
-            <div className="w-20 h-1 bg-steel/50 mt-6" />
+            <VintageOrnament className="max-w-xs mt-6 [&_div]:bg-gradient-to-r [&_div]:from-transparent [&_div]:via-cream/20 [&_div]:to-transparent [&_svg]:text-cream/30" />
           </motion.div>
 
           <motion.div
@@ -117,7 +120,7 @@ const Testimonials = () => {
           >
             <a
               href="tel:9549106883"
-              className="inline-flex items-center justify-center gap-2 border-2 border-cream/40 text-cream px-6 py-3 rounded-lg font-bold text-sm hover:bg-cream/10 transition-all"
+              className="inline-flex items-center justify-center gap-2 border-2 border-cream/40 text-cream px-6 py-3 rounded font-bold text-sm hover:bg-cream/10 transition-all"
             >
               <Phone className="w-4 h-4" />
               (954) 910-6883
@@ -126,7 +129,7 @@ const Testimonials = () => {
               href="https://www.google.com/search?q=jms+plumbing+south+florida#lrd=0x2ccb8ccb743c6cfb:0x109e4e624231af83,3,,,,"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-6 py-3 rounded-lg font-bold text-sm hover:bg-cream/90 transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-6 py-3 rounded font-bold text-sm hover:bg-cream/90 transition-all"
             >
               Leave a Review
               <ExternalLink className="w-4 h-4" />
@@ -146,7 +149,7 @@ const Testimonials = () => {
       </div>
 
       {/* Marquee scroll */}
-      <div className="overflow-hidden">
+      <div className="overflow-hidden relative z-10">
         <motion.div
           className="flex gap-5"
           animate={{ x: ["0%", "-50%"] }}

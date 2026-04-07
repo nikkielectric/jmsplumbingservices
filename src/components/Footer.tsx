@@ -12,15 +12,14 @@ const services = [
 
 const Footer = () => {
   return (
-    <footer className="bg-dark-deep pt-16 pb-6 bg-secondary">
-      <div className="container mx-auto px-4 lg:px-8">
+    <footer className="bg-dark-deep pt-16 pb-6 bg-secondary vintage-grain relative">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid sm:grid-cols-2 lg:grid-cols-[3fr_1fr_1fr_1fr] gap-10 lg:gap-24 mb-12">
           {/* Brand */}
           <div>
             <img src={jmsLogoFooter} alt="JMS Plumbing Logo" className="w-24 h-24 mb-3" />
             <div className="mb-4">
               <span className="font-display text-xl font-bold text-cream">JMS Plumbing Services LLC</span>
-              
             </div>
             <p className="text-cream/50 text-sm font-body leading-relaxed mb-6">
               Licensed & insured plumbing services based in Sunrise, FL. 
@@ -40,6 +39,20 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Our Services */}
+          <div>
+            <h4 className="font-display font-bold text-cream text-base mb-5">Our Services</h4>
+            <ul className="space-y-2.5">
+              {services.map((s) => (
+                <li key={s}>
+                  <a href="#services" className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
+                    {s}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Company */}
           <div>
             <h4 className="font-display font-bold text-cream text-base mb-5">Company</h4>
@@ -53,20 +66,6 @@ const Footer = () => {
                 <li key={l.label}>
                   <a href={l.href} className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
                     {l.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="font-display font-bold text-cream text-base mb-5">Our Services</h4>
-            <ul className="space-y-2.5">
-              {services.map((s) => (
-                <li key={s}>
-                  <a href="#services" className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
-                    {s}
                   </a>
                 </li>
               ))}
