@@ -48,7 +48,7 @@ const PromiseBanner = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream text-center max-w-4xl mx-auto mb-5 leading-tight"
         >
-          We Show Up. We're Straight With You. We Do It Right.
+          Tired of Plumbers Who Don't Follow Through?
         </motion.h2>
 
         <motion.div
@@ -68,14 +68,13 @@ const PromiseBanner = () => {
           className="max-w-2xl mx-auto text-center mb-16"
         >
           <p className="text-cream/80 font-body leading-relaxed mb-4">
-            That's not a marketing line — it's how we operate on every single job.
-            As a family-owned business, our reputation is built one home at a time.
-            We don't have a corporate office covering for bad work.
-            When we leave your property, our name goes with us.
+            So are we. That's exactly why we built JMS differently.
+            As a family-owned business, our reputation is built one home at a time —
+            there's no corporate office to hide behind when a job goes wrong.
           </p>
           <p className="text-cream/80 font-body leading-relaxed">
-            You'll get a real price before we start. You'll know exactly what we're doing and why.
-            And when the job is done, we clean up and follow up — because that's what we'd want if it were our home.
+            When we leave your property, our name goes with us.
+            Here's what that means in practice:
           </p>
         </motion.div>
 
