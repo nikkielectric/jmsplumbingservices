@@ -228,6 +228,37 @@ const GalleryPage = () => {
       newMeta.content = "See real plumbing work completed by JMS Plumbing Services throughout Broward, Miami-Dade, and Palm Beach Counties. Photos and reviews from real South Florida customers.";
       document.head.appendChild(newMeta);
     }
+
+    // Gallery JSON-LD with review markup
+    const jsonLdId = "gallery-jsonld";
+    let script = document.getElementById(jsonLdId) as HTMLScriptElement | null;
+    if (!script) {
+      script = document.createElement("script");
+      script.id = jsonLdId;
+      script.type = "application/ld+json";
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://jmsplumbingservices.com/#business",
+      "name": "JMS Plumbing Services LLC",
+      "url": "https://jmsplumbingservices.com/gallery",
+      "review": [...photoReviews, ...textReviews].map((r) => ({
+        "@type": "Review",
+        "author": { "@type": "Person", "name": r.name },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": r.rating,
+          "bestRating": 5
+        },
+        "reviewBody": r.text
+      }))
+    });
+
+    return () => {
+      document.getElementById(jsonLdId)?.remove();
+    };
   }, []);
 
   return (
