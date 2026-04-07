@@ -1,106 +1,114 @@
-import { Phone, ArrowRight, Shield, Wrench, Heart } from "lucide-react";
+import { Phone, ArrowRight, Clock, MessageCircle, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
-const pillars = [
-  { icon: Shield, label: "We Show Up" },
-  { icon: Wrench, label: "We're Straight With You" },
-  { icon: Heart, label: "We Do It Right" },
+const promises = [
+  {
+    icon: Clock,
+    title: "We Show Up",
+    description: "On time, every time. We give you a real arrival window and we honor it.",
+  },
+  {
+    icon: MessageCircle,
+    title: "We're Straight With You",
+    description: "You'll know the price before we touch anything. No surprises, no hidden fees.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "We Do It Right",
+    description: "Licensed, insured, and thorough. We don't leave until the job is done properly.",
+  },
 ];
 
 const PromiseBanner = () => {
   return (
     <section className="relative bg-secondary py-24 lg:py-32 overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary/8 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-cream/5 rounded-full" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-cream/5 rounded-full" />
+      {/* Decorative background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        {/* Pillar badges */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        {/* Eyebrow */}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-3 mb-10"
+          className="text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase text-center mb-5"
         >
-          {pillars.map((pillar, i) => (
-            <motion.div
-              key={pillar.label}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.15 * i }}
-              className="flex items-center gap-2 bg-cream/10 backdrop-blur-sm border border-cream/10 rounded-full px-5 py-2.5"
-            >
-              <pillar.icon className="w-4 h-4 text-primary" />
-              <span className="text-cream font-body font-semibold text-sm">{pillar.label}</span>
-            </motion.div>
-          ))}
-        </motion.div>
+          Our Commitment to Every Customer
+        </motion.p>
 
-        {/* Main heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-3xl mx-auto text-center"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream text-center max-w-4xl mx-auto mb-5 leading-tight"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream mb-4 leading-tight">
-            We Show Up. We're Straight With You.{" "}
-            <span className="text-primary">We Do It Right.</span>
-          </h2>
-          <div className="w-16 h-1 bg-primary mx-auto mb-8 rounded-full" />
+          We Show Up. We're Straight With You. We Do It Right.
+        </motion.h2>
+
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="w-16 h-1 bg-primary mx-auto mb-10 rounded-full origin-center"
+        />
+
+        {/* Body copy */}
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="max-w-2xl mx-auto text-center mb-16"
+        >
+          <p className="text-cream/80 font-body leading-relaxed mb-4">
+            That's not a marketing line — it's how we operate on every single job.
+            As a family-owned business, our reputation is built one home at a time.
+            We don't have a corporate office covering for bad work.
+            When we leave your property, our name goes with us.
+          </p>
+          <p className="text-cream/80 font-body leading-relaxed">
+            You'll get a real price before we start. You'll know exactly what we're doing and why.
+            And when the job is done, we clean up and follow up — because that's what we'd want if it were our home.
+          </p>
         </motion.div>
 
-        {/* Two-column text cards */}
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 mb-12">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-cream/5 backdrop-blur-sm border border-cream/10 rounded-2xl p-8"
-          >
-            <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
-              <Shield className="w-5 h-5 text-primary" />
-            </div>
-            <p className="text-cream/90 font-body leading-relaxed">
-              That's not a marketing line — it's how we operate on every single job. 
-              As a family-owned business, our reputation is built one home at a time. 
-              We don't have a corporate office covering for bad work. 
-              When we leave your property, <strong className="text-cream">our name goes with us.</strong>
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-cream/5 backdrop-blur-sm border border-cream/10 rounded-2xl p-8"
-          >
-            <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
-              <Heart className="w-5 h-5 text-primary" />
-            </div>
-            <p className="text-cream/90 font-body leading-relaxed">
-              You'll get a real price before we start. You'll know exactly what we're doing and why. 
-              And when the job is done, we clean up and follow up — because{" "}
-              <strong className="text-cream">that's what we'd want if it were our home.</strong>
-            </p>
-          </motion.div>
+        {/* Promise cards */}
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-14">
+          {promises.map((promise, i) => (
+            <motion.div
+              key={promise.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 + i * 0.15 }}
+              className="group bg-cream/[0.04] backdrop-blur-sm border border-cream/10 rounded-2xl p-8 text-center hover:bg-cream/[0.08] hover:border-cream/20 transition-all duration-300"
+            >
+              <div className="w-14 h-14 bg-primary/15 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/25 transition-colors duration-300">
+                <promise.icon className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="font-display font-bold text-cream text-lg mb-3">
+                {promise.title}
+              </h3>
+              <p className="text-cream/70 font-body text-sm leading-relaxed">
+                {promise.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
 
         {/* CTA buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.85 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <a
