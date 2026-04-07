@@ -85,23 +85,6 @@ const Navbar = () => {
               </div>
             </a>
 
-            {/* Divider */}
-            <div className="hidden xl:block w-px h-10 bg-cream/15" />
-
-            {/* Hours */}
-            <div className="hidden xl:flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center">
-                <Clock className="w-4 h-4 text-primary" />
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="text-[10px] text-cream/50 font-body tracking-widest uppercase">
-                  Hours
-                </span>
-                <span className="text-cream font-display font-bold text-sm">
-                  Available 24/7
-                </span>
-              </div>
-            </div>
 
             {/* CTA Button */}
             <a
