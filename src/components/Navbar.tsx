@@ -29,25 +29,23 @@ const Navbar = () => {
       </div>
 
       {/* ── Tier 2: Info bar — slightly lighter ── */}
-      <div className="hidden lg:block bg-[hsl(200,30%,15%)] border-b border-cream/8">
-        <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between py-1.5 text-xs font-body">
+      <div className="hidden lg:block bg-[hsl(200,30%,15%)] border-b border-cream/5">
+        <div className="container mx-auto px-4 lg:px-8 flex items-center justify-evenly py-1.5 text-xs font-body">
           <span className="text-cream/70 tracking-wide">Licensed &amp; Insured Plumbing Services</span>
 
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-1.5 text-amber-400">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-3 h-3 fill-current" />
-              ))}
-              <span className="text-cream/80 ml-1 font-semibold">5.0 Rating</span>
-            </div>
-
-            <div className="flex items-center gap-1.5 text-cream/60">
-              <MapPin className="w-3 h-3 text-primary" />
-              <span>Sunrise, FL 33322</span>
-            </div>
-
-            <span className="text-cream/60">24/7 Emergency Service</span>
+          <div className="flex items-center gap-1.5 text-amber-400">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-3 h-3 fill-current" />
+            ))}
+            <span className="text-cream/80 ml-1 font-semibold">5.0 Rating</span>
           </div>
+
+          <div className="flex items-center gap-1.5 text-cream/60">
+            <MapPin className="w-3 h-3 text-primary" />
+            <span>Sunrise, FL 33322</span>
+          </div>
+
+          <span className="text-cream/60">24/7 Emergency Service</span>
         </div>
       </div>
 
@@ -128,8 +126,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* ── Tier 4: Navigation links bar — lightest tier with primary accent ── */}
-      <div className="hidden md:block bg-[hsl(200,28%,20%)] border-b-2 border-primary/40 shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+      {/* ── Tier 4: Navigation links bar ── */}
+      <div className="hidden md:block bg-[hsl(200,28%,20%)] border-b border-cream/5 shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
         <div className="container mx-auto px-4 lg:px-8 flex items-center gap-8 py-2.5">
           {navLinks.map((link) => (
             <a
