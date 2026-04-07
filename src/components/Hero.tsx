@@ -48,7 +48,7 @@ const Hero = () => {
               </div>
               <span className="text-cream font-bold text-sm font-body tracking-wide">5.0</span>
               <div className="h-4 w-px bg-cream/30" />
-              <span className="text-cream/70 text-xs font-body">Trusted & Verified</span>
+              <span className="text-cream/70 text-xs font-body">5-Star Rated in Broward County</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-black text-cream leading-[1.1] mb-6">
