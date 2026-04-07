@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
-import heroImg from "@/assets/plumbing-team-van.png";
+import heroImg from "@/assets/plumbing-team.png";
+import teamVanImg from "@/assets/plumbing-team-van.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -159,7 +160,7 @@ const AboutPage = () => {
             >
               <div className="rounded overflow-hidden shadow-2xl vintage-border vintage-sepia">
                 <img
-                  src={heroImg}
+                  src={teamVanImg}
                   alt="JMS Plumbing team on the job in South Florida"
                   className="w-full h-[350px] lg:h-[450px] object-cover"
                   loading="lazy"
