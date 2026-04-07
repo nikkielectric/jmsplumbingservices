@@ -50,7 +50,7 @@ const EmergencyCTA = () => {
   };
 
   return (
-    <section className="bg-secondary py-20 lg:py-28">
+    <section className="bg-cream-light py-20 lg:py-28">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* LEFT SIDE — COPY */}
@@ -58,10 +58,10 @@ const EmergencyCTA = () => {
             <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase font-body">
               Available 24/7 — Nights, Weekends &amp; Holidays
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-secondary-foreground mt-4 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-4 mb-6 leading-tight">
               Got a Plumbing Emergency in South Florida?
             </h2>
-            <p className="text-steel font-body leading-relaxed mb-8 text-base lg:text-lg">
+            <p className="text-muted-foreground font-body leading-relaxed mb-8 text-base lg:text-lg">
               Don't wait. In South Florida's climate, a burst pipe or active leak can cause
               serious water damage and mold within 24–48 hours. We answer our phone around
               the clock — no voicemail, no runaround.
@@ -71,7 +71,7 @@ const EmergencyCTA = () => {
               {trustBullets.map((bullet, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-secondary-foreground font-body text-sm lg:text-base">
+                  <span className="text-foreground font-body text-sm lg:text-base">
                     {bullet}
                   </span>
                 </li>
