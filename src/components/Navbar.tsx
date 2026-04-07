@@ -181,17 +181,6 @@ const Navbar = () => {
                       </a>
                     ))}
                   </div>
-
-                  {/* Bottom divider + view all */}
-                  <div className="border-t border-cream/10 px-5 py-3">
-                    <a
-                      href="/#services"
-                      onClick={() => setServicesOpen(false)}
-                      className="text-xs font-body font-semibold text-primary hover:text-primary/80 tracking-wider uppercase transition-colors"
-                    >
-                      View All Services →
-                    </a>
-                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
