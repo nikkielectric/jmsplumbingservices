@@ -7,6 +7,10 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/#services" },
+  { label: "Drain Cleaning", href: "/drain-cleaning" },
+  { label: "Gas Lines", href: "/gas-line-services" },
+  { label: "Repairs", href: "/plumbing-repairs" },
+  { label: "Remodels", href: "/plumbing-remodels" },
   { label: "Contact", href: "/#contact" },
 ];
 
