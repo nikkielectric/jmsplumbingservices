@@ -40,21 +40,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-display font-bold text-cream text-base mb-5">Our Services</h4>
-            <ul className="space-y-2.5">
-              {services.map((s) => (
-                <li key={s}>
-                  <a href="#services" className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
-                    {s}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Quick Links */}
+          {/* Company */}
           <div>
             <h4 className="font-display font-bold text-cream text-base mb-5">Company</h4>
             <ul className="space-y-2.5">
@@ -67,6 +53,20 @@ const Footer = () => {
                 <li key={l.label}>
                   <a href={l.href} className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
                     {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="font-display font-bold text-cream text-base mb-5">Our Services</h4>
+            <ul className="space-y-2.5">
+              {services.map((s) => (
+                <li key={s}>
+                  <a href="#services" className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
+                    {s}
                   </a>
                 </li>
               ))}
