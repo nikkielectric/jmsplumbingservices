@@ -71,7 +71,7 @@ const EmergencyCTA = () => {
               {trustBullets.map((bullet, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                  <span className="text-secondary-foreground font-body text-sm lg:text-base">
+                  <span className="text-foreground font-body text-sm lg:text-base">
                     {bullet}
                   </span>
                 </li>
