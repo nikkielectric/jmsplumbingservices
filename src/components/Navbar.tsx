@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Phone, Menu, X, MapPin, Clock, ChevronDown, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import jmsLogo from "@/assets/jms-logo.png";
@@ -18,6 +19,7 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const location = useLocation();
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -131,15 +133,18 @@ const Navbar = () => {
       {/* ── Tier 4: Navigation links bar ── */}
       <div className="hidden md:block bg-[hsl(200,28%,20%)] border-b border-cream/5 shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
         <div className="container mx-auto px-4 lg:px-8 flex items-center gap-8 py-2.5">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-xs font-body font-semibold text-cream/70 hover:text-cream tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.href;
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`text-xs font-body font-semibold tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:transition-transform after:duration-300 after:origin-left ${isActive ? "text-cream after:scale-x-100" : "text-cream/70 hover:text-cream after:scale-x-0 hover:after:scale-x-100"}`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
 
           {/* Services dropdown */}
           <div
@@ -149,7 +154,7 @@ const Navbar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              className="flex items-center gap-1 text-xs font-body font-semibold text-cream/70 hover:text-cream tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+              className={`flex items-center gap-1 text-xs font-body font-semibold tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:transition-transform after:duration-300 after:origin-left ${serviceDropdownItems.some(s => location.pathname === s.href) ? "text-cream after:scale-x-100" : "text-cream/70 hover:text-cream after:scale-x-0 hover:after:scale-x-100"}`}
               onClick={() => setServicesOpen(!servicesOpen)}
             >
               Services
@@ -188,14 +193,14 @@ const Navbar = () => {
 
           <a
             href="/gallery"
-            className="text-xs font-body font-semibold text-cream/70 hover:text-cream tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+            className={`text-xs font-body font-semibold tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:transition-transform after:duration-300 after:origin-left ${location.pathname === "/gallery" ? "text-cream after:scale-x-100" : "text-cream/70 hover:text-cream after:scale-x-0 hover:after:scale-x-100"}`}
           >
             Gallery
           </a>
 
           <a
             href="/contact"
-            className="text-xs font-body font-semibold text-cream/70 hover:text-cream tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+            className={`text-xs font-body font-semibold tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:transition-transform after:duration-300 after:origin-left ${location.pathname === "/contact" ? "text-cream after:scale-x-100" : "text-cream/70 hover:text-cream after:scale-x-0 hover:after:scale-x-100"}`}
           >
             Contact
           </a>
