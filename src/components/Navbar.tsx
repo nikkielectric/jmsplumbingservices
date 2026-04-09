@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Phone, Menu, X, MapPin, Clock, ChevronDown, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import jmsLogo from "@/assets/jms-logo.png";
@@ -18,6 +19,7 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const location = useLocation();
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
