@@ -48,7 +48,7 @@ const Navbar = () => {
             Family Owned &amp; Operated
           </span>
           <span className="text-primary/50 mx-1">|</span>
-          <span className="text-cream/60">
+          <span className="text-primary-foreground">
             Serving Broward, Miami-Dade &amp; Palm Beach Counties Since 2018
           </span>
         </div>
@@ -57,16 +57,16 @@ const Navbar = () => {
       {/* ── Tier 2: Info bar — slightly lighter ── */}
       <div className="hidden lg:block bg-[hsl(200,30%,15%)] border-b border-cream/5">
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-evenly py-1.5 text-xs font-body">
-          <span className="text-cream/70 tracking-wide">Licensed &amp; Insured Plumbing Services</span>
+          <span className="tracking-wide text-primary-foreground">Licensed &amp; Insured Plumbing Services</span>
 
           <div className="flex items-center gap-1.5 text-cream/60">
             <Clock className="w-3 h-3 text-primary" />
-            <span>24/7 Emergency Service</span>
+            <span className="text-primary-foreground">24/7 Emergency Service</span>
           </div>
 
           <div className="flex items-center gap-1.5 text-cream/60">
             <MapPin className="w-3 h-3 text-primary" />
-            <span>Sunrise, FL 33322</span>
+            <span className="text-primary-foreground">Sunrise, FL 33322</span>
           </div>
         </div>
       </div>
