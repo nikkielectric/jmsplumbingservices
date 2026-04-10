@@ -7,6 +7,9 @@ import repairImg from "@/assets/service-repair.jpg";
 import remodelImg from "@/assets/service-remodel.jpg";
 import disposalImg from "@/assets/service-disposal.jpg";
 import emergencyImg from "@/assets/service-emergency.jpg";
+import waterHeaterImg from "@/assets/service-water-heater.jpg";
+import septicImg from "@/assets/service-septic.jpg";
+import toiletFaucetImg from "@/assets/service-toilet-faucet.jpg";
 
 const services = [
   {
@@ -44,6 +47,24 @@ const services = [
     title: "Emergency Plumbing",
     description: "Nights, weekends, holidays — we pick up. After-hours fees always disclosed upfront.",
     href: "/emergency-plumbing",
+  },
+  {
+    img: waterHeaterImg,
+    title: "Water Heaters",
+    description: "Tank or tankless — we repair, replace, and install water heaters built for South Florida's hard water.",
+    href: "/water-heaters",
+  },
+  {
+    img: septicImg,
+    title: "Septic Leach Fields",
+    description: "Installation, repair, and inspections for drain fields across the Tri-County area.",
+    href: "/septic-leach-fields",
+  },
+  {
+    img: toiletFaucetImg,
+    title: "Toilet, Faucet & Pipe Repairs",
+    description: "Running toilets, dripping faucets, leaking pipes — we fix them right the first time.",
+    href: "/toilet-faucet-pipe-repairs",
   },
 ];
 

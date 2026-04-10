@@ -6,6 +6,9 @@ import garbageDisposalHero from "@/assets/garbage-disposal-hero.png";
 import plumbingRepairsHero from "@/assets/plumbing-repairs-hero.png";
 import repipingHero from "@/assets/repiping-hero.png";
 import emergencyHero from "@/assets/emergency-plumbing-hero.png";
+import waterHeaterHero from "@/assets/water-heater-hero.png";
+import septicLeachHero from "@/assets/septic-leach-hero.png";
+import toiletFaucetHero from "@/assets/toilet-faucet-hero.png";
 import { servicePages } from "@/data/servicePages";
 
 const heroImages: Record<string, string> = {
@@ -15,6 +18,9 @@ const heroImages: Record<string, string> = {
   "plumbing-repairs": plumbingRepairsHero,
   "plumbing-remodels": repipingHero,
   "emergency-plumbing": emergencyHero,
+  "water-heaters": waterHeaterHero,
+  "septic-leach-fields": septicLeachHero,
+  "toilet-faucet-pipe-repairs": toiletFaucetHero,
 };
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
