@@ -7,6 +7,7 @@ interface ServiceHeroProps {
   h1: string;
   subtext: string;
   heroImage?: string;
+  heroObjectPosition?: string;
 }
 
 const ServiceHero = ({ serviceCategory, h1, subtext, heroImage }: ServiceHeroProps) => {
