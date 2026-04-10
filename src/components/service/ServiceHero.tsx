@@ -7,9 +7,10 @@ interface ServiceHeroProps {
   h1: string;
   subtext: string;
   heroImage?: string;
+  heroObjectPosition?: string;
 }
 
-const ServiceHero = ({ serviceCategory, h1, subtext, heroImage }: ServiceHeroProps) => {
+const ServiceHero = ({ serviceCategory, h1, subtext, heroImage, heroObjectPosition }: ServiceHeroProps) => {
   const bgImage = heroImage || heroImg;
 
   return (
@@ -20,7 +21,8 @@ const ServiceHero = ({ serviceCategory, h1, subtext, heroImage }: ServiceHeroPro
           src={bgImage}
           alt={`${h1} — JMS Plumbing Services in South Florida`}
           aria-hidden="true"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: heroObjectPosition || 'top' }}
         />
         {/* Secondary color overlay */}
         <div className="absolute inset-0 bg-secondary/85" />

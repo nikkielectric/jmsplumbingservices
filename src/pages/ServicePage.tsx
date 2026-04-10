@@ -22,6 +22,10 @@ const heroImages: Record<string, string> = {
   "septic-leach-fields": septicLeachHero,
   "toilet-faucet-pipe-repairs": toiletFaucetHero,
 };
+
+const heroObjectPositions: Record<string, string> = {
+  "septic-leach-fields": "center",
+};
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceHero from "@/components/service/ServiceHero";
@@ -154,6 +158,7 @@ const ServicePage = () => {
         h1={data.heroH1}
         subtext={data.heroSubtext}
         heroImage={heroImages[data.slug]}
+        heroObjectPosition={heroObjectPositions[data.slug]}
       />
 
       {/* Section 2: Main Content + Sticky Sidebar */}
