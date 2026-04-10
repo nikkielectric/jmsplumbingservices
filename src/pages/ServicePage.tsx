@@ -25,6 +25,7 @@ const heroImages: Record<string, string> = {
 
 const heroObjectPositions: Record<string, string> = {
   "septic-leach-fields": "center",
+  "toilet-faucet-pipe-repairs": "center 60%",
 };
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
