@@ -62,7 +62,7 @@ const services = [
   },
   {
     img: toiletFaucetImg,
-    title: "Toilet, Faucet & Pipe Repairs",
+    title: "Fixture Repairs",
     description: "Running toilets, dripping faucets, leaking pipes — we fix them right the first time.",
     href: "/toilet-faucet-pipe-repairs",
   },
