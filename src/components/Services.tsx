@@ -7,7 +7,7 @@ import repairImg from "@/assets/plumbing-repairs-card.png";
 import remodelImg from "@/assets/plumbing-remodels-card.png";
 import disposalImg from "@/assets/service-disposal.jpg";
 import emergencyImg from "@/assets/service-emergency.jpg";
-import waterHeaterImg from "@/assets/service-water-heater.jpg";
+import waterHeaterImg from "@/assets/water-heaters-card.png";
 import septicImg from "@/assets/service-septic.jpg";
 import toiletFaucetImg from "@/assets/service-toilet-faucet.jpg";
 
