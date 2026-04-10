@@ -158,6 +158,7 @@ const ServicePage = () => {
         h1={data.heroH1}
         subtext={data.heroSubtext}
         heroImage={heroImages[data.slug]}
+        heroObjectPosition={heroObjectPositions[data.slug]}
       />
 
       {/* Section 2: Main Content + Sticky Sidebar */}
