@@ -320,21 +320,6 @@ const ImmersiveShowcase = () => {
 
         {/* Scrolling gallery strip */}
         <div className="relative">
-          {/* Arrow buttons */}
-          <button
-            onClick={() => scrollBy(-1)}
-            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 backdrop-blur-sm text-cream p-2.5 rounded-full hover:bg-black/60 transition-colors"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            onClick={() => scrollBy(1)}
-            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 backdrop-blur-sm text-cream p-2.5 rounded-full hover:bg-black/60 transition-colors"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
 
           {/* Edge fades */}
           <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-secondary to-transparent z-10 pointer-events-none" />
