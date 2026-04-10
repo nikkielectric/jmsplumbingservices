@@ -22,6 +22,10 @@ const heroImages: Record<string, string> = {
   "septic-leach-fields": septicLeachHero,
   "toilet-faucet-pipe-repairs": toiletFaucetHero,
 };
+
+const heroObjectPositions: Record<string, string> = {
+  "septic-leach-fields": "center",
+};
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceHero from "@/components/service/ServiceHero";
