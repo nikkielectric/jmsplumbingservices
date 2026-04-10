@@ -289,10 +289,7 @@ const GalleryPage = () => {
         </div>
       </section>
 
-      {/* ── SECTION 2: Immersive Media Showcase ── */}
-      <ImmersiveShowcase />
-
-      {/* ── SECTION 3: Photo Reviews Gallery (Masonry) ── */}
+      {/* ── SECTION 2: Photo Reviews Gallery (Masonry) ── */}
       <section className="py-16 lg:py-24 bg-cream-light vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
@@ -345,7 +342,10 @@ const GalleryPage = () => {
         </div>
       </section>
 
-      {/* ── SECTION 4: Leave a Review CTA ── */}
+      {/* ── SECTION 4: Immersive Media Showcase ── */}
+      <ImmersiveShowcase />
+
+      {/* ── SECTION 5: Leave a Review CTA ── */}
       <section
         className="relative py-20 lg:py-28 overflow-hidden"
         style={{ background: "linear-gradient(135deg, hsl(184 72% 32%), hsl(200 30% 18%), hsl(184 72% 25%))" }}
