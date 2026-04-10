@@ -289,7 +289,10 @@ const GalleryPage = () => {
         </div>
       </section>
 
-      {/* ── SECTION 2: Photo Reviews Gallery (Masonry) ── */}
+      {/* ── SECTION 2: Immersive Media Showcase ── */}
+      <ImmersiveShowcase />
+
+      {/* ── SECTION 3: Photo Reviews Gallery (Masonry) ── */}
       <section className="py-16 lg:py-24 bg-cream-light vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
