@@ -4,7 +4,7 @@ import VintageOrnament from "./VintageOrnament";
 import drainImg from "@/assets/drain-cleaning-card.png";
 import gasImg from "@/assets/gas-line-card.png";
 import repairImg from "@/assets/plumbing-repairs-card.png";
-import remodelImg from "@/assets/service-remodel.jpg";
+import remodelImg from "@/assets/plumbing-remodels-card.png";
 import disposalImg from "@/assets/service-disposal.jpg";
 import emergencyImg from "@/assets/service-emergency.jpg";
 import waterHeaterImg from "@/assets/service-water-heater.jpg";
