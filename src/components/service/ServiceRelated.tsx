@@ -4,12 +4,15 @@ import { ArrowRight } from "lucide-react";
 import VintageOrnament from "@/components/VintageOrnament";
 import type { RelatedService } from "@/data/servicePages";
 
-import drainImg from "@/assets/service-drain.jpg";
-import gasImg from "@/assets/service-gas.jpg";
-import repairImg from "@/assets/service-repair.jpg";
-import remodelImg from "@/assets/service-remodel.jpg";
+import drainImg from "@/assets/drain-cleaning-card.png";
+import gasImg from "@/assets/gas-line-card.png";
+import repairImg from "@/assets/plumbing-repairs-card.png";
+import remodelImg from "@/assets/plumbing-remodels-card.png";
 import disposalImg from "@/assets/service-disposal.jpg";
-import emergencyImg from "@/assets/service-emergency.jpg";
+import emergencyImg from "@/assets/emergency-plumbing-card.png";
+import waterHeaterImg from "@/assets/water-heaters-card.png";
+import septicImg from "@/assets/septic-leach-card.png";
+import fixtureImg from "@/assets/fixture-repairs-card.png";
 
 const imageMap: Record<string, string> = {
   "/drain-cleaning": drainImg,
@@ -18,6 +21,9 @@ const imageMap: Record<string, string> = {
   "/plumbing-remodels": remodelImg,
   "/garbage-disposal": disposalImg,
   "/emergency-plumbing": emergencyImg,
+  "/water-heaters": waterHeaterImg,
+  "/septic-leach-fields": septicImg,
+  "/toilet-faucet-pipe-repairs": fixtureImg,
 };
 
 interface ServiceRelatedProps {
