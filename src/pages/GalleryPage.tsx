@@ -4,6 +4,7 @@ import { Star, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
+import ImmersiveShowcase from "@/components/gallery/ImmersiveShowcase";
 
 // Existing project photos used as gallery images
 import drainCleaningImg from "@/assets/drain-cleaning-hero.png";
@@ -288,7 +289,10 @@ const GalleryPage = () => {
         </div>
       </section>
 
-      {/* ── SECTION 2: Photo Reviews Gallery (Masonry) ── */}
+      {/* ── SECTION 2: Immersive Media Showcase ── */}
+      <ImmersiveShowcase />
+
+      {/* ── SECTION 3: Photo Reviews Gallery (Masonry) ── */}
       <section className="py-16 lg:py-24 bg-cream-light vintage-grain relative">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
