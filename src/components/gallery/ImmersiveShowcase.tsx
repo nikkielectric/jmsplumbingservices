@@ -2,45 +2,38 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Phone, Volume2, VolumeX } from "lucide-react";
 
+import slideHoseBib from "@/assets/gallery/slide-hose-bib.jpg";
+import slideCopperRepipe from "@/assets/gallery/slide-copper-repipe.jpg";
+import slideWaterHeater from "@/assets/gallery/slide-water-heater.jpg";
+import slideToilet from "@/assets/gallery/slide-toilet.jpg";
+import slideShowerPanel from "@/assets/gallery/slide-shower-panel.jpg";
+import slideHoseBib2 from "@/assets/gallery/slide-hose-bib-2.jpg";
+import slideSoldering from "@/assets/gallery/slide-soldering.jpg";
+import slideShowerPan from "@/assets/gallery/slide-shower-pan.jpg";
+import slideShowerFixture from "@/assets/gallery/slide-shower-fixture.jpg";
+
 /* ── Slide data type ── */
 export interface ShowcaseSlide {
   id: string;
   type: "image" | "video" | "youtube" | "instagram";
-  /** URL or import path for the media */
   src: string;
-  /** Optional poster/thumbnail for videos */
   poster?: string;
-  /** e.g. "WATER HEATER REPLACEMENT" */
   category?: string;
-  /** e.g. "Sunrise, FL" */
   location?: string;
 }
 
-/* ── Slide content (currently empty — swap in real media later) ── */
+/* ── Slide content ── */
 export const showcaseSlides: ShowcaseSlide[] = [
-  // Example entries (uncomment / replace when media is ready):
-  // {
-  //   id: "1",
-  //   type: "image",
-  //   src: "/path/to/image.jpg",
-  //   category: "WATER HEATER REPLACEMENT",
-  //   location: "Sunrise, FL",
-  // },
-  // {
-  //   id: "2",
-  //   type: "video",
-  //   src: "/path/to/video.mp4",
-  //   poster: "/path/to/poster.jpg",
-  //   category: "DRAIN CLEANING",
-  //   location: "Fort Lauderdale, FL",
-  // },
-  // {
-  //   id: "3",
-  //   type: "youtube",
-  //   src: "https://www.youtube.com/embed/VIDEO_ID",
-  //   category: "SEPTIC LEACH FIELDS",
-  //   location: "Boca Raton, FL",
-  // },
+  { id: "1", type: "image", src: slideSoldering, category: "COPPER REPIPING", location: "South Florida" },
+  { id: "2", type: "image", src: slideCopperRepipe, category: "COPPER REPIPING", location: "South Florida" },
+  { id: "3", type: "image", src: slideWaterHeater, category: "WATER HEATER INSTALLATION", location: "South Florida" },
+  { id: "4", type: "video", src: "/gallery/slide-video-1.mp4", category: "PLUMBING WORK", location: "South Florida" },
+  { id: "5", type: "image", src: slideToilet, category: "TOILET INSTALLATION", location: "South Florida" },
+  { id: "6", type: "image", src: slideShowerPanel, category: "FIXTURE INSTALLATION", location: "South Florida" },
+  { id: "7", type: "image", src: slideShowerPan, category: "SHOWER PAN LINER", location: "South Florida" },
+  { id: "8", type: "image", src: slideShowerFixture, category: "FIXTURE INSTALLATION", location: "South Florida" },
+  { id: "9", type: "image", src: slideHoseBib, category: "HOSE BIB REPAIR", location: "South Florida" },
+  { id: "10", type: "image", src: slideHoseBib2, category: "HOSE BIB REPAIR", location: "South Florida" },
 ];
 
 const AUTO_ADVANCE_MS = 6000;
