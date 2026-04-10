@@ -9,7 +9,7 @@ import disposalImg from "@/assets/service-disposal.jpg";
 import emergencyImg from "@/assets/emergency-plumbing-card.png";
 import waterHeaterImg from "@/assets/water-heaters-card.png";
 import septicImg from "@/assets/septic-leach-card.png";
-import toiletFaucetImg from "@/assets/service-toilet-faucet.jpg";
+import toiletFaucetImg from "@/assets/fixture-repairs-card.png";
 
 const services = [
   {
