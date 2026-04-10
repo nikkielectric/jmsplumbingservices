@@ -10,6 +10,9 @@ const serviceDropdownItems = [
   { label: "Plumbing Repairs", href: "/plumbing-repairs" },
   { label: "Plumbing Remodels", href: "/plumbing-remodels" },
   { label: "Garbage Disposal", href: "/garbage-disposal" },
+  { label: "Water Heaters", href: "/water-heaters" },
+  { label: "Septic Leach Fields", href: "/septic-leach-fields" },
+  { label: "Toilet, Faucet & Pipe Repairs", href: "/toilet-faucet-pipe-repairs" },
   { label: "Emergency Plumbing", href: "/emergency-plumbing" },
 ];
 
