@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Phone, Volume2, VolumeX } from "lucide-react";
+import { ChevronLeft, ChevronRight, Volume2, VolumeX, Play } from "lucide-react";
 
 import slideHoseBib from "@/assets/gallery/slide-hose-bib.jpg";
 import slideCopperRepipe from "@/assets/gallery/slide-copper-repipe.jpg";
@@ -12,7 +12,7 @@ import slideSoldering from "@/assets/gallery/slide-soldering.jpg";
 import slideShowerPan from "@/assets/gallery/slide-shower-pan.jpg";
 import slideShowerFixture from "@/assets/gallery/slide-shower-fixture.jpg";
 
-/* ── Slide data type ── */
+/* ── Types ── */
 export interface ShowcaseSlide {
   id: string;
   type: "image" | "video" | "youtube" | "instagram";
@@ -22,7 +22,7 @@ export interface ShowcaseSlide {
   location?: string;
 }
 
-/* ── Slide content ── */
+/* ── Data ── */
 export const showcaseSlides: ShowcaseSlide[] = [
   { id: "1", type: "image", src: slideSoldering, category: "COPPER REPIPING", location: "South Florida" },
   { id: "2", type: "image", src: slideCopperRepipe, category: "COPPER REPIPING", location: "South Florida" },
@@ -36,280 +36,345 @@ export const showcaseSlides: ShowcaseSlide[] = [
   { id: "10", type: "image", src: slideHoseBib2, category: "HOSE BIB REPAIR", location: "South Florida" },
 ];
 
-const AUTO_ADVANCE_MS = 6000;
-
-/* ── Empty state ── */
-const EmptyState = () => (
-  <div className="w-full h-screen flex items-center justify-center bg-secondary vintage-grain relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-b from-secondary via-secondary/95 to-secondary" />
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(184_72%_38%_/_0.08)_0%,_transparent_60%)]" />
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7 }}
-      className="relative z-10 text-center px-6 max-w-xl"
-    >
-      <span className="text-primary font-semibold text-xs tracking-[0.25em] uppercase font-body block mb-4">
-        COMING SOON
-      </span>
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-cream leading-tight mb-6">
-        Behind-the-scenes content coming&nbsp;soon.
-      </h2>
-      <p className="text-cream/60 font-body text-base leading-relaxed mb-8">
-        In the meantime — give us a call.
-      </p>
-      <a
-        href="tel:+19549106883"
-        className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded font-bold text-sm hover:bg-primary/90 transition-colors shadow-lg"
-      >
-        <Phone className="w-4 h-4" />
-        (954) 910-6883
-      </a>
-    </motion.div>
-  </div>
-);
-
-/* ── Video slide ── */
-const VideoSlide = ({
+/* ── Lightbox for full-screen viewing ── */
+const Lightbox = ({
   slide,
-  isActive,
+  onClose,
+  onPrev,
+  onNext,
 }: {
   slide: ShowcaseSlide;
-  isActive: boolean;
+  onClose: () => void;
+  onPrev: () => void;
+  onNext: () => void;
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
 
   useEffect(() => {
+    if (slide.type === "video" && videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    }
+  }, [slide]);
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") onPrev();
+      if (e.key === "ArrowRight") onNext();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [onClose, onPrev, onNext]);
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+        onClick={onClose}
+      >
+        {/* Close */}
+        <button
+          onClick={onClose}
+          className="absolute top-5 right-5 z-50 text-cream/60 hover:text-cream text-3xl font-light transition-colors"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+
+        {/* Arrows */}
+        <button
+          onClick={(e) => { e.stopPropagation(); onPrev(); }}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-white/10 backdrop-blur-sm text-cream p-3 rounded-full hover:bg-white/20 transition-colors"
+          aria-label="Previous"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={(e) => { e.stopPropagation(); onNext(); }}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-white/10 backdrop-blur-sm text-cream p-3 rounded-full hover:bg-white/20 transition-colors"
+          aria-label="Next"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+
+        {/* Media */}
+        <motion.div
+          key={slide.id}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.3 }}
+          className="relative max-w-5xl max-h-[85vh] w-full mx-4"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {slide.type === "image" ? (
+            <img
+              src={slide.src}
+              alt={slide.category || "Project photo"}
+              className="w-full h-full max-h-[85vh] object-contain rounded-lg"
+            />
+          ) : slide.type === "video" ? (
+            <div className="relative">
+              <video
+                ref={videoRef}
+                src={slide.src}
+                poster={slide.poster}
+                muted={muted}
+                loop
+                playsInline
+                className="w-full max-h-[85vh] object-contain rounded-lg"
+              />
+              <button
+                onClick={() => {
+                  if (videoRef.current) {
+                    videoRef.current.muted = !muted;
+                    setMuted(!muted);
+                  }
+                }}
+                className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm text-cream p-2 rounded-full hover:bg-black/70 transition-colors"
+                aria-label={muted ? "Unmute" : "Mute"}
+              >
+                {muted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+              </button>
+            </div>
+          ) : (
+            <iframe
+              src={slide.src}
+              className="w-full aspect-video rounded-lg"
+              allow="autoplay; encrypted-media"
+              loading="lazy"
+              title={slide.category || "Video"}
+            />
+          )}
+
+          {/* Caption */}
+          {(slide.category || slide.location) && (
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent rounded-b-lg">
+              {slide.category && (
+                <span className="text-primary font-semibold text-xs tracking-[0.25em] uppercase font-body block mb-1">
+                  {slide.category}
+                </span>
+              )}
+              {slide.location && (
+                <span className="text-cream/50 font-body text-xs">{slide.location}</span>
+              )}
+            </div>
+          )}
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  );
+};
+
+/* ── Thumbnail Card ── */
+const SlideCard = ({
+  slide,
+  index,
+  onClick,
+}: {
+  slide: ShowcaseSlide;
+  index: number;
+  onClick: () => void;
+}) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
     if (!videoRef.current) return;
-    if (isActive) {
+    if (isHovered) {
       videoRef.current.play().catch(() => {});
     } else {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
-      setMuted(true);
     }
-  }, [isActive]);
-
-  const toggleMute = () => {
-    if (!videoRef.current) return;
-    const next = !muted;
-    videoRef.current.muted = next;
-    setMuted(next);
-  };
-
-  if (slide.type === "youtube") {
-    return (
-      <iframe
-        src={`${slide.src}?autoplay=${isActive ? 1 : 0}&mute=1&loop=1&controls=0&modestbranding=1&rel=0`}
-        className="absolute inset-0 w-full h-full object-cover"
-        allow="autoplay; encrypted-media"
-        loading="lazy"
-        title={slide.category || "Video"}
-      />
-    );
-  }
-
-  if (slide.type === "instagram") {
-    return (
-      <iframe
-        src={slide.src}
-        className="absolute inset-0 w-full h-full object-cover"
-        loading="lazy"
-        title={slide.category || "Video"}
-      />
-    );
-  }
+  }, [isHovered]);
 
   return (
-    <>
-      <video
-        ref={videoRef}
-        src={slide.src}
-        poster={slide.poster}
-        muted={muted}
-        loop
-        playsInline
-        preload="none"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <button
-        onClick={toggleMute}
-        className="absolute bottom-6 right-6 z-30 bg-black/40 backdrop-blur-sm text-cream p-2.5 rounded-full hover:bg-black/60 transition-colors"
-        aria-label={muted ? "Unmute" : "Mute"}
-      >
-        {muted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-      </button>
-    </>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.06 }}
+      className="flex-shrink-0 w-[300px] sm:w-[360px] lg:w-[420px] group cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
+    >
+      <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+        {slide.type === "image" ? (
+          <img
+            src={slide.src}
+            alt={slide.category || "Project photo"}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            loading="lazy"
+          />
+        ) : (
+          <>
+            <video
+              ref={videoRef}
+              src={slide.src}
+              poster={slide.poster}
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="bg-black/40 backdrop-blur-sm rounded-full p-3 group-hover:bg-primary/80 transition-colors duration-300">
+                <Play className="w-6 h-6 text-cream fill-cream" />
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+
+        {/* Caption */}
+        {(slide.category || slide.location) && (
+          <div className="absolute bottom-0 left-0 right-0 p-4">
+            {slide.category && (
+              <span className="text-primary font-semibold text-[10px] sm:text-[11px] tracking-[0.2em] uppercase font-body block mb-1">
+                {slide.category}
+              </span>
+            )}
+            {slide.location && (
+              <span className="text-cream/50 font-body text-xs">{slide.location}</span>
+            )}
+          </div>
+        )}
+      </div>
+    </motion.div>
   );
 };
 
-/* ── Main Showcase Component ── */
+/* ── Main Component ── */
 const ImmersiveShowcase = () => {
   const slides = showcaseSlides;
-  const [current, setCurrent] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const touchStartX = useRef(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const animRef = useRef<number | null>(null);
+  const scrollSpeed = 0.5; // px per frame
 
-  const count = slides.length;
-
-  /* Auto-advance */
-  const resetTimer = useCallback(() => {
-    if (timerRef.current) clearInterval(timerRef.current);
-    if (!paused && count > 1) {
-      timerRef.current = setInterval(() => {
-        setCurrent((p) => (p + 1) % count);
-      }, AUTO_ADVANCE_MS);
+  /* Slow auto-scroll */
+  const autoScroll = useCallback(() => {
+    if (!scrollRef.current || isPaused) {
+      animRef.current = requestAnimationFrame(autoScroll);
+      return;
     }
-  }, [paused, count]);
+    const el = scrollRef.current;
+    el.scrollLeft += scrollSpeed;
+    // Loop back when reaching the end
+    if (el.scrollLeft >= el.scrollWidth - el.clientWidth - 1) {
+      el.scrollLeft = 0;
+    }
+    animRef.current = requestAnimationFrame(autoScroll);
+  }, [isPaused]);
 
   useEffect(() => {
-    resetTimer();
+    animRef.current = requestAnimationFrame(autoScroll);
     return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
+      if (animRef.current) cancelAnimationFrame(animRef.current);
     };
-  }, [resetTimer]);
+  }, [autoScroll]);
 
-  const goTo = (i: number) => {
-    setCurrent(i);
-    resetTimer();
-  };
-  const prev = () => goTo((current - 1 + count) % count);
-  const next = () => goTo((current + 1) % count);
-
-  /* Touch swipe */
-  const onTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-  const onTouchEnd = (e: React.TouchEvent) => {
-    const diff = touchStartX.current - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) {
-      diff > 0 ? next() : prev();
-    }
+  const scrollBy = (dir: number) => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollBy({ left: dir * 400, behavior: "smooth" });
   };
 
-  /* Keyboard */
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") prev();
-      if (e.key === "ArrowRight") next();
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [current, count]);
-
-  if (count === 0) return <EmptyState />;
+  if (slides.length === 0) return null;
 
   return (
-    <section
-      className="relative w-full h-screen overflow-hidden bg-secondary"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onTouchStart={(e) => {
-        setPaused(true);
-        onTouchStart(e);
-      }}
-      onTouchEnd={(e) => {
-        setPaused(false);
-        onTouchEnd(e);
-      }}
-    >
-      {/* Slides */}
-      <AnimatePresence mode="wait">
-        {slides.map(
-          (slide, i) =>
-            i === current && (
-              <motion.div
+    <>
+      <section className="relative py-16 lg:py-24 bg-secondary vintage-grain overflow-hidden">
+        {/* Top accent line */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+
+        {/* Section header */}
+        <div className="container mx-auto px-4 lg:px-8 mb-10 lg:mb-14">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <span className="text-primary font-semibold text-xs tracking-[0.25em] uppercase font-body">
+              BEHIND THE SCENES
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-cream leading-tight mt-3 mb-4">
+              Our Work, Up Close
+            </h2>
+            <p className="text-cream/50 font-body text-sm sm:text-base max-w-xl mx-auto">
+              Real photos and videos from real jobs across South Florida. Click any image for a closer look.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Scrolling gallery strip */}
+        <div className="relative">
+          {/* Arrow buttons */}
+          <button
+            onClick={() => scrollBy(-1)}
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 backdrop-blur-sm text-cream p-2.5 rounded-full hover:bg-black/60 transition-colors"
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => scrollBy(1)}
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 backdrop-blur-sm text-cream p-2.5 rounded-full hover:bg-black/60 transition-colors"
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          {/* Edge fades */}
+          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-secondary to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-secondary to-transparent z-10 pointer-events-none" />
+
+          {/* Scrollable row */}
+          <div
+            ref={scrollRef}
+            className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide px-8 sm:px-16 py-2"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setTimeout(() => setIsPaused(false), 3000)}
+          >
+            {slides.map((slide, i) => (
+              <SlideCard
                 key={slide.id}
-                initial={{ opacity: 0, x: 80 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -80 }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute inset-0 w-full h-full"
-              >
-                {slide.type === "image" ? (
-                  <img
-                    src={slide.src}
-                    alt={slide.category || "Project photo"}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                ) : (
-                  <VideoSlide slide={slide} isActive={i === current} />
-                )}
-
-                {/* Dark gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent pointer-events-none" />
-
-                {/* Text overlay — bottom left */}
-                {(slide.category || slide.location) && (
-                  <div className="absolute bottom-20 sm:bottom-16 left-6 sm:left-12 z-20">
-                    {slide.category && (
-                      <span className="text-primary font-semibold text-[11px] sm:text-xs tracking-[0.25em] uppercase font-body block mb-1.5">
-                        {slide.category}
-                      </span>
-                    )}
-                    {slide.location && (
-                      <span className="text-cream/50 font-body text-xs sm:text-sm">
-                        {slide.location}
-                      </span>
-                    )}
-                  </div>
-                )}
-              </motion.div>
-            )
-        )}
-      </AnimatePresence>
-
-      {/* Arrow navigation */}
-      {count > 1 && (
-        <>
-          <button
-            onClick={prev}
-            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 bg-black/30 backdrop-blur-sm text-cream p-2.5 sm:p-3 rounded-full hover:bg-black/50 transition-colors"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
-          </button>
-          <button
-            onClick={next}
-            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 bg-black/30 backdrop-blur-sm text-cream p-2.5 sm:p-3 rounded-full hover:bg-black/50 transition-colors"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
-          </button>
-        </>
-      )}
-
-      {/* Dot indicators */}
-      {count > 1 && (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goTo(i)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                i === current
-                  ? "bg-primary w-6"
-                  : "bg-cream/30 hover:bg-cream/50"
-              }`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
+                slide={slide}
+                index={i}
+                onClick={() => setLightboxIndex(i)}
+              />
+            ))}
+          </div>
         </div>
-      )}
 
-      {/* Slide counter */}
-      {count > 1 && (
-        <div className="absolute top-6 right-6 sm:right-12 z-30 text-cream/40 font-body text-xs tracking-widest">
-          {String(current + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
-        </div>
+        {/* Bottom accent line */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      </section>
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <Lightbox
+          slide={slides[lightboxIndex]}
+          onClose={() => setLightboxIndex(null)}
+          onPrev={() => setLightboxIndex((lightboxIndex - 1 + slides.length) % slides.length)}
+          onNext={() => setLightboxIndex((lightboxIndex + 1) % slides.length)}
+        />
       )}
-    </section>
+    </>
   );
 };
 
