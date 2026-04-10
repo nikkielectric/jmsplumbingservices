@@ -7,6 +7,9 @@ const services = [
   { name: "Plumbing Repairs", href: "/plumbing-repairs" },
   { name: "Plumbing Remodels", href: "/plumbing-remodels" },
   { name: "Garbage Disposal", href: "/garbage-disposal" },
+  { name: "Water Heaters", href: "/water-heaters" },
+  { name: "Septic Leach Fields", href: "/septic-leach-fields" },
+  { name: "Fixture Repairs", href: "/toilet-faucet-pipe-repairs" },
   { name: "Emergency Plumbing", href: "/emergency-plumbing" },
 ];
 

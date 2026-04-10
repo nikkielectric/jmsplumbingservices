@@ -108,6 +108,8 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
               <option value="repairs" className="bg-secondary text-cream">Plumbing Repairs &amp; Replacements</option>
               <option value="gas" className="bg-secondary text-cream">Gas Line Services</option>
               <option value="garbage-disposal" className="bg-secondary text-cream">Garbage Disposal</option>
+              <option value="septic-leach-fields" className="bg-secondary text-cream">Septic Leach Fields</option>
+              <option value="fixture-repairs" className="bg-secondary text-cream">Fixture Repairs</option>
               <option value="remodel" className="bg-secondary text-cream">Bathroom/Kitchen Remodel</option>
               <option value="emergency" className="bg-secondary text-cream">Emergency Repair</option>
               <option value="other" className="bg-secondary text-cream">Other</option>
