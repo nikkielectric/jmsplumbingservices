@@ -4,6 +4,7 @@ import { Star, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
+import ImmersiveShowcase from "@/components/gallery/ImmersiveShowcase";
 
 // Existing project photos used as gallery images
 import drainCleaningImg from "@/assets/drain-cleaning-hero.png";
