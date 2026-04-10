@@ -5,7 +5,7 @@ import gasLineHero from "@/assets/gas-line-hero.png";
 import garbageDisposalHero from "@/assets/garbage-disposal-hero.png";
 import plumbingRepairsHero from "@/assets/plumbing-repairs-hero.png";
 import repipingHero from "@/assets/repiping-hero.png";
-import emergencyHero from "@/assets/emergency-plumbing-hero.png";
+import emergencyHero from "@/assets/emergency-plumbing-card.png";
 import waterHeaterHero from "@/assets/water-heaters-card.png";
 import septicLeachHero from "@/assets/septic-leach-card.png";
 import toiletFaucetHero from "@/assets/toilet-faucet-hero.png";
