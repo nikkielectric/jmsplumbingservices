@@ -8,7 +8,7 @@ import repipingHero from "@/assets/repiping-hero.png";
 import emergencyHero from "@/assets/emergency-plumbing-card.png";
 import waterHeaterHero from "@/assets/water-heaters-card.png";
 import septicLeachHero from "@/assets/septic-leach-card.png";
-import toiletFaucetHero from "@/assets/toilet-faucet-hero.png";
+import toiletFaucetHero from "@/assets/fixture-repairs-card.png";
 import { servicePages } from "@/data/servicePages";
 
 const heroImages: Record<string, string> = {
