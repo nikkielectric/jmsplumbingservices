@@ -57,7 +57,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {services.map((s) => (
                 <li key={s.name}>
-                  <a href={s.href} className="text-cream/50 text-sm font-body hover:text-cream transition-colors whitespace-nowrap">
+                  <a href={s.href} className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
                     {s.name}
                   </a>
                 </li>
