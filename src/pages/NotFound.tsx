@@ -5,6 +5,9 @@ const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
+    document.title = "Page Not Found | JMS Plumbing Services LLC";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", "The page you're looking for doesn't exist. Return to JMS Plumbing Services for expert plumbing in Sunrise, FL and South Florida's Tri-County area.");
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
   }, [location.pathname]);
 
