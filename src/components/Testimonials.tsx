@@ -157,7 +157,7 @@ const Testimonials = () => {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 35,
+              duration: 18,
               ease: "linear",
             },
           }}

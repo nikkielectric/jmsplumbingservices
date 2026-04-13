@@ -260,7 +260,7 @@ const ImmersiveShowcase = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [isPaused, setIsPaused] = useState(false);
   const animRef = useRef<number | null>(null);
-  const scrollSpeed = 0.5; // px per frame
+  const scrollSpeed = 1.2; // px per frame
 
   /* Slow auto-scroll */
   const autoScroll = useCallback(() => {

@@ -70,7 +70,7 @@ const About = () => {
                 />
               </div>
               {/* Stamp badge instead of modern badge */}
-              <div className="absolute -bottom-6 -left-4 lg:-left-8 stamp-badge bg-primary shadow-lg">
+              <div className="absolute -bottom-6 left-2 sm:-left-4 lg:-left-8 stamp-badge bg-primary shadow-lg">
                 <div className="text-center">
                   <span className="text-cream font-display font-black text-2xl block">Family</span>
                   <span className="text-cream/80 text-[10px] font-body uppercase tracking-widest">Owned & Operated</span>
