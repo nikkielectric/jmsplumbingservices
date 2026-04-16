@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, ArrowRight } from "lucide-react";
-import heroImg from "@/assets/hero-plumber.png";
+import heroImg from "@/assets/hero-plumber.webp";
 
 interface ServiceHeroProps {
   serviceCategory: string;

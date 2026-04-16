@@ -4,15 +4,15 @@ import { ArrowRight } from "lucide-react";
 import VintageOrnament from "@/components/VintageOrnament";
 import type { RelatedService } from "@/data/servicePages";
 
-import drainImg from "@/assets/drain-cleaning-card.png";
-import gasImg from "@/assets/gas-line-card.png";
-import repairImg from "@/assets/plumbing-repairs-card.png";
-import remodelImg from "@/assets/plumbing-remodels-card.png";
+import drainImg from "@/assets/drain-cleaning-card.webp";
+import gasImg from "@/assets/gas-line-card.webp";
+import repairImg from "@/assets/plumbing-repairs-card.webp";
+import remodelImg from "@/assets/plumbing-remodels-card.webp";
 import disposalImg from "@/assets/service-disposal.jpg";
-import emergencyImg from "@/assets/emergency-plumbing-card.png";
-import waterHeaterImg from "@/assets/water-heaters-card.png";
-import septicImg from "@/assets/septic-leach-card.png";
-import fixtureImg from "@/assets/fixture-repairs-card.png";
+import emergencyImg from "@/assets/emergency-plumbing-card.webp";
+import waterHeaterImg from "@/assets/water-heaters-card.webp";
+import septicImg from "@/assets/septic-leach-card.webp";
+import fixtureImg from "@/assets/fixture-repairs-card.webp";
 
 const imageMap: Record<string, string> = {
   "/drain-cleaning": drainImg,

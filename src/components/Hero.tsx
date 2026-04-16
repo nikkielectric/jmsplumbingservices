@@ -1,6 +1,6 @@
 import { Phone, ArrowRight, Star, Shield, Clock, DollarSign } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-plumber.png";
+import heroImg from "@/assets/hero-plumber.webp";
 import VintageOrnament from "./VintageOrnament";
 
 const valueProps = [
@@ -94,8 +94,11 @@ const Hero = () => {
                 src={heroImg}
                 alt="Professional JMS plumber at work in a modern Florida home"
                 className="w-full h-[400px] lg:h-[500px] object-cover object-[center_25%]"
-                width={1920}
-                height={1080}
+                width={1200}
+                height={800}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent" />
             </div>
