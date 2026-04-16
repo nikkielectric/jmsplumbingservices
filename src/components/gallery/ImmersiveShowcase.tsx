@@ -2,14 +2,14 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Volume2, VolumeX, Play } from "lucide-react";
 
-import slideHoseBib from "@/assets/gallery/slide-hose-bib.jpg";
-import slideCopperRepipe from "@/assets/gallery/slide-copper-repipe.jpg";
+import slideHoseBib from "@/assets/gallery/slide-hose-bib.webp";
+import slideCopperRepipe from "@/assets/gallery/slide-copper-repipe.webp";
 import slideWaterHeater from "@/assets/gallery/slide-water-heater.jpg";
 import slideToilet from "@/assets/gallery/slide-toilet.jpg";
 import slideShowerPanel from "@/assets/gallery/slide-shower-panel.jpg";
 import slideHoseBib2 from "@/assets/gallery/slide-hose-bib-2.jpg";
-import slideSoldering from "@/assets/gallery/slide-soldering.jpg";
-import slideShowerPan from "@/assets/gallery/slide-shower-pan.jpg";
+import slideSoldering from "@/assets/gallery/slide-soldering.webp";
+import slideShowerPan from "@/assets/gallery/slide-shower-pan.webp";
 import slideShowerFixture from "@/assets/gallery/slide-shower-fixture.jpg";
 
 /* ── Types ── */

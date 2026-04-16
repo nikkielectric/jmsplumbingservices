@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import drainCleaningHero from "@/assets/drain-cleaning-hero.png";
-import gasLineHero from "@/assets/gas-line-hero.png";
-import garbageDisposalHero from "@/assets/garbage-disposal-hero.png";
-import plumbingRepairsHero from "@/assets/plumbing-repairs-hero.png";
-import repipingHero from "@/assets/repiping-hero.png";
-import emergencyHero from "@/assets/emergency-plumbing-card.png";
-import waterHeaterHero from "@/assets/water-heaters-card.png";
-import septicLeachHero from "@/assets/septic-leach-card.png";
-import toiletFaucetHero from "@/assets/fixture-repairs-card.png";
+import drainCleaningHero from "@/assets/drain-cleaning-hero.webp";
+import gasLineHero from "@/assets/gas-line-hero.webp";
+import garbageDisposalHero from "@/assets/garbage-disposal-hero.webp";
+import plumbingRepairsHero from "@/assets/plumbing-repairs-hero.webp";
+import repipingHero from "@/assets/repiping-hero.webp";
+import emergencyHero from "@/assets/emergency-plumbing-card.webp";
+import waterHeaterHero from "@/assets/water-heaters-card.webp";
+import septicLeachHero from "@/assets/septic-leach-card.webp";
+import toiletFaucetHero from "@/assets/fixture-repairs-card.webp";
 import { servicePages } from "@/data/servicePages";
 
 const heroImages: Record<string, string> = {

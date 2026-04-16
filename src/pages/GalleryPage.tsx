@@ -7,20 +7,20 @@ import VintageOrnament from "@/components/VintageOrnament";
 import ImmersiveShowcase from "@/components/gallery/ImmersiveShowcase";
 
 // Existing project photos used as gallery images
-import drainCleaningImg from "@/assets/drain-cleaning-hero.png";
-import galleryReview1Img from "@/assets/gallery-review-1.png";
-import gasLineImg from "@/assets/gas-line-hero.png";
-import galleryReview2Img from "@/assets/gallery-review-2.png";
-import plumbingRepairsImg from "@/assets/plumbing-repairs-hero.png";
-import garbageDisposalImg from "@/assets/garbage-disposal-hero.png";
-import galleryReview3Img from "@/assets/gallery-review-3.png";
-import galleryReview4Img from "@/assets/gallery-review-4.png";
-import galleryReview5Img from "@/assets/gallery-review-5.png";
-import galleryReview6Img from "@/assets/gallery-review-6.png";
-import repipingImg from "@/assets/repiping-hero.png";
-import emergencyImg from "@/assets/emergency-plumbing-hero.png";
-import plumberFixingSinkImg from "@/assets/plumber-fixing-sink.png";
-import teamVanImg from "@/assets/plumbing-team-van.png";
+import drainCleaningImg from "@/assets/drain-cleaning-hero.webp";
+import galleryReview1Img from "@/assets/gallery-review-1.webp";
+import gasLineImg from "@/assets/gas-line-hero.webp";
+import galleryReview2Img from "@/assets/gallery-review-2.webp";
+import plumbingRepairsImg from "@/assets/plumbing-repairs-hero.webp";
+import garbageDisposalImg from "@/assets/garbage-disposal-hero.webp";
+import galleryReview3Img from "@/assets/gallery-review-3.webp";
+import galleryReview4Img from "@/assets/gallery-review-4.webp";
+import galleryReview5Img from "@/assets/gallery-review-5.webp";
+import galleryReview6Img from "@/assets/gallery-review-6.webp";
+import repipingImg from "@/assets/repiping-hero.webp";
+import emergencyImg from "@/assets/emergency-plumbing-hero.webp";
+import plumberFixingSinkImg from "@/assets/plumber-fixing-sink.webp";
+import teamVanImg from "@/assets/plumbing-team-van.webp";
 
 /* ── Google icon reusable ── */
 const GoogleIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
