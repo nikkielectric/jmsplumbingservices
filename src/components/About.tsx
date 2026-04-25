@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Phone, ArrowRight } from "lucide-react";
-import heroImg from "@/assets/plumbing-team.webp";
+import heroImg from "@/assets/jms-van.png";
 import VintageOrnament from "./VintageOrnament";
 import CertificationsTicker from "./CertificationsTicker";
 
