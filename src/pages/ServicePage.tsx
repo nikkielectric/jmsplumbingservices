@@ -5,6 +5,7 @@ import gasLineHero from "@/assets/gas-line-hero.webp";
 import backflowHero from "@/assets/backflow-prevention-hero.jpg";
 import plumbingRepairsHero from "@/assets/plumbing-repairs-hero.webp";
 import repipingHero from "@/assets/repiping-hero.webp";
+import remodelsHero from "@/assets/plumbing-remodels-card.jpg";
 import emergencyHero from "@/assets/emergency-plumbing-card.webp";
 import waterHeaterHero from "@/assets/water-heaters-card.jpg";
 import septicLeachHero from "@/assets/septic-leach-card.webp";
@@ -16,7 +17,7 @@ const heroImages: Record<string, string> = {
   "gas-line-services": gasLineHero,
   "backflow-prevention": backflowHero,
   "plumbing-repairs": plumbingRepairsHero,
-  "plumbing-remodels": repipingHero,
+  "plumbing-remodels": remodelsHero,
   "emergency-plumbing": emergencyHero,
   "water-heaters": waterHeaterHero,
   "septic-leach-fields": septicLeachHero,
