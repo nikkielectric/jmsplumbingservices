@@ -15,7 +15,7 @@ import plumbingRepairsImg from "@/assets/plumbing-repairs-hero.webp";
 
 import galleryReview3Img from "@/assets/gallery-review-3.webp";
 import galleryReview4Img from "@/assets/gallery-review-4.webp";
-import galleryReview5Img from "@/assets/gallery-review-5.webp";
+import galleryReviewJoeSImg from "@/assets/gallery-review-joe-s.jpg";
 import galleryReview6Img from "@/assets/gallery-review-6.webp";
 import repipingImg from "@/assets/repiping-hero.webp";
 import emergencyImg from "@/assets/emergency-plumbing-hero.webp";
@@ -100,7 +100,7 @@ const photoReviews: PhotoReview[] = [
     city: "South Florida",
     text: "James came out within 30 minutes of us calling him. We had a major leak on the side of the house from the sprinkler. It was diagnosed within 2 minutes and fixed within the hour. He even went out of the way to fix a small issue we had with the sink. Will definitely be back!",
     rating: 5,
-    image: galleryReview5Img,
+    image: galleryReviewJoeSImg,
   },
 ];
 
