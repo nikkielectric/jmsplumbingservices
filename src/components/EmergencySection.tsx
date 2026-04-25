@@ -61,7 +61,7 @@ const EmergencySection = () => {
             <div className="rounded overflow-hidden shadow-2xl vintage-border vintage-sepia">
               <img
                 src={heroImg}
-                alt="Emergency plumbing service"
+                alt="JMS Plumbing technician responding to a 24/7 emergency plumbing call in Sunrise, FL"
                 className="w-full h-[400px] object-cover"
                 loading="lazy"
                 width={1920}

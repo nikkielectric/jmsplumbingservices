@@ -63,7 +63,7 @@ const About = () => {
               <div className="rounded overflow-hidden shadow-2xl vintage-border vintage-sepia">
                 <img
                   src={heroImg}
-                  alt="JMS Plumbing professional at work"
+                  alt="JMS Plumbing Services branded service van parked at a South Florida home — family-owned plumber in Sunrise, FL"
                   className="w-full h-[350px] lg:h-[450px] object-cover"
                   loading="lazy"
                   width={1920}
