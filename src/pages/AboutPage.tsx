@@ -160,10 +160,12 @@ const AboutPage = () => {
             </motion.div>
           </div>
         </div>
-      </section>
 
-      {/* ═══ CERTIFICATIONS TICKER ═══ */}
-      <CertificationsTicker />
+        {/* ═══ CERTIFICATIONS TICKER (inside hero) ═══ */}
+        <div className="relative z-10 mt-8 lg:mt-10">
+          <CertificationsTicker />
+        </div>
+      </section>
 
       {/* ═══ SECTION 2 — OUR STORY ═══ */}
       <section className="bg-cream-light py-20 lg:py-28 vintage-grain relative">
