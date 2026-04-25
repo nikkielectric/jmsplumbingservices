@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import drainCleaningHero from "@/assets/drain-cleaning-hero.webp";
 import gasLineHero from "@/assets/gas-line-hero.webp";
-import garbageDisposalHero from "@/assets/garbage-disposal-hero.webp";
+import backflowHero from "@/assets/backflow-prevention-hero.jpg";
 import plumbingRepairsHero from "@/assets/plumbing-repairs-hero.webp";
 import repipingHero from "@/assets/repiping-hero.webp";
 import emergencyHero from "@/assets/emergency-plumbing-card.webp";
@@ -14,7 +14,7 @@ import { servicePages } from "@/data/servicePages";
 const heroImages: Record<string, string> = {
   "drain-cleaning": drainCleaningHero,
   "gas-line-services": gasLineHero,
-  "garbage-disposal": garbageDisposalHero,
+  "backflow-prevention": backflowHero,
   "plumbing-repairs": plumbingRepairsHero,
   "plumbing-remodels": repipingHero,
   "emergency-plumbing": emergencyHero,

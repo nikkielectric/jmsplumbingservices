@@ -35,8 +35,8 @@ const reviews = [
     name: "Stephanie W.",
     initial: "S",
     rating: 5,
-    text: "James and his team replaced our old water heater and installed a new garbage disposal. Very clean work, explained everything clearly, and left the area spotless. Great family-owned business!",
-    service: "Water Heater & Disposal",
+    text: "James and his team replaced our old water heater and handled our annual backflow test the same week. Very clean work, explained everything clearly, and submitted our paperwork to the city directly. Great family-owned business!",
+    service: "Water Heater & Backflow Prevention",
   },
 ];
 

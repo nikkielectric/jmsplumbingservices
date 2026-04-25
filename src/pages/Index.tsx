@@ -97,7 +97,7 @@ const Index = () => {
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gas Line Services" } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plumbing Repairs" } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plumbing Remodels" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garbage Disposal" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Backflow Prevention" } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Plumbing" } }
           ]
         },

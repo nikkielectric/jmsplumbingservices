@@ -5,7 +5,7 @@ import drainImg from "@/assets/drain-cleaning-card.webp";
 import gasImg from "@/assets/gas-line-card.webp";
 import repairImg from "@/assets/plumbing-repairs-card.webp";
 import remodelImg from "@/assets/plumbing-remodels-card.webp";
-import disposalImg from "@/assets/service-disposal.jpg";
+import backflowImg from "@/assets/backflow-prevention-card.webp";
 import emergencyImg from "@/assets/emergency-plumbing-card.webp";
 import waterHeaterImg from "@/assets/water-heaters-card.webp";
 import septicImg from "@/assets/septic-leach-card.webp";
@@ -37,10 +37,10 @@ const services = [
     href: "/plumbing-remodels",
   },
   {
-    img: disposalImg,
-    title: "Garbage Disposal",
-    description: "Jammed, leaking, or dead? We inspect, repair, and install — usually same day.",
-    href: "/garbage-disposal",
+    img: backflowImg,
+    title: "Backflow Prevention",
+    description: "Annual testing, certification, installation, and repair. Licensed, documented, and submitted to your water authority.",
+    href: "/backflow-prevention",
   },
   {
     img: emergencyImg,

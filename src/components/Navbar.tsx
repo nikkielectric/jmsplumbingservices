@@ -9,7 +9,7 @@ const serviceDropdownItems = [
   { label: "Gas Line Services", href: "/gas-line-services" },
   { label: "Plumbing Repairs", href: "/plumbing-repairs" },
   { label: "Plumbing Remodels", href: "/plumbing-remodels" },
-  { label: "Garbage Disposal", href: "/garbage-disposal" },
+  { label: "Backflow Prevention", href: "/backflow-prevention" },
   { label: "Water Heaters", href: "/water-heaters" },
   { label: "Septic Services", href: "/septic-leach-fields" },
   { label: "Fixture Repairs", href: "/toilet-faucet-pipe-repairs" },
