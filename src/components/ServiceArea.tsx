@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-import areaImg from "@/assets/service-area.jpg";
-import jmsLogoPin from "@/assets/jms-logo-pin.png";
+import areaImg from "@/assets/service-area.webp";
+import jmsLogoPin from "@/assets/jms-logo-pin.webp";
 import VintageOrnament from "./VintageOrnament";
 
 const ServiceArea = () => {

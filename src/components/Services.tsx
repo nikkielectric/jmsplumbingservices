@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import VintageOrnament from "./VintageOrnament";
-import drainImg from "@/assets/drain-cleaning-card.jpeg";
+import drainImg from "@/assets/drain-cleaning-card.webp";
 import gasImg from "@/assets/gas-line-card.webp";
 import repairImg from "@/assets/plumbing-repairs-card.webp";
-import remodelImg from "@/assets/plumbing-remodels-card.jpg";
+import remodelImg from "@/assets/plumbing-remodels-card.webp";
 import backflowImg from "@/assets/backflow-prevention-card.webp";
 import emergencyImg from "@/assets/emergency-plumbing-card.webp";
-import waterHeaterImg from "@/assets/water-heaters-card.jpg";
+import waterHeaterImg from "@/assets/water-heaters-card.webp";
 import septicImg from "@/assets/septic-leach-card.webp";
-import toiletFaucetImg from "@/assets/fixture-repairs-card.jpg";
+import toiletFaucetImg from "@/assets/fixture-repairs-card.webp";
 
 const services = [
   {

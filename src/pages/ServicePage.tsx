@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import drainCleaningHero from "@/assets/drain-cleaning-hero.jpeg";
+import drainCleaningHero from "@/assets/drain-cleaning-hero.webp";
 import gasLineHero from "@/assets/gas-line-hero.webp";
-import backflowHero from "@/assets/backflow-prevention-hero.jpg";
+import backflowHero from "@/assets/backflow-prevention-hero.webp";
 import plumbingRepairsHero from "@/assets/plumbing-repairs-hero.webp";
 import repipingHero from "@/assets/repiping-hero.webp";
-import remodelsHero from "@/assets/plumbing-remodels-card.jpg";
+import remodelsHero from "@/assets/plumbing-remodels-card.webp";
 import emergencyHero from "@/assets/emergency-plumbing-card.webp";
-import waterHeaterHero from "@/assets/water-heaters-card.jpg";
+import waterHeaterHero from "@/assets/water-heaters-card.webp";
 import septicLeachHero from "@/assets/septic-leach-card.webp";
-import toiletFaucetHero from "@/assets/fixture-repairs-card.jpg";
+import toiletFaucetHero from "@/assets/fixture-repairs-card.webp";
 import { servicePages } from "@/data/servicePages";
 
 const heroImages: Record<string, string> = {

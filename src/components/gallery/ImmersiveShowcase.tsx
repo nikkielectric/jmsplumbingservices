@@ -4,13 +4,13 @@ import { ChevronLeft, ChevronRight, Volume2, VolumeX, Play } from "lucide-react"
 
 import slideHoseBib from "@/assets/gallery/slide-hose-bib.webp";
 import slideCopperRepipe from "@/assets/gallery/slide-copper-repipe.webp";
-import slideWaterHeater from "@/assets/gallery/slide-water-heater.jpg";
-import slideToilet from "@/assets/gallery/slide-toilet.jpg";
-import slideShowerPanel from "@/assets/gallery/slide-shower-panel.jpg";
-import slideHoseBib2 from "@/assets/gallery/slide-hose-bib-2.jpg";
+import slideWaterHeater from "@/assets/gallery/slide-water-heater.webp";
+import slideToilet from "@/assets/gallery/slide-toilet.webp";
+import slideShowerPanel from "@/assets/gallery/slide-shower-panel.webp";
+import slideHoseBib2 from "@/assets/gallery/slide-hose-bib-2.webp";
 import slideSoldering from "@/assets/gallery/slide-soldering.webp";
 import slideShowerPan from "@/assets/gallery/slide-shower-pan.webp";
-import slideShowerFixture from "@/assets/gallery/slide-shower-fixture.jpg";
+import slideShowerFixture from "@/assets/gallery/slide-shower-fixture.webp";
 
 /* ── Types ── */
 export interface ShowcaseSlide {
