@@ -104,7 +104,7 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
               onChange={(e) => setForm({ ...form, service: e.target.value })}
               className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-2.5 text-cream text-sm font-body focus:outline-none focus:border-primary transition-colors appearance-none"
             >
-              <option value="drain" className="bg-secondary text-cream">Drain Cleaning</option>
+              <option value="drain" className="bg-secondary text-cream">Drain Services</option>
               <option value="repairs" className="bg-secondary text-cream">Plumbing Repairs &amp; Replacements</option>
               <option value="gas" className="bg-secondary text-cream">Gas Line Services</option>
               <option value="garbage-disposal" className="bg-secondary text-cream">Garbage Disposal</option>

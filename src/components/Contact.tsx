@@ -155,7 +155,7 @@ const Contact = () => {
                     className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body focus:outline-none focus:border-primary transition-colors appearance-none"
                   >
                     <option value="" className="bg-secondary text-cream">Select a service</option>
-                    <option value="drain" className="bg-secondary text-cream">Drain Cleaning</option>
+                    <option value="drain" className="bg-secondary text-cream">Drain Services</option>
                     <option value="repairs" className="bg-secondary text-cream">Plumbing Repairs & Replacements</option>
                     <option value="gas" className="bg-secondary text-cream">Gas Line Services</option>
                     <option value="water-heater" className="bg-secondary text-cream">Water Heater</option>
