@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import jmsLogo from "@/assets/jms-logo.png";
 
 const serviceDropdownItems = [
-  { label: "Drain Cleaning", href: "/drain-cleaning" },
+  { label: "Drain Services", href: "/drain-cleaning" },
   { label: "Gas Line Services", href: "/gas-line-services" },
   { label: "Plumbing Repairs", href: "/plumbing-repairs" },
   { label: "Plumbing Remodels", href: "/plumbing-remodels" },

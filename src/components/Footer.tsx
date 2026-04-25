@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import jmsLogoFooter from "@/assets/jms-logo-footer.png";
 
 const services = [
-  { name: "Drain Cleaning", href: "/drain-cleaning" },
+  { name: "Drain Services", href: "/drain-cleaning" },
   { name: "Gas Line Services", href: "/gas-line-services" },
   { name: "Plumbing Repairs", href: "/plumbing-repairs" },
   { name: "Plumbing Remodels", href: "/plumbing-remodels" },
