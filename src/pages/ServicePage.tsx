@@ -6,7 +6,7 @@ import backflowHero from "@/assets/backflow-prevention-hero.jpg";
 import plumbingRepairsHero from "@/assets/plumbing-repairs-hero.webp";
 import repipingHero from "@/assets/repiping-hero.webp";
 import emergencyHero from "@/assets/emergency-plumbing-card.webp";
-import waterHeaterHero from "@/assets/water-heaters-card.webp";
+import waterHeaterHero from "@/assets/water-heaters-card.jpg";
 import septicLeachHero from "@/assets/septic-leach-card.webp";
 import toiletFaucetHero from "@/assets/fixture-repairs-card.webp";
 import { servicePages } from "@/data/servicePages";
