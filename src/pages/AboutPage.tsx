@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
+import CertificationsTicker from "@/components/CertificationsTicker";
 import heroImg from "@/assets/plumbing-team.webp";
 import teamVanImg from "@/assets/plumbing-team-van2.webp";
 import plumberSinkImg from "@/assets/plumber-fixing-sink.webp";
@@ -160,6 +161,9 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+
+      {/* ═══ CERTIFICATIONS TICKER ═══ */}
+      <CertificationsTicker />
 
       {/* ═══ SECTION 2 — OUR STORY ═══ */}
       <section className="bg-cream-light py-20 lg:py-28 vintage-grain relative">
