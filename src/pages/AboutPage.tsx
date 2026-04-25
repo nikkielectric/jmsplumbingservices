@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
 import CertificationsTicker from "@/components/CertificationsTicker";
-import heroImg from "@/assets/plumbing-team.webp";
+import heroImg from "@/assets/jms-van-hero.png";
 import teamVanImg from "@/assets/plumbing-team-van2.webp";
 import plumberSinkImg from "@/assets/plumber-fixing-sink.webp";
 
