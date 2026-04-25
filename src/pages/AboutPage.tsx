@@ -150,7 +150,7 @@ const AboutPage = () => {
               <div className="relative rounded overflow-hidden shadow-2xl vintage-border vintage-sepia">
                 <img
                   src={heroImg}
-                  alt="JMS Plumbing professional at work"
+                  alt="JMS Plumbing Services van on a job in Sunrise, FL — family-owned plumber serving Broward, Miami-Dade, and Palm Beach Counties"
                   className="w-full h-[350px] lg:h-[450px] object-cover object-[center_25%]"
                   width={1920}
                   height={1080}
@@ -211,7 +211,7 @@ const AboutPage = () => {
               <div className="rounded overflow-hidden shadow-2xl vintage-border vintage-sepia">
                 <img
                   src={teamVanImg}
-                  alt="JMS Plumbing team on the job in South Florida"
+                  alt="JMS Plumbing team standing beside their service van on a residential job site in South Florida"
                   className="w-full h-[350px] lg:h-[450px] object-cover"
                   loading="lazy"
                   width={1920}
@@ -329,7 +329,7 @@ const AboutPage = () => {
               <div className="rounded overflow-hidden shadow-2xl vintage-border vintage-sepia">
                 <img
                   src={plumberSinkImg}
-                  alt="JMS Plumbing professional fixing a sink"
+                  alt="JMS Plumbing technician repairing a kitchen sink in a Sunrise, FL home"
                   className="w-full h-[350px] lg:h-[450px] object-cover"
                   loading="lazy"
                   width={1920}

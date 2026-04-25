@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-[3fr_1fr_1fr_1fr] gap-10 lg:gap-24 mb-12">
           {/* Brand */}
           <div>
-            <img src={jmsLogoFooter} alt="JMS Plumbing Logo" className="h-20 w-auto mb-3" />
+            <img src={jmsLogoFooter} alt="JMS Plumbing Services LLC logo — licensed plumber in Sunrise, FL" className="h-20 w-auto mb-3" />
             <div className="mb-4">
               <span className="font-display text-xl font-bold text-cream">JMS Plumbing Services LLC</span>
             </div>

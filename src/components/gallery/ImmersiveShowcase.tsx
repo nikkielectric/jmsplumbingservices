@@ -114,7 +114,7 @@ const Lightbox = ({
           {slide.type === "image" ? (
             <img
               src={slide.src}
-              alt={slide.category || "Project photo"}
+              alt={`${slide.category || "Plumbing project"} completed by JMS Plumbing Services in South Florida`}
               className="w-full h-full max-h-[85vh] object-contain rounded-lg"
             />
           ) : slide.type === "video" ? (
@@ -208,7 +208,7 @@ const SlideCard = ({
         {slide.type === "image" ? (
           <img
             src={slide.src}
-            alt={slide.category || "Project photo"}
+            alt={`${slide.category || "Plumbing project"} completed by JMS Plumbing Services in South Florida`}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
             loading="lazy"
           />
