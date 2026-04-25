@@ -14,7 +14,7 @@ const ServiceHero = ({ serviceCategory, h1, subtext, heroImage, heroObjectPositi
   const bgImage = heroImage || heroImg;
 
   return (
-    <section className="relative pt-44 lg:pt-52 pb-16 lg:pb-28 overflow-hidden">
+    <section className="relative pt-24 lg:pt-44 pb-12 lg:pb-20 overflow-hidden">
       {/* Full-span background image */}
       <div className="absolute inset-0">
         <img
