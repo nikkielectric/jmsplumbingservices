@@ -383,7 +383,7 @@ const ContactPage = () => {
                       <option value="gas" className="bg-secondary text-cream">Gas Line Services</option>
                       <option value="water-heater" className="bg-secondary text-cream">Water Heater Services</option>
                       <option value="garbage-disposal" className="bg-secondary text-cream">Garbage Disposal</option>
-                      <option value="septic-leach-fields" className="bg-secondary text-cream">Septic Leach Fields</option>
+                      <option value="septic-leach-fields" className="bg-secondary text-cream">Septic Services</option>
                       <option value="fixture-repairs" className="bg-secondary text-cream">Fixture Repairs</option>
                       <option value="remodel" className="bg-secondary text-cream">Plumbing Remodels</option>
                       <option value="emergency" className="bg-secondary text-cream">Emergency Plumbing</option>

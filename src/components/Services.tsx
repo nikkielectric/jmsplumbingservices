@@ -56,8 +56,8 @@ const services = [
   },
   {
     img: septicImg,
-    title: "Septic Leach Fields",
-    description: "Installation, repair, and inspections for drain fields across the Tri-County area.",
+    title: "Septic Services",
+    description: "Leach field repairs, septic inspections, and septic and storm drain pump outs across the Tri-County area.",
     href: "/septic-leach-fields",
   },
   {
