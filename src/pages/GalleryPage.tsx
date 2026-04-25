@@ -12,7 +12,7 @@ import galleryReview1Img from "@/assets/gallery-review-1.webp";
 import gasLineImg from "@/assets/gas-line-hero.webp";
 import galleryReview2Img from "@/assets/gallery-review-2.webp";
 import plumbingRepairsImg from "@/assets/plumbing-repairs-hero.webp";
-import garbageDisposalImg from "@/assets/garbage-disposal-hero.webp";
+
 import galleryReview3Img from "@/assets/gallery-review-3.webp";
 import galleryReview4Img from "@/assets/gallery-review-4.webp";
 import galleryReview5Img from "@/assets/gallery-review-5.webp";

@@ -86,7 +86,7 @@ const ContactPage = () => {
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plumbing Repairs" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gas Line Services" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water Heater Services" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garbage Disposal" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Backflow Prevention" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plumbing Remodels" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Plumbing" } }
         ]
@@ -382,7 +382,7 @@ const ContactPage = () => {
                       <option value="repairs" className="bg-secondary text-cream">Plumbing Repairs and Replacements</option>
                       <option value="gas" className="bg-secondary text-cream">Gas Line Services</option>
                       <option value="water-heater" className="bg-secondary text-cream">Water Heater Services</option>
-                      <option value="garbage-disposal" className="bg-secondary text-cream">Garbage Disposal</option>
+                      <option value="backflow-prevention" className="bg-secondary text-cream">Backflow Prevention</option>
                       <option value="septic-leach-fields" className="bg-secondary text-cream">Septic Services</option>
                       <option value="fixture-repairs" className="bg-secondary text-cream">Fixture Repairs</option>
                       <option value="remodel" className="bg-secondary text-cream">Plumbing Remodels</option>

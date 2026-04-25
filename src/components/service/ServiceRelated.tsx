@@ -8,7 +8,7 @@ import drainImg from "@/assets/drain-cleaning-card.webp";
 import gasImg from "@/assets/gas-line-card.webp";
 import repairImg from "@/assets/plumbing-repairs-card.webp";
 import remodelImg from "@/assets/plumbing-remodels-card.webp";
-import disposalImg from "@/assets/service-disposal.jpg";
+import backflowImg from "@/assets/backflow-prevention-card.webp";
 import emergencyImg from "@/assets/emergency-plumbing-card.webp";
 import waterHeaterImg from "@/assets/water-heaters-card.webp";
 import septicImg from "@/assets/septic-leach-card.webp";
@@ -19,7 +19,7 @@ const imageMap: Record<string, string> = {
   "/gas-line-services": gasImg,
   "/plumbing-repairs": repairImg,
   "/plumbing-remodels": remodelImg,
-  "/garbage-disposal": disposalImg,
+  "/backflow-prevention": backflowImg,
   "/emergency-plumbing": emergencyImg,
   "/water-heaters": waterHeaterImg,
   "/septic-leach-fields": septicImg,
