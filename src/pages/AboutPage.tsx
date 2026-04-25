@@ -107,9 +107,9 @@ const AboutPage = () => {
       <Navbar />
 
       {/* ═══ SECTION 1 — PAGE HERO ═══ */}
-      <section className="relative pt-24 lg:pt-44 bg-secondary vintage-grain vintage-vignette">
+      <section className="relative pt-24 lg:pt-44 pb-24 lg:pb-44 bg-secondary vintage-grain vintage-vignette">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-20">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }}>
               <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
                 WHO WE ARE
