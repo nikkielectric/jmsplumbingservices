@@ -88,7 +88,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-bold text-cream text-base mb-5">Areas We Serve</h4>
             <ul className="space-y-2.5">
-              {["Sunrise", "Plantation", "Fort Lauderdale", "Tamarac", "Lauderhill", "Coral Springs", "Weston", "Broward County"].map((a) => (
+              {["Sunrise", "Plantation", "Fort Lauderdale", "Tamarac", "Lauderhill", "Coral Springs", "Weston", "Davie", "Parkland", "Southwest Ranches", "Hollywood", "Pembroke Pines", "Cooper City", "Broward County"].map((a) => (
                 <li key={a}>
                   <span className="text-cream/50 text-sm font-body">{a}</span>
                 </li>

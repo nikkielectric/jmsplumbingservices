@@ -404,7 +404,7 @@ const AboutPage = () => {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
-              {["Broward County", "Miami-Dade County", "Palm Beach County", "Sunrise", "Fort Lauderdale", "Plantation", "Tamarac", "Lauderhill", "Coral Springs", "Weston"].map((area) => (
+              {["Broward County", "Miami-Dade County", "Palm Beach County", "Sunrise", "Fort Lauderdale", "Plantation", "Tamarac", "Lauderhill", "Coral Springs", "Weston", "Davie", "Parkland", "Southwest Ranches", "Hollywood", "Pembroke Pines", "Cooper City"].map((area) => (
                 <div
                   key={area}
                   className="flex items-center gap-2 bg-primary/10 border border-primary/20 rounded px-5 py-3"

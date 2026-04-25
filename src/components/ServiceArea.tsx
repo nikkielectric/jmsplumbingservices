@@ -86,7 +86,7 @@ const ServiceArea = () => {
                 Communities We Serve
               </p>
               <p className="text-sm text-secondary-foreground/70 font-body leading-relaxed tracking-wide">
-                Broward · Miami-Dade · Palm Beach Counties · Sunrise · Plantation · Fort Lauderdale · Tamarac · Lauderhill · Coral Springs · Weston
+                Broward · Miami-Dade · Palm Beach Counties · Sunrise · Plantation · Fort Lauderdale · Tamarac · Lauderhill · Coral Springs · Weston · Davie · Parkland · Southwest Ranches · Hollywood · Pembroke Pines · Cooper City
               </p>
             </div>
           </div>
