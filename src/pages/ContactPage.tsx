@@ -466,7 +466,7 @@ const ContactPage = () => {
               </p>
 
               <p className="text-foreground font-body text-base lg:text-lg font-semibold mb-6">
-                Sunrise · Fort Lauderdale · Plantation · Tamarac · Lauderhill · Coral Springs · Weston
+                Sunrise · Fort Lauderdale · Plantation · Tamarac · Lauderhill · Coral Springs · Weston · Davie · Parkland · Southwest Ranches · Hollywood · Pembroke Pines · Cooper City
                 · and surrounding communities throughout Broward, Miami-Dade and Palm Beach Counties
               </p>
 

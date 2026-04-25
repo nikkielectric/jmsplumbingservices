@@ -78,6 +78,13 @@ const Index = () => {
           { "@type": "City", "name": "Lauderhill", "containedInPlace": { "@type": "State", "name": "Florida" } },
           { "@type": "City", "name": "Coral Springs", "containedInPlace": { "@type": "State", "name": "Florida" } },
           { "@type": "City", "name": "Weston", "containedInPlace": { "@type": "State", "name": "Florida" } },
+          { "@type": "City", "name": "Davie", "containedInPlace": { "@type": "State", "name": "Florida" } },
+          { "@type": "City", "name": "Parkland", "containedInPlace": { "@type": "State", "name": "Florida" } },
+          { "@type": "City", "name": "Southwest Ranches", "containedInPlace": { "@type": "State", "name": "Florida" } },
+          { "@type": "City", "name": "Hollywood", "containedInPlace": { "@type": "State", "name": "Florida" } },
+          { "@type": "City", "name": "Pembroke Pines", "containedInPlace": { "@type": "State", "name": "Florida" } },
+          { "@type": "City", "name": "Cooper City", "containedInPlace": { "@type": "State", "name": "Florida" } },
+          { "@type": "City", "name": "Weston", "containedInPlace": { "@type": "State", "name": "Florida" } },
           { "@type": "County", "name": "Broward County", "containedInPlace": { "@type": "State", "name": "Florida" } },
           { "@type": "County", "name": "Miami-Dade County", "containedInPlace": { "@type": "State", "name": "Florida" } },
           { "@type": "County", "name": "Palm Beach County", "containedInPlace": { "@type": "State", "name": "Florida" } }
