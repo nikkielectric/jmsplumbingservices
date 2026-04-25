@@ -459,7 +459,7 @@ export const servicePages: ServicePageData[] = [
     metaDescription: "Licensed septic services in Broward, Miami-Dade & Palm Beach Counties. Leach field repairs, septic inspections, and pump outs. JMS Plumbing — call (954) 910-6883.",
     heroH1: "Septic Problems in South Florida Don't Wait. Neither Do We.",
     heroSubtext: "Licensed septic services throughout the Tri-County area — leach field repairs, septic inspections, and septic and storm drain pump outs handled correctly, to code, and with upfront pricing before any work begins.",
-    defaultServiceValue: "septic",
+    defaultServiceValue: "septic-leach-fields",
     introHeading: "Septic Services Across South Florida's Tri-County Area",
     paragraph1: "South Florida's high water table, subtropical climate, and sandy soil create septic conditions unlike anywhere else in the country. Systems that perform well in other regions struggle here — and when a septic system starts to fail in Broward, Miami-Dade, or Palm Beach County, it fails fast. Soggy ground, sewage odors, slow drains throughout the house, and sewage backing up into your lowest fixtures are not problems to monitor. They are problems to address immediately by a licensed septic contractor who understands South Florida's specific conditions.",
     paragraph2: "JMS holds the proper licensing for septic work in Florida. We handle leach field repairs and restorations, full septic inspections, and septic and storm drain pump outs throughout the Tri-County area. Every job is assessed thoroughly, priced honestly upfront, and completed to Florida Department of Health standards. We tell you exactly what's happening with your system and what your options are before any decisions are made.",
