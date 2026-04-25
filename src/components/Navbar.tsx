@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Phone, Menu, X, MapPin, Clock, ChevronDown, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import jmsLogo from "@/assets/jms-logo.png";
+import jmsLogo from "@/assets/jms-logo.webp";
 
 const serviceDropdownItems = [
   { label: "Drain Services", href: "/drain-cleaning" },

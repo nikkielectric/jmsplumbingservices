@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertTriangle } from "lucide-react";
-import jmsLogoPin from "@/assets/jms-logo-pin.png";
+import jmsLogoPin from "@/assets/jms-logo-pin.webp";
 import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";

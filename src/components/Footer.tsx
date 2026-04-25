@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-import jmsLogoFooter from "@/assets/jms-logo-footer.png";
+import jmsLogoFooter from "@/assets/jms-logo-footer.webp";
 
 const services = [
   { name: "Drain Services", href: "/drain-cleaning" },
