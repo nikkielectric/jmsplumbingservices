@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import VintageOrnament from "./VintageOrnament";
-import drainImg from "@/assets/drain-cleaning-card.webp";
+import drainImg from "@/assets/drain-cleaning-card.jpeg";
 import gasImg from "@/assets/gas-line-card.webp";
 import repairImg from "@/assets/plumbing-repairs-card.webp";
 import remodelImg from "@/assets/plumbing-remodels-card.webp";
