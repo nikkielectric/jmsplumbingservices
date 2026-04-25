@@ -11,8 +11,10 @@ const certs = [
 ];
 
 const CertificationsTicker = () => {
-  // Duplicate the list so the marquee loops seamlessly (translateX -50%)
-  const loop = [...certs, ...certs];
+  // Repeat enough times to overflow any viewport width — the marquee
+  // translates by -50%, so the first half must always be wider than the screen
+  // to avoid an empty gap before the loop restarts.
+  const loop = [...certs, ...certs, ...certs, ...certs, ...certs, ...certs];
 
   return (
     <section
