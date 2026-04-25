@@ -107,7 +107,7 @@ const AboutPage = () => {
       <Navbar />
 
       {/* ═══ SECTION 1 — PAGE HERO ═══ */}
-      <section className="relative pt-36 lg:pt-44 bg-secondary vintage-grain vintage-vignette pb-16 lg:pb-24">
+      <section className="relative pt-36 lg:pt-44 bg-secondary vintage-grain vintage-vignette pb-6 lg:pb-8">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-16">
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }}>
@@ -160,10 +160,12 @@ const AboutPage = () => {
             </motion.div>
           </div>
         </div>
-      </section>
 
-      {/* ═══ CERTIFICATIONS TICKER ═══ */}
-      <CertificationsTicker />
+        {/* ═══ CERTIFICATIONS TICKER (inside hero) ═══ */}
+        <div className="relative z-10 mt-8 lg:mt-10">
+          <CertificationsTicker />
+        </div>
+      </section>
 
       {/* ═══ SECTION 2 — OUR STORY ═══ */}
       <section className="bg-cream-light py-20 lg:py-28 vintage-grain relative">
