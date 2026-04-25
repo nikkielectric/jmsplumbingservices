@@ -267,7 +267,7 @@ const GalleryPage = () => {
       <Navbar />
 
       {/* ── SECTION 1: Hero ── */}
-      <section className="relative pt-24 lg:pt-44 pb-24 lg:pb-44 bg-secondary vintage-grain vintage-vignette overflow-hidden">
+      <section className="relative pt-24 lg:pt-44 pb-12 lg:pb-20 bg-secondary vintage-grain vintage-vignette overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-secondary via-secondary/95 to-secondary" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <motion.div
