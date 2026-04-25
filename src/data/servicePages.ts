@@ -219,7 +219,7 @@ export const servicePages: ServicePageData[] = [
       { question: "What plumbing repairs are most common in older South Florida homes?", answer: "Homes built before 1985 throughout Broward, Miami-Dade, and Palm Beach Counties commonly need water heater replacements due to hard water shortening appliance lifespan, faucet and valve repairs from mineral buildup, and pipe joint repairs where older connections have corroded or loosened over time. If you've recently purchased an older home in the Tri-County area, a plumbing assessment is a smart first step before small issues become costly ones." },
     ],
     relatedServices: [
-      { title: "Drain Cleaning", description: "Slow drains and recurring backups often point to something deeper than a surface clog. We find the cause and clear it properly.", href: "/drain-cleaning" },
+      { title: "Drain Services", description: "Slow drains and recurring backups often point to something deeper than a surface clog. We find the cause and clear it properly.", href: "/drain-cleaning" },
       { title: "Emergency Plumbing", description: "Some repairs can't wait until Monday. We answer nights, weekends, and holidays with after-hours fees always disclosed upfront.", href: "/emergency-plumbing" },
       { title: "Plumbing Remodels", description: "Upgrading your bathroom or kitchen? We handle all the plumbing from blueprint to final install.", href: "/plumbing-remodels" },
     ],
@@ -276,7 +276,7 @@ export const servicePages: ServicePageData[] = [
     relatedServices: [
       { title: "Fixture Repairs", description: "Upgrading individual fixtures without a full remodel? We handle toilet, faucet, hose bib, and shut off valve repairs and replacements throughout South Florida.", href: "/toilet-faucet-pipe-repairs" },
       { title: "Plumbing Repairs", description: "Noticed something during the renovation that needs fixing? Honest assessments and upfront pricing on repairs of all sizes.", href: "/plumbing-repairs" },
-      { title: "Drain Cleaning", description: "New fixtures deserve clean lines. We clear and inspect drain lines as part of any remodel to make sure everything flows properly from day one.", href: "/drain-cleaning" },
+      { title: "Drain Services", description: "New fixtures deserve clean lines. We clear and inspect drain lines as part of any remodel to make sure everything flows properly from day one.", href: "/drain-cleaning" },
     ],
     ctaHeading: "Planning a Remodel in South Florida? Let's Talk Before the Demo Starts.",
     ctaSubtext: "The best time to involve your plumber is before anything is torn out. Call JMS for a straight conversation about your project and an upfront quote with no obligation.",
@@ -328,7 +328,7 @@ export const servicePages: ServicePageData[] = [
       { question: "What size or brand of garbage disposal should I replace mine with?", answer: "The right disposal depends on your household size and how heavily you use it. We carry and install quality units across a range of sizes and price points. When we assess your current unit we'll recommend what makes sense for your kitchen and your budget without steering you toward something more expensive than you need." },
     ],
     relatedServices: [
-      { title: "Drain Cleaning", description: "A failing disposal often goes hand in hand with slow kitchen drains. We clear and inspect drain lines to make sure everything flows properly.", href: "/drain-cleaning" },
+      { title: "Drain Services", description: "A failing disposal often goes hand in hand with slow kitchen drains. We clear and inspect drain lines to make sure everything flows properly.", href: "/drain-cleaning" },
       { title: "Plumbing Repairs", description: "From leaking supply lines to faulty shut off valves, we handle repairs throughout your kitchen and home with upfront pricing.", href: "/plumbing-repairs" },
       { title: "Plumbing Remodels", description: "Upgrading your kitchen? We handle all the plumbing from fixture installation to drain and supply line reconfigurations.", href: "/plumbing-remodels" },
     ],
@@ -386,7 +386,7 @@ export const servicePages: ServicePageData[] = [
       { question: "Is a slow leak a plumbing emergency?", answer: "In South Florida it can be. A slow leak that has been going for even a few days can cause significant water damage and mold growth in our climate. Mold begins developing within 24 to 48 hours of a water intrusion event. If you have an active leak that you cannot stop, even a slow one, it is worth an emergency call rather than waiting until morning. The cost of the after hours fee is far less than the cost of mold remediation." },
     ],
     relatedServices: [
-      { title: "Drain Cleaning", description: "Not every drain backup is a full emergency. For standard blockages we offer same day drain cleaning throughout the Tri-County area with upfront pricing.", href: "/drain-cleaning" },
+      { title: "Drain Services", description: "Not every drain backup is a full emergency. For standard blockages we offer same day drain cleaning throughout the Tri-County area with upfront pricing.", href: "/drain-cleaning" },
       { title: "Plumbing Repairs", description: "Once the emergency is handled we take care of any follow up repairs needed to get your home fully back to normal.", href: "/plumbing-repairs" },
       { title: "Septic Services", description: "Sewage backups are sometimes a septic system issue rather than a drain line problem. We are licensed for full septic services throughout South Florida.", href: "/septic-leach-fields" },
     ],
@@ -498,7 +498,7 @@ export const servicePages: ServicePageData[] = [
       { question: "Can heavy rainfall affect my septic system in South Florida?", answer: "Yes and this is a South Florida specific concern. During the rainy season the water table rises significantly throughout Broward, Miami-Dade, and Palm Beach Counties. When the water table rises close to the leach field the soil loses its capacity to absorb effluent which can cause temporary system backup even in a well maintained system. If you experience septic problems specifically during or after heavy rainfall your system may need to be assessed for proper depth and drainage relative to your local water table conditions." },
     ],
     relatedServices: [
-      { title: "Drain Cleaning", description: "Slow drains throughout the house can be a septic symptom or a drain line issue. We identify the real cause and address it properly.", href: "/drain-cleaning" },
+      { title: "Drain Services", description: "Slow drains throughout the house can be a septic symptom or a drain line issue. We identify the real cause and address it properly.", href: "/drain-cleaning" },
       { title: "Plumbing Repairs", description: "Once your septic system is addressed, we handle any related plumbing repairs inside the home with honest assessments and upfront pricing.", href: "/plumbing-repairs" },
       { title: "Emergency Plumbing", description: "Sewage backing up into your home is a plumbing emergency. We answer nights, weekends, and holidays with after hours fees always disclosed upfront.", href: "/emergency-plumbing" },
     ],
@@ -558,7 +558,7 @@ export const servicePages: ServicePageData[] = [
     ],
     relatedServices: [
       { title: "Plumbing Repairs", description: "Beyond fixtures, we handle the full range of plumbing repairs throughout your home with honest assessments and upfront pricing.", href: "/plumbing-repairs" },
-      { title: "Drain Cleaning", description: "Fixture problems and slow drains often go hand in hand. We clear drain lines completely and identify the real cause of recurring backups.", href: "/drain-cleaning" },
+      { title: "Drain Services", description: "Fixture problems and slow drains often go hand in hand. We clear drain lines completely and identify the real cause of recurring backups.", href: "/drain-cleaning" },
       { title: "Plumbing Remodels", description: "Upgrading your bathroom or kitchen fixtures as part of a larger renovation? We handle all the plumbing from rough in through final installation.", href: "/plumbing-remodels" },
     ],
     ctaHeading: "Fixture Problem in South Florida? We Can Usually Get There Today.",
