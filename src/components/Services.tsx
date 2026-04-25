@@ -7,7 +7,7 @@ import repairImg from "@/assets/plumbing-repairs-card.webp";
 import remodelImg from "@/assets/plumbing-remodels-card.webp";
 import backflowImg from "@/assets/backflow-prevention-card.webp";
 import emergencyImg from "@/assets/emergency-plumbing-card.webp";
-import waterHeaterImg from "@/assets/water-heaters-card.webp";
+import waterHeaterImg from "@/assets/water-heaters-card.jpg";
 import septicImg from "@/assets/septic-leach-card.webp";
 import toiletFaucetImg from "@/assets/fixture-repairs-card.webp";
 
