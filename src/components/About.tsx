@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Phone, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/plumbing-team.webp";
 import VintageOrnament from "./VintageOrnament";
+import CertificationsTicker from "./CertificationsTicker";
 
 const About = () => {
   return (
@@ -80,6 +81,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <CertificationsTicker />
     </section>
   );
 };
