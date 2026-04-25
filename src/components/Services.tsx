@@ -14,8 +14,8 @@ import toiletFaucetImg from "@/assets/fixture-repairs-card.webp";
 const services = [
   {
     img: drainImg,
-    title: "Drain Cleaning",
-    description: "Slow or fully blocked — we clear main lines, sinks, tubs, and showers fast. And we tell you why it happened.",
+    title: "Drain Services",
+    description: "Drain cleaning, hydro flush, and pump outs. We clear the line and tell you why it happened.",
     href: "/drain-cleaning",
   },
   {

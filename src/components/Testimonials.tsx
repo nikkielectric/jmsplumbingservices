@@ -8,7 +8,7 @@ const reviews = [
     initial: "M",
     rating: 5,
     text: "JMS came out same day and fixed our kitchen drain that had been backing up for weeks. Super professional and the pricing was very fair. Will definitely use again!",
-    service: "Drain Cleaning",
+    service: "Drain Services",
   },
   {
     name: "Linda R.",
