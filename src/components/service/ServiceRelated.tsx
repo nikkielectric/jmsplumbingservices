@@ -32,6 +32,7 @@ interface ServiceRelatedProps {
 }
 
 const ServiceRelated = ({ services }: ServiceRelatedProps) => {
+  const t = useT();
   return (
     <section className="py-20 lg:py-28 bg-cream-light vintage-grain relative">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
