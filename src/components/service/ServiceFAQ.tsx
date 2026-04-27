@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import type { ServiceFAQ as ServiceFAQType } from "@/data/servicePages";
+import { useT } from "@/i18n/LanguageContext";
 
 interface ServiceFAQProps {
   heading: string;
@@ -14,6 +15,7 @@ interface ServiceFAQProps {
 }
 
 const ServiceFAQ = ({ heading, faqs }: ServiceFAQProps) => {
+  const t = useT();
   return (
     <section className="py-14 lg:py-20 bg-cream-light vintage-grain relative">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -25,7 +27,7 @@ const ServiceFAQ = ({ heading, faqs }: ServiceFAQProps) => {
           className="text-center mb-12"
         >
           <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
-            COMMON QUESTIONS
+            {t("sp.faq.eyebrow")}
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-foreground mt-3 mb-4">
             {heading}
