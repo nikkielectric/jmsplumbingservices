@@ -93,6 +93,7 @@ const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
 );
 
 const Testimonials = () => {
+  const t = useT();
   const duplicated = [...reviews, ...reviews];
 
   return (
