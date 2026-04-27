@@ -40,7 +40,8 @@ import NotFound from "./NotFound";
 
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
-  const data = servicePages.find((s) => s.slug === slug);
+  const localizedPages = useLocalizedServicePages();
+  const data = localizedPages.find((s) => s.slug === slug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
