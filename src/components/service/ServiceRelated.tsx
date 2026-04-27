@@ -44,7 +44,7 @@ const ServiceRelated = ({ services }: ServiceRelatedProps) => {
           className="text-center mb-12"
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-foreground mb-4">
-            Other Services We Offer
+            {t("sp.related.h2")}
           </h2>
           <VintageOrnament className="max-w-xs mx-auto" />
         </motion.div>
