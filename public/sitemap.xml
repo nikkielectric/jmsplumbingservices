@@ -1,23 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jmsplumbingservices.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://jmsplumbingservices.com/?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
     <loc>https://jmsplumbingservices.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/about?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/about" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://jmsplumbingservices.com/about?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/about?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/about" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://jmsplumbingservices.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/contact?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/contact" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://jmsplumbingservices.com/contact?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/contact?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://jmsplumbingservices.com/gallery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/gallery" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/gallery?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/gallery" />
     <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jmsplumbingservices.com/gallery?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/gallery" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/gallery?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/gallery" />
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jmsplumbingservices.com/services/drain-cleaning</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/drain-cleaning" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/drain-cleaning?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/drain-cleaning" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jmsplumbingservices.com/services/drain-cleaning?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/drain-cleaning" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/drain-cleaning?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/drain-cleaning" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmsplumbingservices.com/services/gas-line-services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/gas-line-services" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/gas-line-services?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/gas-line-services" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jmsplumbingservices.com/services/gas-line-services?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/gas-line-services" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/gas-line-services?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/gas-line-services" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmsplumbingservices.com/services/plumbing-repairs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/plumbing-repairs" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/plumbing-repairs?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/plumbing-repairs" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jmsplumbingservices.com/services/plumbing-repairs?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/plumbing-repairs" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/plumbing-repairs?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/plumbing-repairs" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmsplumbingservices.com/services/plumbing-remodels</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/plumbing-remodels" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/plumbing-remodels?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/plumbing-remodels" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jmsplumbingservices.com/services/plumbing-remodels?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/plumbing-remodels" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/plumbing-remodels?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/plumbing-remodels" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmsplumbingservices.com/services/backflow-prevention</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/backflow-prevention" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/backflow-prevention?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/backflow-prevention" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jmsplumbingservices.com/services/backflow-prevention?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/backflow-prevention" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/backflow-prevention?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/backflow-prevention" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmsplumbingservices.com/services/emergency-plumbing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/emergency-plumbing" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/emergency-plumbing?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/emergency-plumbing" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jmsplumbingservices.com/services/emergency-plumbing?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/emergency-plumbing" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/emergency-plumbing?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/emergency-plumbing" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://jmsplumbingservices.com/services/water-heaters</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/water-heaters" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/water-heaters?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/water-heaters" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jmsplumbingservices.com/services/water-heaters?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/water-heaters" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/water-heaters?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/water-heaters" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmsplumbingservices.com/services/septic-leach-fields</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/septic-leach-fields" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/septic-leach-fields?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/septic-leach-fields" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jmsplumbingservices.com/services/septic-leach-fields?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/septic-leach-fields" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/septic-leach-fields?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/septic-leach-fields" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmsplumbingservices.com/services/toilet-faucet-pipe-repairs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/toilet-faucet-pipe-repairs" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/toilet-faucet-pipe-repairs?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/toilet-faucet-pipe-repairs" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jmsplumbingservices.com/services/toilet-faucet-pipe-repairs?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jmsplumbingservices.com/services/toilet-faucet-pipe-repairs" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://jmsplumbingservices.com/services/toilet-faucet-pipe-repairs?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jmsplumbingservices.com/services/toilet-faucet-pipe-repairs" />
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 </urlset>
