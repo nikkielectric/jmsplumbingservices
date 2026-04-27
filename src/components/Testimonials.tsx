@@ -94,6 +94,7 @@ const ReviewCard = ({ review, seeMoreLabel }: { review: typeof reviews[0]; seeMo
 
 const Testimonials = () => {
   const t = useT();
+  const seeMoreLabel = t("tst.seeMore");
   const duplicated = [...reviews, ...reviews];
 
   return (
