@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import VintageOrnament from "@/components/VintageOrnament";
 import type { RelatedService } from "@/data/servicePages";
+import { useT } from "@/i18n/LanguageContext";
 
 import drainImg from "@/assets/drain-cleaning-card.webp";
 import gasImg from "@/assets/gas-line-card.webp";
