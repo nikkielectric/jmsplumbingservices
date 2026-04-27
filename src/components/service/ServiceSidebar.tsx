@@ -4,12 +4,14 @@ import { toast } from "sonner";
 import type { ServiceTestimonial } from "@/data/servicePages";
 import { submitToFormspree } from "@/lib/formspree";
 import ThankYouModal from "@/components/ThankYouModal";
+import { useT } from "@/i18n/LanguageContext";
 interface ServiceSidebarProps {
   defaultService: string;
   testimonials: ServiceTestimonial[];
 }
 
 const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) => {
+  const tx = useT();
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -23,7 +25,7 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.phone.trim() || !form.zip.trim()) {
-      toast.error("Please fill in all required fields.");
+      toast.error(tx("contact.fillAll"));
       return;
     }
     setSending(true);
@@ -41,7 +43,7 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
       setShowThankYou(true);
     } catch (err) {
       console.error('Form submission error:', err);
-      toast.error("Something went wrong. Please call us at (954) 910-6883.");
+      toast.error(tx("contact.error"));
     } finally {
       setSending(false);
     }
@@ -57,26 +59,26 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
         <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-cream/15 rounded-br" />
 
         <h3 className="text-xl lg:text-2xl font-display font-black text-cream mb-1">
-          Request a Free Quote
+          {tx("sp.sb.title")}
         </h3>
         <p className="text-cream/60 font-body text-sm mb-5">
-          We'll call you back fast — usually within minutes.
+          {tx("sp.sb.sub")}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-3">
           <div>
-            <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Full Name *</label>
+            <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{tx("sp.sb.fullName")} *</label>
             <input
               type="text"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               maxLength={100}
               className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-2.5 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
-              placeholder="Your name"
+              placeholder={tx("contact.namePh")}
             />
           </div>
           <div>
-            <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Phone Number *</label>
+            <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{tx("sp.sb.phone")} *</label>
             <input
               type="tel"
               value={form.phone}
@@ -87,43 +89,43 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
             />
           </div>
           <div>
-            <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">City / Zip Code *</label>
+            <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{tx("sp.sb.cityZip")} *</label>
             <input
               type="text"
               value={form.zip}
               onChange={(e) => setForm({ ...form, zip: e.target.value })}
               maxLength={50}
               className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-2.5 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
-              placeholder="Sunrise, FL 33322"
+              placeholder={tx("cp.cityZipPh")}
             />
           </div>
           <div>
-            <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Service Needed</label>
+            <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{tx("sp.sb.serviceNeeded")}</label>
             <select
               value={form.service}
               onChange={(e) => setForm({ ...form, service: e.target.value })}
               className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-2.5 text-cream text-sm font-body focus:outline-none focus:border-primary transition-colors appearance-none"
             >
-              <option value="drain" className="bg-secondary text-cream">Drain Services</option>
-              <option value="repairs" className="bg-secondary text-cream">Plumbing Repairs &amp; Replacements</option>
-              <option value="gas" className="bg-secondary text-cream">Gas Line Services</option>
-              <option value="backflow-prevention" className="bg-secondary text-cream">Backflow Prevention</option>
-              <option value="septic-leach-fields" className="bg-secondary text-cream">Septic Services</option>
-              <option value="fixture-repairs" className="bg-secondary text-cream">Fixture Repairs</option>
-              <option value="remodel" className="bg-secondary text-cream">Bathroom/Kitchen Remodel</option>
-              <option value="emergency" className="bg-secondary text-cream">Emergency Repair</option>
-              <option value="other" className="bg-secondary text-cream">Other</option>
+              <option value="drain" className="bg-secondary text-cream">{tx("svc.drain")}</option>
+              <option value="repairs" className="bg-secondary text-cream">{tx("contact.svc.repairsAndReplacements")}</option>
+              <option value="gas" className="bg-secondary text-cream">{tx("svc.gas")}</option>
+              <option value="backflow-prevention" className="bg-secondary text-cream">{tx("svc.backflow")}</option>
+              <option value="septic-leach-fields" className="bg-secondary text-cream">{tx("svc.septic")}</option>
+              <option value="fixture-repairs" className="bg-secondary text-cream">{tx("svc.fixture")}</option>
+              <option value="remodel" className="bg-secondary text-cream">{tx("contact.svc.bathKitchen")}</option>
+              <option value="emergency" className="bg-secondary text-cream">{tx("svc.emergency")}</option>
+              <option value="other" className="bg-secondary text-cream">{tx("emCta.issue.other")}</option>
             </select>
           </div>
           <div>
-            <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Brief Description</label>
+            <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{tx("sp.sb.brief")}</label>
             <textarea
               value={form.description}
               onChange={(e) => setForm({ ...form, description: e.target.value })}
               maxLength={500}
               rows={2}
               className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-2.5 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors resize-none"
-              placeholder="Tell us what's happening so we can come prepared."
+              placeholder={tx("sp.sb.briefPh")}
             />
           </div>
           <button
@@ -131,21 +133,21 @@ const ServiceSidebar = ({ defaultService, testimonials }: ServiceSidebarProps) =
             disabled={sending}
             className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded font-bold text-sm hover:bg-primary/90 transition-all w-full disabled:opacity-60"
           >
-            {sending ? "Sending..." : "Send My Request"}
+            {sending ? tx("contact.sending") : tx("contact.send")}
             {!sending && <Send className="w-4 h-4" />}
           </button>
         </form>
         <p className="text-cream/40 text-xs font-body text-center mt-4">
-          Serving Broward, Miami-Dade &amp; Palm Beach Counties
+          {tx("sp.sb.serving")}
         </p>
       </div>
 
       {/* Trust Badges */}
       <div className="grid grid-cols-3 gap-3">
         {[
-          { icon: Star, label: "5-Star Rated" },
-          { icon: Shield, label: "Licensed & Insured" },
-          { icon: Users, label: "Family Owned" },
+          { icon: Star, label: tx("sp.sb.5star") },
+          { icon: Shield, label: tx("sp.sb.licensed") },
+          { icon: Users, label: tx("sp.sb.family") },
         ].map((badge) => (
           <div
             key={badge.label}
