@@ -57,7 +57,7 @@ const Stars = ({ count }: { count: number }) => (
 const googleMapsUrl =
   "https://www.google.com/maps/place/JMS+Plumbing+Services+LLC/@26.147967,-80.2959248,13.03z/data=!4m6!3m5!1s0x2ccb8ccb743c6cfb:0x109e4e624231af83!8m2!3d26.1479841!4d-80.296254!16s%2Fg%2F11lzdt02kt";
 
-const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
+const ReviewCard = ({ review, seeMoreLabel }: { review: typeof reviews[0]; seeMoreLabel: string }) => (
   <div className="bg-forest-deep rounded border-2 border-cream/10 p-6 w-[340px] min-w-[340px] flex-shrink-0 relative">
     {/* Decorative corner */}
     <div className="absolute top-2 right-2 w-6 h-6 border-t-2 border-r-2 border-cream/15 rounded-tr" />
