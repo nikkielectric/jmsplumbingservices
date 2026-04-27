@@ -14,7 +14,7 @@ const ServiceHero = ({ serviceCategory, h1, subtext, heroImage, heroObjectPositi
   const bgImage = heroImage || heroImg;
 
   return (
-    <section className="relative pt-24 lg:pt-44 overflow-hidden">
+    <section className="relative pt-20 md:pt-24 lg:pt-40 overflow-hidden">
       {/* Full-span background image */}
       <div className="absolute inset-0">
         <img
@@ -33,7 +33,7 @@ const ServiceHero = ({ serviceCategory, h1, subtext, heroImage, heroObjectPositi
       {/* Grain & vignette on top */}
       <div className="absolute inset-0 vintage-grain vintage-vignette pointer-events-none" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 py-12 lg:py-20">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 py-10 md:py-12 lg:py-16">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
