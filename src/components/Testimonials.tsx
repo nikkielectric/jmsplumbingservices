@@ -94,6 +94,7 @@ const ReviewCard = ({ review, seeMoreLabel }: { review: typeof reviews[0]; seeMo
 
 const Testimonials = () => {
   const t = useT();
+  const seeMoreLabel = t("tst.seeMore");
   const duplicated = [...reviews, ...reviews];
 
   return (
@@ -165,7 +166,7 @@ const Testimonials = () => {
           }}
         >
           {duplicated.map((review, i) => (
-            <ReviewCard key={i} review={review} seeMoreLabel={t("tst.seeMore")} />
+            <ReviewCard key={i} review={review} seeMoreLabel={seeMoreLabel} />
           ))}
         </motion.div>
       </div>
