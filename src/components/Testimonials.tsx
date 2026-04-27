@@ -165,7 +165,7 @@ const Testimonials = () => {
           }}
         >
           {duplicated.map((review, i) => (
-            <ReviewCard key={i} review={review} />
+            <ReviewCard key={i} review={review} seeMoreLabel={t("tst.seeMore")} />
           ))}
         </motion.div>
       </div>
