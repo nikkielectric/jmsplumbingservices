@@ -68,6 +68,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     document.documentElement.lang = lang;
     localStorage.setItem(STORAGE_KEY, lang);
+    updateHreflangTags(lang);
   }, [lang]);
 
   const value = useMemo<LanguageContextValue>(() => ({
