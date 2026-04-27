@@ -2,43 +2,20 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Phone, CalendarCheck, Clock, ClipboardList, Sparkles } from "lucide-react";
 import VintageOrnament from "./VintageOrnament";
-
-const steps = [
-  {
-    num: "01",
-    icon: Phone,
-    title: "Call or Request a Quote",
-    desc: "Reach us by phone or fill out our online form. A real person picks up — no voicemail maze, no call center.",
-  },
-  {
-    num: "02",
-    icon: CalendarCheck,
-    title: "We Confirm Your Appointment",
-    desc: "We'll get you scheduled fast — often same day. You'll know exactly when to expect us.",
-  },
-  {
-    num: "03",
-    icon: Clock,
-    title: "On-Time Arrival",
-    desc: "We arrive within your scheduled window. No sitting around wondering if someone's coming.",
-  },
-  {
-    num: "04",
-    icon: ClipboardList,
-    title: "Upfront Price Before We Start",
-    desc: "We diagnose the issue and give you a clear price before touching anything. No surprises, no pressure.",
-  },
-  {
-    num: "05",
-    icon: Sparkles,
-    title: "Job Done. Area Clean. Done Right.",
-    desc: "We complete the work, clean up after ourselves, and follow up to make sure you're satisfied.",
-  },
-];
+import { useT } from "@/i18n/LanguageContext";
 
 const HowItWorks = () => {
+  const t = useT();
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+
+  const steps = [
+    { num: "01", icon: Phone, title: t("how.s1.title"), desc: t("how.s1.desc") },
+    { num: "02", icon: CalendarCheck, title: t("how.s2.title"), desc: t("how.s2.desc") },
+    { num: "03", icon: Clock, title: t("how.s3.title"), desc: t("how.s3.desc") },
+    { num: "04", icon: ClipboardList, title: t("how.s4.title"), desc: t("how.s4.desc") },
+    { num: "05", icon: Sparkles, title: t("how.s5.title"), desc: t("how.s5.desc") },
+  ];
 
   return (
     <section className="relative bg-cream-light py-20 lg:py-28 overflow-hidden vintage-grain">
@@ -52,15 +29,15 @@ const HowItWorks = () => {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <span className="text-primary text-sm font-semibold tracking-widest uppercase font-body">
-            Simple Process
+            {t("how.eyebrow")}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-4">
-            Getting a Great Plumber{" "}
-            <span className="text-primary italic">Shouldn't Be Complicated</span>
+            {t("how.h2.part1")}{" "}
+            <span className="text-primary italic">{t("how.h2.italic")}</span>
           </h2>
           <VintageOrnament className="max-w-xs mx-auto mb-5" />
           <p className="text-muted-foreground font-body leading-relaxed">
-            Here's exactly what happens when you call JMS — from first contact to job done.
+            {t("how.intro")}
           </p>
         </motion.div>
 
