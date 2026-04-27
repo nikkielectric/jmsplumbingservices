@@ -1,19 +1,20 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import jmsLogoFooter from "@/assets/jms-logo-footer.webp";
-
-const services = [
-  { name: "Drain Services", href: "/drain-cleaning" },
-  { name: "Gas Line Services", href: "/gas-line-services" },
-  { name: "Plumbing Repairs", href: "/plumbing-repairs" },
-  { name: "Plumbing Remodels", href: "/plumbing-remodels" },
-  { name: "Backflow Prevention", href: "/backflow-prevention" },
-  { name: "Water Heaters", href: "/water-heaters" },
-  { name: "Septic Services", href: "/septic-leach-fields" },
-  { name: "Fixture Repairs", href: "/toilet-faucet-pipe-repairs" },
-  { name: "Emergency Plumbing", href: "/emergency-plumbing" },
-];
+import { useT } from "@/i18n/LanguageContext";
 
 const Footer = () => {
+  const t = useT();
+  const services = [
+    { name: t("svc.drain"), href: "/drain-cleaning" },
+    { name: t("svc.gas"), href: "/gas-line-services" },
+    { name: t("svc.repairs"), href: "/plumbing-repairs" },
+    { name: t("svc.remodels"), href: "/plumbing-remodels" },
+    { name: t("svc.backflow"), href: "/backflow-prevention" },
+    { name: t("svc.waterHeaters"), href: "/water-heaters" },
+    { name: t("svc.septic"), href: "/septic-leach-fields" },
+    { name: t("svc.fixture"), href: "/toilet-faucet-pipe-repairs" },
+    { name: t("svc.emergency"), href: "/emergency-plumbing" },
+  ];
   return (
     <footer className="bg-dark-deep pt-16 pb-6 bg-secondary vintage-grain relative">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -25,9 +26,7 @@ const Footer = () => {
               <span className="font-display text-xl font-bold text-cream">JMS Plumbing Services LLC</span>
             </div>
             <p className="text-cream/50 text-sm font-body leading-relaxed mb-6">
-              Licensed & insured plumbing services based in Sunrise, FL. 
-              Serving Broward, Miami-Dade, and Palm Beach Counties with 
-              honest work and upfront pricing.
+              {t("footer.tagline")}
             </p>
             <div className="flex flex-col gap-2">
               <a href="tel:9549106883" className="flex items-center gap-2 text-cream/70 text-sm font-body hover:text-cream transition-colors">
@@ -53,7 +52,7 @@ const Footer = () => {
 
           {/* Our Services */}
           <div>
-            <h4 className="font-display font-bold text-cream text-base mb-5">Our Services</h4>
+            <h4 className="font-display font-bold text-cream text-base mb-5">{t("footer.ourServices")}</h4>
             <ul className="space-y-2.5">
               {services.map((s) => (
                 <li key={s.name}>
@@ -67,13 +66,13 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-display font-bold text-cream text-base mb-5">Company</h4>
+            <h4 className="font-display font-bold text-cream text-base mb-5">{t("footer.company")}</h4>
             <ul className="space-y-2.5">
               {[
-                { label: "Home", href: "/" },
-                { label: "About", href: "/about" },
-                { label: "Services", href: "/#services" },
-                { label: "Contact", href: "/contact" },
+                { label: t("nav.home"), href: "/" },
+                { label: t("nav.about"), href: "/about" },
+                { label: t("nav.services"), href: "/#services" },
+                { label: t("nav.contact"), href: "/contact" },
               ].map((l) => (
                 <li key={l.label}>
                   <a href={l.href} className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
@@ -86,7 +85,7 @@ const Footer = () => {
 
           {/* Areas Served */}
           <div>
-            <h4 className="font-display font-bold text-cream text-base mb-5">Areas We Serve</h4>
+            <h4 className="font-display font-bold text-cream text-base mb-5">{t("footer.areasServed")}</h4>
             <ul className="space-y-2.5">
               {["Sunrise", "Plantation", "Fort Lauderdale", "Tamarac", "Lauderhill", "Coral Springs", "Weston", "Davie", "Parkland", "Southwest Ranches", "Hollywood", "Pembroke Pines", "Cooper City", "Broward County"].map((a) => (
                 <li key={a}>
@@ -100,19 +99,19 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-cream/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-cream/30 text-xs font-body">
-            © {new Date().getFullYear()} JMS Plumbing Services LLC. All Rights Reserved.
+            © {new Date().getFullYear()} JMS Plumbing Services LLC. {t("footer.rights")}
           </p>
           <p className="text-cream/30 text-xs font-body">
-            Website Built By{" "}
+            {t("footer.builtBy")}{" "}
             <a href="https://www.wisdomstudios.co" target="_blank" rel="noopener noreferrer" className="text-cream/60 hover:text-cream transition-colors">
               Wisdom Studios
             </a>
           </p>
           <div className="flex items-center gap-2 text-cream/40 text-xs font-body">
             <Phone className="w-3 h-3" />
-            <span>Have An Emergency?</span>
+            <span>{t("footer.haveEmergency")}</span>
             <a href="tel:9549106883" className="text-cream/60 font-semibold hover:text-cream transition-colors">
-              Call (954) 910-6883
+              {t("footer.callEmergency")}
             </a>
           </div>
         </div>

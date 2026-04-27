@@ -3,31 +3,34 @@ import { useLocation } from "react-router-dom";
 import { Phone, Menu, X, MapPin, Clock, ChevronDown, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import jmsLogo from "@/assets/jms-logo.webp";
-
-const serviceDropdownItems = [
-  { label: "Drain Services", href: "/drain-cleaning" },
-  { label: "Gas Line Services", href: "/gas-line-services" },
-  { label: "Plumbing Repairs", href: "/plumbing-repairs" },
-  { label: "Plumbing Remodels", href: "/plumbing-remodels" },
-  { label: "Backflow Prevention", href: "/backflow-prevention" },
-  { label: "Water Heaters", href: "/water-heaters" },
-  { label: "Septic Services", href: "/septic-leach-fields" },
-  { label: "Fixture Repairs", href: "/toilet-faucet-pipe-repairs" },
-  { label: "Emergency Plumbing", href: "/emergency-plumbing" },
-];
-
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-];
+import { useT } from "@/i18n/LanguageContext";
+import LanguageToggle from "@/components/LanguageToggle";
 
 const Navbar = () => {
+  const t = useT();
   const location = useLocation();
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+
+  const serviceDropdownItems = [
+    { label: t("svc.drain"), href: "/drain-cleaning" },
+    { label: t("svc.gas"), href: "/gas-line-services" },
+    { label: t("svc.repairs"), href: "/plumbing-repairs" },
+    { label: t("svc.remodels"), href: "/plumbing-remodels" },
+    { label: t("svc.backflow"), href: "/backflow-prevention" },
+    { label: t("svc.waterHeaters"), href: "/water-heaters" },
+    { label: t("svc.septic"), href: "/septic-leach-fields" },
+    { label: t("svc.fixture"), href: "/toilet-faucet-pipe-repairs" },
+    { label: t("svc.emergency"), href: "/emergency-plumbing" },
+  ];
+
+  const navLinks = [
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.about"), href: "/about" },
+  ];
 
   useEffect(() => {
     return () => {
@@ -50,11 +53,11 @@ const Navbar = () => {
       <div className="hidden md:block bg-[hsl(200,30%,12%)] border-b border-cream/5">
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-center py-1.5 gap-2 text-xs font-body">
           <span className="text-cream font-semibold tracking-wide">
-            Family Owned &amp; Operated
+            {t("nav.familyOwned")}
           </span>
           <span className="text-primary/50 mx-1">|</span>
           <span className="text-primary-foreground">
-            Serving Broward, Miami-Dade &amp; Palm Beach Counties Since 2018
+            {t("nav.servingSince")}
           </span>
         </div>
       </div>
@@ -62,11 +65,11 @@ const Navbar = () => {
       {/* ── Tier 2: Info bar — slightly lighter ── */}
       <div className="hidden lg:block bg-[hsl(200,30%,15%)] border-b border-cream/5">
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-evenly py-1.5 text-xs font-body">
-          <span className="tracking-wide text-primary-foreground">Licensed &amp; Insured Plumbing Services</span>
+          <span className="tracking-wide text-primary-foreground">{t("nav.licensedInsured")}</span>
 
           <div className="flex items-center gap-1.5 text-cream/60">
             <Clock className="w-3 h-3 text-primary" />
-            <span className="text-primary-foreground">24/7 Emergency Service</span>
+            <span className="text-primary-foreground">{t("nav.247Emergency")}</span>
           </div>
 
           <div className="flex items-center gap-1.5 text-cream/60">
@@ -96,7 +99,7 @@ const Navbar = () => {
             </div>
           </a>
 
-          {/* Desktop right side: phone + CTA */}
+          {/* Desktop right side: phone + CTA + language */}
           <div className="hidden md:flex items-center gap-5">
             <a
               href="tel:9549106883"
@@ -107,7 +110,7 @@ const Navbar = () => {
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="text-[10px] text-cream/50 font-body tracking-widest uppercase">
-                  Call Now
+                  {t("nav.callNow")}
                 </span>
                 <span className="text-cream font-display font-bold text-lg tracking-tight">
                   (954) 910-6883
@@ -119,8 +122,10 @@ const Navbar = () => {
               href="/contact"
               className="ml-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded font-display font-bold text-sm tracking-wide uppercase transition-colors shadow-lg shadow-primary/20"
             >
-              Get a Quote
+              {t("nav.getQuote")}
             </a>
+
+            <LanguageToggle />
           </div>
 
           {/* Mobile hamburger */}
@@ -160,7 +165,7 @@ const Navbar = () => {
               className={`flex items-center gap-1 text-xs font-body font-semibold tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:transition-transform after:duration-300 after:origin-left ${serviceDropdownItems.some(s => location.pathname === s.href) ? "text-cream after:scale-x-100" : "text-cream/70 hover:text-cream after:scale-x-0 hover:after:scale-x-100"}`}
               onClick={() => setServicesOpen(!servicesOpen)}
             >
-              Services
+              {t("nav.services")}
               <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
 
@@ -177,7 +182,7 @@ const Navbar = () => {
                   <div className="h-0.5 bg-gradient-to-r from-primary/0 via-primary to-primary/0" />
 
                   <div className="py-2">
-                    {serviceDropdownItems.map((item, i) => (
+                    {serviceDropdownItems.map((item) => (
                       <a
                         key={item.href}
                         href={item.href}
@@ -198,14 +203,14 @@ const Navbar = () => {
             href="/gallery"
             className={`text-xs font-body font-semibold tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:transition-transform after:duration-300 after:origin-left ${location.pathname === "/gallery" ? "text-cream after:scale-x-100" : "text-cream/70 hover:text-cream after:scale-x-0 hover:after:scale-x-100"}`}
           >
-            Gallery
+            {t("nav.gallery")}
           </a>
 
           <a
             href="/contact"
             className={`text-xs font-body font-semibold tracking-[0.2em] uppercase transition-colors relative after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:transition-transform after:duration-300 after:origin-left ${location.pathname === "/contact" ? "text-cream after:scale-x-100" : "text-cream/70 hover:text-cream after:scale-x-0 hover:after:scale-x-100"}`}
           >
-            Contact
+            {t("nav.contact")}
           </a>
         </div>
       </div>
@@ -236,7 +241,7 @@ const Navbar = () => {
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                 className="flex items-center justify-between text-sm font-body font-semibold text-cream/80 hover:text-cream tracking-[0.15em] uppercase transition-colors"
               >
-                Services
+                {t("nav.services")}
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
               </button>
               <AnimatePresence>
@@ -269,7 +274,7 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
                 className="text-sm font-body font-semibold text-cream/80 hover:text-cream tracking-[0.15em] uppercase transition-colors"
               >
-                Gallery
+                {t("nav.gallery")}
               </a>
 
               <a
@@ -277,7 +282,7 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
                 className="text-sm font-body font-semibold text-cream/80 hover:text-cream tracking-[0.15em] uppercase transition-colors"
               >
-                Contact
+                {t("nav.contact")}
               </a>
 
               <div className="h-px bg-cream/10 my-1" />
@@ -292,8 +297,10 @@ const Navbar = () => {
                 href="/contact"
                 className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded font-bold text-sm uppercase tracking-wide"
               >
-                Get a Quote
+                {t("nav.getQuote")}
               </a>
+
+              <LanguageToggle variant="mobile" />
             </div>
           </motion.div>
         )}
