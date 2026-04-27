@@ -1,26 +1,15 @@
 import { Clock, MessageCircle, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import VintageOrnament from "./VintageOrnament";
-
-const promises = [
-  {
-    icon: Clock,
-    title: "We Show Up",
-    description: "On time, every time. We give you a real arrival window and we honor it.",
-  },
-  {
-    icon: MessageCircle,
-    title: "We're Straight With You",
-    description: "You'll know the price before we touch anything. No surprises, no hidden fees.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "We Do It Right",
-    description: "Licensed, insured, and thorough. We don't leave until the job is done properly.",
-  },
-];
+import { useT } from "@/i18n/LanguageContext";
 
 const PromiseBanner = () => {
+  const t = useT();
+  const promises = [
+    { icon: Clock, title: t("promise.c1.title"), description: t("promise.c1.desc") },
+    { icon: MessageCircle, title: t("promise.c2.title"), description: t("promise.c2.desc") },
+    { icon: ShieldCheck, title: t("promise.c3.title"), description: t("promise.c3.desc") },
+  ];
   return (
     <section className="relative bg-secondary py-24 lg:py-32 overflow-hidden vintage-grain vintage-vignette">
       {/* Decorative background */}
@@ -36,7 +25,7 @@ const PromiseBanner = () => {
           transition={{ duration: 0.5 }}
           className="text-primary font-body font-semibold text-xs tracking-[0.2em] uppercase text-center mb-5"
         >
-          Our Commitment to Every Customer
+          {t("promise.eyebrow")}
         </motion.p>
 
         <motion.h2
@@ -46,7 +35,7 @@ const PromiseBanner = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream text-center max-w-4xl mx-auto mb-5 leading-tight"
         >
-          Tired of Plumbers Who Don't Follow Through?
+          {t("promise.h2")}
         </motion.h2>
 
         <VintageOrnament className="max-w-xs mx-auto mb-10 [&_div]:bg-gradient-to-r [&_div]:from-transparent [&_div]:via-cream/20 [&_div]:to-transparent [&_svg]:text-cream/30" />
@@ -59,13 +48,10 @@ const PromiseBanner = () => {
           className="max-w-2xl mx-auto text-center mb-16"
         >
           <p className="text-cream/80 font-body leading-relaxed mb-4">
-            So are we. That's exactly why we built JMS differently.
-            As a family-owned business, our reputation is built one home at a time —
-            there's no corporate office to hide behind when a job goes wrong.
+            {t("promise.p1")}
           </p>
           <p className="text-cream/80 font-body leading-relaxed">
-            When we leave your property, our name goes with us.
-            Here's what that means in practice:
+            {t("promise.p2")}
           </p>
         </motion.div>
 

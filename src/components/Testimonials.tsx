@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Star, ExternalLink, Phone } from "lucide-react";
 import VintageOrnament from "./VintageOrnament";
+import { useT } from "@/i18n/LanguageContext";
 
 const reviews = [
   {
@@ -56,7 +57,7 @@ const Stars = ({ count }: { count: number }) => (
 const googleMapsUrl =
   "https://www.google.com/maps/place/JMS+Plumbing+Services+LLC/@26.147967,-80.2959248,13.03z/data=!4m6!3m5!1s0x2ccb8ccb743c6cfb:0x109e4e624231af83!8m2!3d26.1479841!4d-80.296254!16s%2Fg%2F11lzdt02kt";
 
-const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
+const ReviewCard = ({ review, seeMoreLabel }: { review: typeof reviews[0]; seeMoreLabel: string }) => (
   <div className="bg-forest-deep rounded border-2 border-cream/10 p-6 w-[340px] min-w-[340px] flex-shrink-0 relative">
     {/* Decorative corner */}
     <div className="absolute top-2 right-2 w-6 h-6 border-t-2 border-r-2 border-cream/15 rounded-tr" />
@@ -86,12 +87,13 @@ const ReviewCard = ({ review }: { review: typeof reviews[0] }) => (
         <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
         <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
       </svg>
-      See More on Google
+      {seeMoreLabel}
     </a>
   </div>
 );
 
 const Testimonials = () => {
+  const t = useT();
   const duplicated = [...reviews, ...reviews];
 
   return (
@@ -105,8 +107,8 @@ const Testimonials = () => {
             transition={{ duration: 0.7 }}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream leading-tight">
-              We Don't Just Say It. Our Customers{" "}
-              <span className="text-steel italic">Do.</span>
+              {t("tst.h2.part1")}{" "}
+              <span className="text-steel italic">{t("tst.h2.italic")}</span>
             </h2>
             <VintageOrnament className="max-w-xs mt-6 [&_div]:bg-gradient-to-r [&_div]:from-transparent [&_div]:via-cream/20 [&_div]:to-transparent [&_svg]:text-cream/30" />
           </motion.div>
@@ -131,7 +133,7 @@ const Testimonials = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-6 py-3 rounded font-bold text-sm hover:bg-cream/90 transition-all"
             >
-              Leave a Review
+              {t("tst.leaveReview")}
               <ExternalLink className="w-4 h-4" />
             </a>
           </motion.div>
@@ -144,7 +146,7 @@ const Testimonials = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-cream/70 font-body leading-relaxed mt-6 max-w-2xl"
         >
-          Every plumber promises good work. We let our customers tell you what actually happened — how fast we showed up, how clearly we communicated, and whether the price matched what we quoted. That's the standard we hold ourselves to on every single job in Broward, Miami-Dade, and Palm Beach County.
+          {t("tst.intro")}
         </motion.p>
       </div>
 
@@ -163,7 +165,7 @@ const Testimonials = () => {
           }}
         >
           {duplicated.map((review, i) => (
-            <ReviewCard key={i} review={review} />
+            <ReviewCard key={i} review={review} seeMoreLabel={t("tst.seeMore")} />
           ))}
         </motion.div>
       </div>

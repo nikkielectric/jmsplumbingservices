@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import VintageOrnament from "@/components/VintageOrnament";
 import type { RelatedService } from "@/data/servicePages";
+import { useT } from "@/i18n/LanguageContext";
 
 import drainImg from "@/assets/drain-cleaning-card.webp";
 import gasImg from "@/assets/gas-line-card.webp";
@@ -31,6 +32,7 @@ interface ServiceRelatedProps {
 }
 
 const ServiceRelated = ({ services }: ServiceRelatedProps) => {
+  const t = useT();
   return (
     <section className="py-20 lg:py-28 bg-cream-light vintage-grain relative">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -42,7 +44,7 @@ const ServiceRelated = ({ services }: ServiceRelatedProps) => {
           className="text-center mb-12"
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-foreground mb-4">
-            Other Services We Offer
+            {t("sp.related.h2")}
           </h2>
           <VintageOrnament className="max-w-xs mx-auto" />
         </motion.div>

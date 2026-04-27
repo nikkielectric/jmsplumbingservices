@@ -10,7 +10,7 @@ import emergencyHero from "@/assets/emergency-plumbing-card.webp";
 import waterHeaterHero from "@/assets/water-heaters-card.webp";
 import septicLeachHero from "@/assets/septic-leach-card.webp";
 import toiletFaucetHero from "@/assets/fixture-repairs-card.webp";
-import { servicePages } from "@/data/servicePages";
+import { servicePages, useLocalizedServicePages } from "@/data/servicePages";
 
 const heroImages: Record<string, string> = {
   "drain-cleaning": drainCleaningHero,
@@ -40,7 +40,8 @@ import NotFound from "./NotFound";
 
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
-  const data = servicePages.find((s) => s.slug === slug);
+  const localizedPages = useLocalizedServicePages();
+  const data = localizedPages.find((s) => s.slug === slug);
 
   useEffect(() => {
     window.scrollTo(0, 0);

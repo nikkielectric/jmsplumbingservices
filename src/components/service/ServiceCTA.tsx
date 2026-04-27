@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, ArrowRight } from "lucide-react";
 import VintageOrnament from "@/components/VintageOrnament";
+import { useT } from "@/i18n/LanguageContext";
 
 interface ServiceCTAProps {
   heading: string;
@@ -8,6 +9,7 @@ interface ServiceCTAProps {
 }
 
 const ServiceCTA = ({ heading, subtext }: ServiceCTAProps) => {
+  const t = useT();
   return (
     <section className="relative py-20 lg:py-28 overflow-hidden" style={{ background: "linear-gradient(135deg, hsl(184 72% 32%), hsl(200 30% 18%), hsl(184 72% 25%))" }}>
       {/* Decorative top border */}
@@ -31,7 +33,7 @@ const ServiceCTA = ({ heading, subtext }: ServiceCTAProps) => {
           {/* Stamp-style badge */}
           <div className="inline-flex items-center gap-2 border border-cream/20 rounded-full px-5 py-1.5 mb-6">
             <Phone className="w-3.5 h-3.5 text-primary" />
-            <span className="text-cream/60 text-xs font-body uppercase tracking-widest">24/7 Emergency Service</span>
+            <span className="text-cream/60 text-xs font-body uppercase tracking-widest">{t("sp.cta.247badge")}</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-cream mb-4">
@@ -47,13 +49,13 @@ const ServiceCTA = ({ heading, subtext }: ServiceCTAProps) => {
               className="inline-flex items-center justify-center gap-2 border-2 border-cream/30 text-cream px-8 py-4 rounded font-bold text-sm hover:bg-cream/10 hover:border-cream/50 transition-all"
             >
               <Phone className="w-4 h-4" />
-              Call (954) 910-6883
+              {t("sp.callBtn")}
             </a>
             <a
               href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded font-bold text-sm hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
             >
-              Get a Free Quote
+              {t("sp.freeQuote")}
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

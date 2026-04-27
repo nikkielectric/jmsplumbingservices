@@ -3,8 +3,10 @@ import { MapPin } from "lucide-react";
 import areaImg from "@/assets/service-area.webp";
 import jmsLogoPin from "@/assets/jms-logo-pin.webp";
 import VintageOrnament from "./VintageOrnament";
+import { useT } from "@/i18n/LanguageContext";
 
 const ServiceArea = () => {
+  const t = useT();
   return (
     <section id="area" className="py-20 lg:py-28 bg-cream vintage-grain relative">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -16,18 +18,18 @@ const ServiceArea = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
-              Where We Serve
+              {t("area.eyebrow")}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
-              We Come to You{" "}
-              <span className="text-primary italic">Anywhere in South Florida's Tri-County Area</span>
+              {t("area.h2.part1")}{" "}
+              <span className="text-primary italic">{t("area.h2.italic")}</span>
             </h2>
             <VintageOrnament className="max-w-xs mb-6" />
             <p className="text-muted-foreground font-body leading-relaxed mb-6">
-              Based in Sunrise, our trucks serve communities across Broward, Miami-Dade, and Palm Beach Counties. We know South Florida's homes, its aging pipes, and its climate — and we bring that local knowledge to every job.
+              {t("area.p1")}
             </p>
             <p className="text-muted-foreground font-body leading-relaxed">
-              Don't see your city listed? Call us. If you're in the Tri-County area, there's a good chance we can get to you.
+              {t("area.p2")}
             </p>
           </motion.div>
 
@@ -83,10 +85,10 @@ const ServiceArea = () => {
             </div>
             <div>
               <p className="font-display font-bold text-lg text-secondary-foreground mb-2">
-                Communities We Serve
+                {t("area.communities")}
               </p>
               <p className="text-sm text-secondary-foreground/70 font-body leading-relaxed tracking-wide">
-                Broward · Miami-Dade · Palm Beach Counties · Sunrise · Plantation · Fort Lauderdale · Tamarac · Lauderhill · Coral Springs · Weston · Davie · Parkland · Southwest Ranches · Hollywood · Pembroke Pines · Cooper City
+                {t("area.communitiesList")}
               </p>
             </div>
           </div>

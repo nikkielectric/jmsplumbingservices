@@ -2,6 +2,7 @@ import backflow from "@/assets/certifications/backflow-certified.png";
 import medicalGas from "@/assets/certifications/florida-medical-gas.png";
 import osha from "@/assets/certifications/osha-certified.png";
 import tracpipe from "@/assets/certifications/tracpipe-certified.png";
+import { useT } from "@/i18n/LanguageContext";
 
 const certs = [
   { src: backflow, alt: "Backflow Certified" },
@@ -11,6 +12,7 @@ const certs = [
 ];
 
 const CertificationsTicker = () => {
+  const t = useT();
   // Repeat enough times to overflow any viewport width — the marquee
   // translates by -50%, so the first half must always be wider than the screen
   // to avoid an empty gap before the loop restarts.
@@ -23,7 +25,7 @@ const CertificationsTicker = () => {
     >
       <div className="container mx-auto px-4 lg:px-8 mb-3">
         <p className="text-center text-primary font-semibold text-[10px] tracking-[0.25em] uppercase font-body">
-          Licensed · Insured · Certified
+          {t("certs.label")}
         </p>
       </div>
 

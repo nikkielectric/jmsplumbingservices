@@ -5,8 +5,10 @@ import { toast } from "sonner";
 import VintageOrnament from "./VintageOrnament";
 import { submitToFormspree } from "@/lib/formspree";
 import ThankYouModal from "./ThankYouModal";
+import { useT } from "@/i18n/LanguageContext";
 
 const Contact = () => {
+  const t = useT();
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
   const [sending, setSending] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
@@ -14,14 +16,14 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      toast.error("Please fill in all required fields.");
+      toast.error(t("contact.fillAll"));
       return;
     }
     setSending(true);
     try {
       await submitToFormspree({
         _subject: 'New Lead — Homepage Quote Form',
-        "Form Source": 'Homepage — Request a Free Quote',
+        "Form Source": 'Homepage — {t("contact.formTitle")}',
         Name: form.name,
         Email: form.email,
         Phone: form.phone,
@@ -32,7 +34,7 @@ const Contact = () => {
       setShowThankYou(true);
     } catch (err) {
       console.error('Form submission error:', err);
-      toast.error("Something went wrong. Please call us at (954) 910-6883.");
+      toast.error(t("contact.error"));
     } finally {
       setSending(false);
     }
@@ -50,24 +52,23 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
-              GET IN TOUCH
+              {t("contact.eyebrow")}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
-              Ready For A Plumber Who{" "}
-              <span className="text-primary italic">Actually Shows Up?</span>
+              {t("contact.h2.part1")}{" "}
+              <span className="text-primary italic">{t("contact.h2.italic")}</span>
             </h2>
             <VintageOrnament className="max-w-xs mb-6" />
             <p className="text-muted-foreground font-body leading-relaxed mb-8">
-              Call us or fill out the form and we'll get back to you fast — with a real answer 
-              and a fair quote. No runaround, no voicemail maze, no surprise fees.
+              {t("contact.intro")}
             </p>
 
             <div className="space-y-4">
               {[
-                { icon: Phone, label: "Call Us", value: "(954) 910-6883", href: "tel:9549106883" },
-                { icon: Mail, label: "Email", value: "Jmsplumbingservicesllc@gmail.com", href: "mailto:Jmsplumbingservicesllc@gmail.com" },
-                { icon: MapPin, label: "Location", value: "Sunrise, FL 33322" },
-                { icon: Clock, label: "Emergency", value: "Available 24/7" },
+                { icon: Phone, label: t("contact.callUs"), value: "(954) 910-6883", href: "tel:9549106883" },
+                { icon: Mail, label: t("contact.email"), value: "Jmsplumbingservicesllc@gmail.com", href: "mailto:Jmsplumbingservicesllc@gmail.com" },
+                { icon: MapPin, label: t("contact.location"), value: "Sunrise, FL 33322" },
+                { icon: Clock, label: t("contact.emergency"), value: t("contact.emergencyVal") },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-11 h-11 rounded-full border-2 border-primary/20 flex items-center justify-center flex-shrink-0">
@@ -103,41 +104,41 @@ const Contact = () => {
             <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-cream/15 rounded-br" />
 
             <h3 className="text-2xl lg:text-3xl font-display font-black text-cream mb-2">
-              Request a Free Quote
+              {t("contact.formTitle")}
             </h3>
             <p className="text-cream/60 font-body text-sm mb-6">
-              We'll review your request and call you back — usually within minutes.
+              {t("contact.formSub")}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Name *</label>
+                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("contact.name")} *</label>
                   <input
                     type="text"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     maxLength={100}
                     className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
-                    placeholder="Your name"
+                    placeholder={t("contact.namePh")}
                   />
                 </div>
                 <div>
-                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Email *</label>
+                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("contact.email")} *</label>
                   <input
                     type="email"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     maxLength={255}
                     className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
-                    placeholder="your@email.com"
+                    placeholder={t("contact.emailPh")}
                   />
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Phone</label>
+                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("contact.phone")}</label>
                   <input
                     type="tel"
                     value={form.phone}
@@ -148,36 +149,36 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Service Needed</label>
+                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("contact.serviceNeeded")}</label>
                   <select
                     value={form.service}
                     onChange={(e) => setForm({ ...form, service: e.target.value })}
                     className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body focus:outline-none focus:border-primary transition-colors appearance-none"
                   >
-                    <option value="" className="bg-secondary text-cream">Select a service</option>
-                    <option value="drain" className="bg-secondary text-cream">Drain Services</option>
-                    <option value="repairs" className="bg-secondary text-cream">Plumbing Repairs & Replacements</option>
-                    <option value="gas" className="bg-secondary text-cream">Gas Line Services</option>
-                    <option value="water-heater" className="bg-secondary text-cream">Water Heater</option>
-                    <option value="backflow-prevention" className="bg-secondary text-cream">Backflow Prevention</option>
-                    <option value="septic-leach-fields" className="bg-secondary text-cream">Septic Services</option>
-                    <option value="fixture-repairs" className="bg-secondary text-cream">Fixture Repairs</option>
-                    <option value="remodel" className="bg-secondary text-cream">Bathroom/Kitchen Remodel</option>
-                    <option value="emergency" className="bg-secondary text-cream">Emergency Repair</option>
-                    <option value="other" className="bg-secondary text-cream">Other</option>
+                    <option value="" className="bg-secondary text-cream">{t("contact.selectService")}</option>
+                    <option value="drain" className="bg-secondary text-cream">{t("svc.drain")}</option>
+                    <option value="repairs" className="bg-secondary text-cream">{t("contact.svc.repairsAndReplacements")}</option>
+                    <option value="gas" className="bg-secondary text-cream">{t("svc.gas")}</option>
+                    <option value="water-heater" className="bg-secondary text-cream">{t("contact.svc.waterHeater")}</option>
+                    <option value="backflow-prevention" className="bg-secondary text-cream">{t("svc.backflow")}</option>
+                    <option value="septic-leach-fields" className="bg-secondary text-cream">{t("svc.septic")}</option>
+                    <option value="fixture-repairs" className="bg-secondary text-cream">{t("svc.fixture")}</option>
+                    <option value="remodel" className="bg-secondary text-cream">{t("contact.svc.bathKitchen")}</option>
+                    <option value="emergency" className="bg-secondary text-cream">{t("svc.emergency")}</option>
+                    <option value="other" className="bg-secondary text-cream">{t("emCta.issue.other")}</option>
                   </select>
                 </div>
               </div>
 
               <div>
-                <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Message *</label>
+                <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("contact.message")} *</label>
                 <textarea
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   maxLength={1000}
                   rows={4}
                   className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors resize-none"
-                  placeholder="Describe your plumbing issue or project..."
+                  placeholder={t("contact.messagePh")}
                 />
               </div>
 
@@ -186,14 +187,14 @@ const Contact = () => {
                 disabled={sending}
                 className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded font-bold text-base hover:bg-primary/90 transition-all w-full disabled:opacity-60"
               >
-                {sending ? "Sending..." : "Send My Request"}
+                {sending ? t("contact.sending") : t("contact.send")}
                 {!sending && <Send className="w-4 h-4" />}
               </button>
             </form>
 
             <div className="mt-6 pt-4 border-t border-cream/10">
               <p className="text-cream/50 text-xs font-body text-center">
-                Serving Sunrise, Plantation, Fort Lauderdale, Broward, Miami-Dade & Palm Beach Counties
+                {t("contact.servingNote")}
               </p>
             </div>
           </motion.div>
