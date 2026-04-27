@@ -1,66 +1,7 @@
-export interface ServiceSign {
-  text: string;
-}
+import type { ServicePageData } from "./servicePages";
 
-export interface ServiceFAQ {
-  question: string;
-  answer: string;
-}
+export const servicePagesEn: ServicePageData[] = [
 
-export interface ServiceStep {
-  title: string;
-  description: string;
-}
-
-export interface RelatedService {
-  title: string;
-  description: string;
-  href: string;
-}
-
-export interface ServiceTestimonial {
-  name: string;
-  city: string;
-  text: string;
-  rating: number;
-}
-
-export interface ServicePageData {
-  slug: string;
-  serviceName: string;
-  serviceCategory: string;
-  pageTitle: string;
-  metaDescription: string;
-  heroH1: string;
-  heroSubtext: string;
-  defaultServiceValue: string;
-  // Section 2 content
-  introHeading: string;
-  paragraph1: string;
-  paragraph2: string;
-  paragraph3: string;
-  // Signs
-  signsHeading: string;
-  signs: ServiceSign[];
-  // Why not DIY
-  diyHeading: string;
-  diyParagraphs: string[];
-  // What to expect
-  expectHeading: string;
-  steps: ServiceStep[];
-  // Sidebar testimonials
-  testimonials: ServiceTestimonial[];
-  // FAQ
-  faqHeading: string;
-  faqs: ServiceFAQ[];
-  // Related services
-  relatedServices: RelatedService[];
-  // Final CTA
-  ctaHeading: string;
-  ctaSubtext: string;
-}
-
-export const servicePages: ServicePageData[] = [
   {
     slug: "drain-cleaning",
     serviceName: "Drain Services",
