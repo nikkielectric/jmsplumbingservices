@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { Phone, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-plumber.webp";
 import VintageOrnament from "./VintageOrnament";
+import { useT } from "@/i18n/LanguageContext";
 
 const EmergencySection = () => {
+  const t = useT();
   return (
     <div className="relative bg-cream-light py-20 lg:py-28 overflow-hidden vintage-grain">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -16,22 +18,18 @@ const EmergencySection = () => {
             className="lg:order-last"
           >
             <span className="text-primary text-sm font-semibold tracking-widest uppercase font-body">
-              Fully equipped & ready to respond
+              {t("emSec.eyebrow")}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
-              Providing 24/7{" "}
-              <span className="text-primary italic">Emergency Help</span>
+              {t("emSec.h2.part1")}{" "}
+              <span className="text-primary italic">{t("emSec.h2.italic")}</span>
             </h2>
             <VintageOrnament className="max-w-xs mb-6" />
             <p className="text-muted-foreground font-body leading-relaxed mb-6">
-              Plumbing emergencies can strike at any time. With every second that passes,
-              you risk more damage occurring to your home or office. Instead, opt for our
-              24-hour emergency plumbing services.
+              {t("emSec.p1")}
             </p>
             <p className="text-muted-foreground font-body leading-relaxed mb-8">
-              We'll get to work diagnosing and resolving the problem, leaving you with
-              the comfort knowing that your plumbing is in the right hands. Remember that
-              our South Florida plumbers are just a call away.
+              {t("emSec.p2")}
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -45,7 +43,7 @@ const EmergencySection = () => {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded font-bold text-sm hover:bg-primary/90 transition-all"
               >
-                Get a Free Quote
+                {t("hero.getFreeQuote")}
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
