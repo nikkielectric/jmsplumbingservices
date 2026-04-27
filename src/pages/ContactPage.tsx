@@ -136,14 +136,14 @@ const ContactPage = () => {
       <Navbar />
 
       {/* ═══ SECTION 1 — PAGE HERO ═══ */}
-      <section className="relative pt-24 lg:pt-44 pb-12 lg:pb-20 bg-secondary vintage-grain vintage-vignette">
+      <section className="relative pt-24 lg:pt-44 bg-secondary vintage-grain vintage-vignette">
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-center max-w-3xl mx-auto py-10 lg:py-14"
+            className="text-center max-w-3xl mx-auto py-12 lg:py-20"
           >
             {/* Stamp-style badge */}
             <motion.div
