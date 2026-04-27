@@ -2,26 +2,15 @@ import { Phone, ArrowRight, Star, Shield, Clock, DollarSign } from "lucide-react
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-plumber.webp";
 import VintageOrnament from "./VintageOrnament";
-
-const valueProps = [
-  {
-    icon: Shield,
-    title: "Licensed & Insured",
-    desc: "Florida-licensed and fully insured. Every job is done right, to code — protecting your home and your wallet.",
-  },
-  {
-    icon: Clock,
-    title: "24/7 Emergency Service",
-    desc: "Burst pipe at midnight? No water on a Sunday? We pick up the phone when other plumbers don't. We're here when it counts.",
-  },
-  {
-    icon: DollarSign,
-    title: "Upfront & Fair Pricing",
-    desc: "You'll know the price before we start — every time. No hidden fees, no shock invoices. Just honest work at a fair rate.",
-  },
-];
+import { useT } from "@/i18n/LanguageContext";
 
 const Hero = () => {
+  const t = useT();
+  const valueProps = [
+    { icon: Shield, title: t("hero.licensed.title"), desc: t("hero.licensed.desc") },
+    { icon: Clock, title: t("hero.247.title"), desc: t("hero.247.desc") },
+    { icon: DollarSign, title: t("hero.pricing.title"), desc: t("hero.pricing.desc") },
+  ];
   return (
     <section className="relative pt-24 lg:pt-44 bg-secondary vintage-grain vintage-vignette">
       {/* Main hero content */}
@@ -49,19 +38,17 @@ const Hero = () => {
               </div>
               <span className="text-cream font-bold text-sm font-body tracking-wide">5.0</span>
               <div className="h-4 w-px bg-cream/30 hidden sm:block" />
-              <span className="text-cream/70 text-xs font-body hidden sm:inline">5-Star Rated in Broward County</span>
+              <span className="text-cream/70 text-xs font-body hidden sm:inline">{t("hero.5star")}</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-black text-cream leading-[1.1] mb-6">
-              South Florida's <span className="text-steel italic">Plumber</span> That Actually Shows Up
+              {t("hero.h1.part1")} <span className="text-steel italic">{t("hero.h1.italic")}</span> {t("hero.h1.part2")}
             </h1>
 
             <VintageOrnament className="max-w-xs mb-6 [&_div]:bg-gradient-to-r [&_div]:from-transparent [&_div]:via-cream/30 [&_div]:to-transparent [&_svg]:text-cream/40" />
 
             <p className="text-cream/70 font-body text-base lg:text-lg leading-relaxed mb-8 max-w-lg">
-              We answer our phone. We arrive on time. We tell you the price before we touch a thing. 
-              JMS Plumbing Services is a family-owned, licensed plumber serving Broward, Miami-Dade, 
-              and Palm Beach Counties — and we treat your home like it's our own.
+              {t("hero.subtitle")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
@@ -76,7 +63,7 @@ const Hero = () => {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-7 py-3.5 rounded font-bold text-sm hover:bg-cream/90 transition-all"
               >
-                Get a Free Quote
+                {t("hero.getFreeQuote")}
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>

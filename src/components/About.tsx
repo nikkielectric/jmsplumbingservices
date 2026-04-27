@@ -4,8 +4,10 @@ import { Phone, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/jms-van.webp";
 import VintageOrnament from "./VintageOrnament";
 import CertificationsTicker from "./CertificationsTicker";
+import { useT } from "@/i18n/LanguageContext";
 
 const About = () => {
+  const t = useT();
   return (
     <section id="about" className="relative overflow-hidden">
       <div className="bg-cream py-20 lg:py-28 vintage-grain relative">
@@ -18,22 +20,18 @@ const About = () => {
               transition={{ duration: 0.7 }}
             >
               <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
-                FAMILY OWNED & OPERATED IN SUNRISE, FL
+                {t("about.eyebrow")}
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
-                You're Not a Ticket Number.{" "}
-                <span className="text-primary italic">You're A Neighbor.</span>
+                {t("about.h2.part1")}{" "}
+                <span className="text-primary italic">{t("about.h2.italic")}</span>
               </h2>
               <VintageOrnament className="max-w-xs mb-6" />
               <p className="text-muted-foreground font-body leading-relaxed mb-6">
-                Most plumbing companies send whoever's available, charge whatever they want, and move on. 
-                That's not how we operate. At JMS, the owner is personally invested in every job — 
-                because our name and our reputation are on the line every single time we pull up to your door.
+                {t("about.p1")}
               </p>
               <p className="text-muted-foreground font-body leading-relaxed mb-8">
-                We're based right here in Sunrise and we serve Broward, Miami-Dade, and Palm Beach Counties. 
-                We know these pipes, this water, and these homes. When you call us, you'll get a straight answer, 
-                a fair price, and a plumber who actually shows up.
+                {t("about.p2")}
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
@@ -47,7 +45,7 @@ const About = () => {
                   to="/about"
                   className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded font-bold text-sm hover:bg-primary/90 transition-all"
                 >
-                  Our Story
+                  {t("about.ourStory")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -73,8 +71,8 @@ const About = () => {
               {/* Stamp badge instead of modern badge */}
               <div className="absolute -bottom-6 left-2 sm:-left-4 lg:-left-8 stamp-badge bg-primary shadow-lg">
                 <div className="text-center">
-                  <span className="text-cream font-display font-black text-2xl block">Family</span>
-                  <span className="text-cream/80 text-[10px] font-body uppercase tracking-widest">Owned & Operated</span>
+                  <span className="text-cream font-display font-black text-2xl block">{t("about.familyBadge")}</span>
+                  <span className="text-cream/80 text-[10px] font-body uppercase tracking-widest">{t("about.familyBadge.sub")}</span>
                 </div>
               </div>
             </motion.div>

@@ -10,65 +10,21 @@ import emergencyImg from "@/assets/emergency-plumbing-card.webp";
 import waterHeaterImg from "@/assets/water-heaters-card.webp";
 import septicImg from "@/assets/septic-leach-card.webp";
 import toiletFaucetImg from "@/assets/fixture-repairs-card.webp";
-
-const services = [
-  {
-    img: drainImg,
-    title: "Drain Services",
-    description: "Drain cleaning, hydro flush, and pump outs. We clear the line and tell you why it happened.",
-    href: "/drain-cleaning",
-  },
-  {
-    img: gasImg,
-    title: "Gas Line Services",
-    description: "Installations, repairs, and leak inspections. Licensed, insured, and done right the first time.",
-    href: "/gas-line-services",
-  },
-  {
-    img: repairImg,
-    title: "Plumbing Repairs",
-    description: "We fix what actually needs fixing. No unnecessary replacements, no upsells. Honest work at a fair price.",
-    href: "/plumbing-repairs",
-  },
-  {
-    img: remodelImg,
-    title: "Plumbing Remodels",
-    description: "From blueprint to final install — precise, clean plumbing work that's built to last.",
-    href: "/plumbing-remodels",
-  },
-  {
-    img: backflowImg,
-    title: "Backflow Prevention",
-    description: "Annual testing, certification, installation, and repair. Licensed, documented, and submitted to your water authority.",
-    href: "/backflow-prevention",
-  },
-  {
-    img: emergencyImg,
-    title: "Emergency Plumbing",
-    description: "Nights, weekends, holidays — we pick up. After-hours fees always disclosed upfront.",
-    href: "/emergency-plumbing",
-  },
-  {
-    img: waterHeaterImg,
-    title: "Water Heaters",
-    description: "Tank or tankless — we repair, replace, and install water heaters built for South Florida's hard water.",
-    href: "/water-heaters",
-  },
-  {
-    img: septicImg,
-    title: "Septic Services",
-    description: "Leach field repairs, septic inspections, and septic and storm drain pump outs across the Tri-County area.",
-    href: "/septic-leach-fields",
-  },
-  {
-    img: toiletFaucetImg,
-    title: "Fixture Repairs",
-    description: "Running toilets, dripping faucets, leaking pipes — we fix them right the first time.",
-    href: "/toilet-faucet-pipe-repairs",
-  },
-];
+import { useT } from "@/i18n/LanguageContext";
 
 const Services = () => {
+  const t = useT();
+  const services = [
+    { img: drainImg, title: t("svc.drain"), description: t("services.drain.desc"), href: "/drain-cleaning" },
+    { img: gasImg, title: t("svc.gas"), description: t("services.gas.desc"), href: "/gas-line-services" },
+    { img: repairImg, title: t("svc.repairs"), description: t("services.repairs.desc"), href: "/plumbing-repairs" },
+    { img: remodelImg, title: t("svc.remodels"), description: t("services.remodels.desc"), href: "/plumbing-remodels" },
+    { img: backflowImg, title: t("svc.backflow"), description: t("services.backflow.desc"), href: "/backflow-prevention" },
+    { img: emergencyImg, title: t("svc.emergency"), description: t("services.emergency.desc"), href: "/emergency-plumbing" },
+    { img: waterHeaterImg, title: t("svc.waterHeaters"), description: t("services.waterHeaters.desc"), href: "/water-heaters" },
+    { img: septicImg, title: t("svc.septic"), description: t("services.septic.desc"), href: "/septic-leach-fields" },
+    { img: toiletFaucetImg, title: t("svc.fixture"), description: t("services.fixture.desc"), href: "/toilet-faucet-pipe-repairs" },
+  ];
   return (
     <section id="services" className="py-20 lg:py-28 bg-cream-light vintage-grain relative">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -80,16 +36,16 @@ const Services = () => {
           className="text-center mb-14"
         >
           <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
-            WHAT WE DO
+            {t("services.eyebrow")}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3">
-            South Florida Plumbing <br />
-            Has A Different Set Of Rules. <br />
-            <span className="text-primary italic">We Know Them All.</span>
+            {t("services.h2.line1")} <br />
+            {t("services.h2.line2")} <br />
+            <span className="text-primary italic">{t("services.h2.line3")}</span>
           </h2>
           <VintageOrnament className="max-w-sm mx-auto mt-5" />
           <p className="text-muted-foreground font-body mt-5 max-w-2xl mx-auto leading-relaxed">
-            Hard water. Cast iron pipes. Slab construction. Humidity that turns a small leak into a mold problem in 48 hours. South Florida plumbing isn't like anywhere else — and cookie-cutter fixes don't cut it here. JMS handles it all, with the expertise your home actually needs.
+            {t("services.intro")}
           </p>
         </motion.div>
 
