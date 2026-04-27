@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-plumber.webp";
+import { useT, useLanguage } from "@/i18n/LanguageContext";
 
 interface ServiceHeroProps {
   serviceCategory: string;
@@ -11,7 +12,10 @@ interface ServiceHeroProps {
 }
 
 const ServiceHero = ({ serviceCategory, h1, subtext, heroImage, heroObjectPosition }: ServiceHeroProps) => {
+  const t = useT();
+  const { lang } = useLanguage();
   const bgImage = heroImage || heroImg;
+  const region = lang === "es" ? "CONDADOS DE BROWARD, MIAMI-DADE Y PALM BEACH" : "BROWARD, MIAMI-DADE & PALM BEACH COUNTIES";
 
   return (
     <section className="relative pt-20 md:pt-24 lg:pt-40 overflow-hidden">
@@ -41,7 +45,7 @@ const ServiceHero = ({ serviceCategory, h1, subtext, heroImage, heroObjectPositi
           className="max-w-2xl"
         >
           <span className="text-primary font-semibold text-xs tracking-[0.25em] uppercase font-body">
-            {serviceCategory} | BROWARD, MIAMI-DADE &amp; PALM BEACH COUNTIES
+            {serviceCategory} | {region}
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-black text-cream leading-[1.08] mt-4 mb-6 drop-shadow-lg">
             {h1}
@@ -55,13 +59,13 @@ const ServiceHero = ({ serviceCategory, h1, subtext, heroImage, heroObjectPositi
               className="inline-flex items-center justify-center gap-2 border-2 border-cream/40 text-cream px-7 py-3.5 rounded font-bold text-sm hover:bg-cream/10 transition-all backdrop-blur-sm"
             >
               <Phone className="w-4 h-4" />
-              Call (954) 910-6883
+              {t("thanks.call")}
             </a>
             <a
               href="#service-form"
               className="inline-flex items-center justify-center gap-2 bg-cream text-dark px-7 py-3.5 rounded font-bold text-sm hover:bg-cream/90 transition-all"
             >
-              Get a Free Quote
+              {t("hero.getFreeQuote")}
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
