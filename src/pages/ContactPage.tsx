@@ -8,7 +8,9 @@ import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
 import { submitToFormspree } from "@/lib/formspree";
 import ThankYouModal from "@/components/ThankYouModal";
+import { useT } from "@/i18n/LanguageContext";
 const ContactPage = () => {
+  const t = useT();
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -105,7 +107,7 @@ const ContactPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.phone.trim() || !form.email.trim() || !form.cityZip.trim() || !form.service) {
-      toast.error("Please fill in all required fields.");
+      toast.error(t("contact.fillAll"));
       return;
     }
     setSending(true);
@@ -125,7 +127,7 @@ const ContactPage = () => {
       setShowThankYou(true);
     } catch (err) {
       console.error('Form submission error:', err);
-      toast.error("Something went wrong. Please call us at (954) 910-6883.");
+      toast.error(t("contact.error"));
     } finally {
       setSending(false);
     }
@@ -154,22 +156,20 @@ const ContactPage = () => {
             >
               <div className="text-center">
                 <Phone className="w-6 h-6 text-primary mx-auto mb-0.5" />
-                <span className="text-cream/60 text-[8px] font-body uppercase tracking-widest">Talk to Us</span>
+                <span className="text-cream/60 text-[8px] font-body uppercase tracking-widest">{t("cp.talkToUs")}</span>
               </div>
             </motion.div>
 
             <span className="block text-primary font-semibold text-sm tracking-widest uppercase font-body mb-3">
-              GET IN TOUCH
+              {t("cp.eyebrow")}
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-cream leading-[1.1] mb-5">
-              Let's Talk. We'll Give You a Straight Answer{" "}
-              <span className="text-steel italic">and a Fair Price.</span>
+              {t("cp.h1.part1")}{" "}
+              <span className="text-steel italic">{t("cp.h1.italic")}</span>
             </h1>
             <VintageOrnament className="max-w-xs mx-auto mb-5 [&_div]:bg-gradient-to-r [&_div]:from-transparent [&_div]:via-cream/30 [&_div]:to-transparent [&_svg]:text-cream/40" />
             <p className="text-cream/70 font-body text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
-              No voicemail maze. No runaround. Call us directly or fill out the form below and a real
-              person will get back to you fast. We serve homeowners and businesses throughout Broward,
-              Miami-Dade, and Palm Beach Counties.
+              {t("cp.heroIntro")}
             </p>
           </motion.div>
         </div>
@@ -190,11 +190,10 @@ const ContactPage = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl font-display font-black text-foreground mb-2">
-                Reach Us <span className="text-primary italic">Directly</span>
+                {t("cp.reach.h2.part1")} <span className="text-primary italic">{t("cp.reach.h2.italic")}</span>
               </h2>
               <p className="text-muted-foreground font-body leading-relaxed mb-8">
-                The fastest way to reach us is always a phone call. We pick up during business hours
-                and after hours for emergencies.
+                {t("cp.reach.intro")}
               </p>
 
               {/* Contact detail blocks */}
@@ -205,11 +204,11 @@ const ContactPage = () => {
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground font-body mb-0.5">Call Us</p>
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground font-body mb-0.5">{t("contact.callUs")}</p>
                     <a href="tel:9549106883" className="text-lg font-semibold text-foreground hover:text-primary transition-colors font-body block">
                       (954) 910-6883
                     </a>
-                    <p className="text-xs text-muted-foreground font-body mt-0.5">Available 24/7 for emergencies</p>
+                    <p className="text-xs text-muted-foreground font-body mt-0.5">{t("cp.callUs.note")}</p>
                   </div>
                 </div>
 
@@ -219,11 +218,11 @@ const ContactPage = () => {
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground font-body mb-0.5">Email Us</p>
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground font-body mb-0.5">{t("cp.email.label")}</p>
                     <a href="mailto:Jmsplumbingservicesllc@gmail.com" className="text-sm font-semibold text-foreground hover:text-primary transition-colors font-body block break-all">
                       Jmsplumbingservicesllc@gmail.com
                     </a>
-                    <p className="text-xs text-muted-foreground font-body mt-0.5">We respond within a few hours during business hours</p>
+                    <p className="text-xs text-muted-foreground font-body mt-0.5">{t("cp.email.note")}</p>
                   </div>
                 </div>
 
@@ -233,9 +232,9 @@ const ContactPage = () => {
                     <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground font-body mb-0.5">Based In</p>
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground font-body mb-0.5">{t("cp.based.label")}</p>
                     <p className="text-sm font-semibold text-foreground font-body">Sunrise, FL 33322</p>
-                    <p className="text-xs text-muted-foreground font-body mt-0.5">Serving Broward, Miami-Dade and Palm Beach Counties</p>
+                    <p className="text-xs text-muted-foreground font-body mt-0.5">{t("cp.based.note")}</p>
                   </div>
                 </div>
 
@@ -245,13 +244,13 @@ const ContactPage = () => {
                     <Clock className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground font-body mb-0.5">Business Hours</p>
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground font-body mb-0.5">{t("cp.hours.label")}</p>
                     <div className="text-sm font-semibold text-foreground font-body space-y-0.5">
-                      <p>Monday – Friday: 8:00am to 6:00pm</p>
-                      <p>Saturday: 8:00am to 4:00pm</p>
-                      <p>Sunday: Emergency calls only</p>
+                      <p>{t("cp.hours.mf")}</p>
+                      <p>{t("cp.hours.sat")}</p>
+                      <p>{t("cp.hours.sun")}</p>
                     </div>
-                    <p className="text-xs text-muted-foreground font-body mt-0.5">After hours emergency fees disclosed upfront</p>
+                    <p className="text-xs text-muted-foreground font-body mt-0.5">{t("cp.hours.note")}</p>
                   </div>
                 </div>
               </div>
@@ -261,11 +260,7 @@ const ContactPage = () => {
 
               {/* Trust block */}
               <div className="flex flex-wrap gap-4 mb-8">
-                {[
-                  "Licensed and Insured in Florida",
-                  "Family Owned and Operated",
-                  "Upfront Pricing on Every Job",
-                ].map((item) => (
+                {[t("cp.trust1"), t("cp.trust2"), t("cp.trust3")].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
                     <span className="text-foreground font-body text-sm font-semibold">{item}</span>
@@ -279,19 +274,18 @@ const ContactPage = () => {
                 <div className="flex items-start gap-3 mb-3">
                   <AlertTriangle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   <h3 className="font-display font-bold text-foreground text-lg">
-                    Plumbing Emergency Right Now?
+                    {t("cp.urgent.h3")}
                   </h3>
                 </div>
                 <p className="text-muted-foreground font-body text-sm leading-relaxed mb-4 ml-8">
-                  Don't fill out a form. Call us directly at (954) 910-6883. A real person picks up
-                  around the clock for emergencies. After hours fees are always disclosed before we dispatch.
+                  {t("cp.urgent.body")}
                 </p>
                 <a
                   href="tel:9549106883"
                   className="ml-8 inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded font-bold text-sm hover:bg-primary/90 transition-all"
                 >
                   <Phone className="w-4 h-4" />
-                  Call Now
+                  {t("cp.urgent.cta")}
                 </a>
               </div>
             </motion.div>
@@ -311,48 +305,48 @@ const ContactPage = () => {
               <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-cream/15 rounded-br" />
 
               <h3 className="text-2xl lg:text-3xl font-display font-black text-cream mb-2">
-                Request a Free Quote
+                {t("cp.form.title")}
               </h3>
               <p className="text-cream/60 font-body text-sm mb-6">
-                Fill out the form and we'll call you back fast. Usually within minutes during business hours.
+                {t("cp.form.sub")}
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Full Name */}
                 <div>
-                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Full Name *</label>
+                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("cp.form.fullName")} *</label>
                   <input
                     type="text"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     maxLength={100}
                     className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
-                    placeholder="Your full name"
+                    placeholder={t("emCta.fullNamePh")}
                   />
                 </div>
 
                 {/* Phone + Email */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Phone Number *</label>
+                    <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("cp.form.phone")} *</label>
                     <input
                       type="tel"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       maxLength={20}
                       className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
-                      placeholder="(555) 123-4567"
+                      placeholder={t("cp.phonePh")}
                     />
                   </div>
                   <div>
-                    <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Email Address *</label>
+                    <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("cp.form.email")} *</label>
                     <input
                       type="email"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       maxLength={255}
                       className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
-                      placeholder="your@email.com"
+                      placeholder={t("contact.emailPh")}
                     />
                   </div>
                 </div>
@@ -360,66 +354,66 @@ const ContactPage = () => {
                 {/* City/Zip + Service */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">City & Zip Code *</label>
+                    <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("cp.form.cityZip")} *</label>
                     <input
                       type="text"
                       value={form.cityZip}
                       onChange={(e) => setForm({ ...form, cityZip: e.target.value })}
                       maxLength={100}
                       className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors"
-                      placeholder="Sunrise, FL 33322"
+                      placeholder={t("cp.cityZipPh")}
                     />
                   </div>
                   <div>
-                    <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Service Needed *</label>
+                    <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("cp.form.serviceNeeded")} *</label>
                     <select
                       value={form.service}
                       onChange={(e) => setForm({ ...form, service: e.target.value })}
                       className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body focus:outline-none focus:border-primary transition-colors appearance-none"
                     >
-                      <option value="" className="bg-secondary text-cream">Select a service</option>
-                      <option value="drain" className="bg-secondary text-cream">Drain Services</option>
-                      <option value="repairs" className="bg-secondary text-cream">Plumbing Repairs and Replacements</option>
-                      <option value="gas" className="bg-secondary text-cream">Gas Line Services</option>
-                      <option value="water-heater" className="bg-secondary text-cream">Water Heater Services</option>
-                      <option value="backflow-prevention" className="bg-secondary text-cream">Backflow Prevention</option>
-                      <option value="septic-leach-fields" className="bg-secondary text-cream">Septic Services</option>
-                      <option value="fixture-repairs" className="bg-secondary text-cream">Fixture Repairs</option>
-                      <option value="remodel" className="bg-secondary text-cream">Plumbing Remodels</option>
-                      <option value="emergency" className="bg-secondary text-cream">Emergency Plumbing</option>
-                      <option value="other" className="bg-secondary text-cream">Other</option>
+                      <option value="" className="bg-secondary text-cream">{t("contact.selectService")}</option>
+                      <option value="drain" className="bg-secondary text-cream">{t("svc.drain")}</option>
+                      <option value="repairs" className="bg-secondary text-cream">{t("contact.svc.repairsAndReplacements")}</option>
+                      <option value="gas" className="bg-secondary text-cream">{t("svc.gas")}</option>
+                      <option value="water-heater" className="bg-secondary text-cream">{t("svc.waterHeaters")}</option>
+                      <option value="backflow-prevention" className="bg-secondary text-cream">{t("svc.backflow")}</option>
+                      <option value="septic-leach-fields" className="bg-secondary text-cream">{t("svc.septic")}</option>
+                      <option value="fixture-repairs" className="bg-secondary text-cream">{t("svc.fixture")}</option>
+                      <option value="remodel" className="bg-secondary text-cream">{t("svc.remodels")}</option>
+                      <option value="emergency" className="bg-secondary text-cream">{t("svc.emergency")}</option>
+                      <option value="other" className="bg-secondary text-cream">{t("cp.form.hearAbout.other")}</option>
                     </select>
                   </div>
                 </div>
 
                 {/* How did you hear */}
                 <div>
-                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">How Did You Hear About Us?</label>
+                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("cp.form.hearAbout")}</label>
                   <select
                     value={form.hearAbout}
                     onChange={(e) => setForm({ ...form, hearAbout: e.target.value })}
                     className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body focus:outline-none focus:border-primary transition-colors appearance-none"
                   >
-                    <option value="" className="bg-secondary text-cream">Select an option</option>
-                    <option value="google-search" className="bg-secondary text-cream">Google Search</option>
-                    <option value="google-maps" className="bg-secondary text-cream">Google Maps</option>
-                    <option value="referral" className="bg-secondary text-cream">Referral from Friend or Family</option>
-                    <option value="social-media" className="bg-secondary text-cream">Social Media</option>
-                    <option value="truck" className="bg-secondary text-cream">Drove Past Our Truck</option>
-                    <option value="other" className="bg-secondary text-cream">Other</option>
+                    <option value="" className="bg-secondary text-cream">{t("cp.form.hearAbout.select")}</option>
+                    <option value="google-search" className="bg-secondary text-cream">{t("cp.form.hearAbout.search")}</option>
+                    <option value="google-maps" className="bg-secondary text-cream">{t("cp.form.hearAbout.maps")}</option>
+                    <option value="referral" className="bg-secondary text-cream">{t("cp.form.hearAbout.referral")}</option>
+                    <option value="social-media" className="bg-secondary text-cream">{t("cp.form.hearAbout.social")}</option>
+                    <option value="truck" className="bg-secondary text-cream">{t("cp.form.hearAbout.truck")}</option>
+                    <option value="other" className="bg-secondary text-cream">{t("cp.form.hearAbout.other")}</option>
                   </select>
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">Message</label>
+                  <label className="text-cream/70 text-xs font-body uppercase tracking-wider mb-1 block">{t("cp.form.message")}</label>
                   <textarea
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     maxLength={1000}
                     rows={3}
                     className="w-full bg-cream/10 border border-cream/20 rounded px-4 py-3 text-cream text-sm font-body placeholder:text-cream/30 focus:outline-none focus:border-primary transition-colors resize-none"
-                    placeholder="Tell us what's going on so we can come prepared."
+                    placeholder={t("cp.form.messagePh")}
                   />
                 </div>
 
@@ -428,13 +422,12 @@ const ContactPage = () => {
                   disabled={sending}
                   className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded font-bold text-base hover:bg-primary/90 transition-all w-full disabled:opacity-60"
                 >
-                  {sending ? "Sending..." : "Send My Request"}
+                  {sending ? t("contact.sending") : t("contact.send")}
                   {!sending && <Send className="w-4 h-4" />}
                 </button>
 
                 <p className="text-cream/40 text-xs font-body text-center leading-relaxed">
-                  We'll call you back fast. After hours requests will be returned first thing the next
-                  business day unless it's an emergency — in which case call us directly.
+                  {t("cp.form.note")}
                 </p>
               </form>
             </motion.div>
@@ -456,26 +449,24 @@ const ContactPage = () => {
                 WHERE WE WORK
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
-                Serving South Florida's{" "}
-                <span className="text-primary italic">Tri-County Area</span>
+                {t("cp.area.h2.part1")}{" "}
+                <span className="text-primary italic">{t("cp.area.h2.italic")}</span>
               </h2>
               <VintageOrnament className="max-w-xs mb-6" />
               <p className="text-muted-foreground font-body leading-relaxed mb-6">
-                Based in Sunrise, FL, JMS Plumbing Services makes house calls across Broward,
-                Miami-Dade, and Palm Beach Counties. If you're in South Florida, we're your plumber.
+                {t("cp.area.p1")}
               </p>
 
               <p className="text-foreground font-body text-base lg:text-lg font-semibold mb-6">
-                Sunrise · Fort Lauderdale · Plantation · Tamarac · Lauderhill · Coral Springs · Weston · Davie · Parkland · Southwest Ranches · Hollywood · Pembroke Pines · Cooper City
-                · and surrounding communities throughout Broward, Miami-Dade and Palm Beach Counties
+                {t("cp.area.cities")}
               </p>
 
               <p className="text-muted-foreground font-body text-sm">
-                Don't see your city? Call us anyway at{" "}
+                {t("cp.area.dontSee")}{" "}
                 <a href="tel:9549106883" className="text-primary font-semibold hover:underline">
                   (954) 910-6883
                 </a>{" "}
-                — chances are we serve your area.
+                {t("cp.area.dontSeeEnd")}
               </p>
             </motion.div>
 
