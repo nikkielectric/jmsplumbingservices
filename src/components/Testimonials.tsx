@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Star, ExternalLink, Phone } from "lucide-react";
 import VintageOrnament from "./VintageOrnament";
+import { useT } from "@/i18n/LanguageContext";
 
 const reviews = [
   {
