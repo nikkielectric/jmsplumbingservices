@@ -36,9 +36,9 @@ const AboutPage = () => {
     { icon: Phone, label: t("ap.expect.i6.label"), desc: t("ap.expect.i6.desc") },
   ];
   useEffect(() => {
-    document.title = "About JMS Plumbing Services | Family-Owned Plumber in Sunrise, FL";
+    document.title = "About JMS Plumbing | Family-Owned Plumber in Sunrise, FL";
     const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Meet the family behind JMS Plumbing Services. Licensed, insured, and based in Sunrise, FL — serving Broward, Miami-Dade, and Palm Beach Counties with honest work and upfront pricing.");
+    if (meta) meta.setAttribute("content", "Meet the team behind JMS Plumbing — licensed, insured & based in Sunrise, FL since 2018. Honest work, upfront pricing, serving all of South Florida.");
 
     // AboutPage JSON-LD
     const jsonLdId = "about-jsonld";

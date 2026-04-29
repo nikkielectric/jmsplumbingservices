@@ -219,14 +219,14 @@ const TextReviewCard = ({ review, index }: { review: TextReview; index: number }
 /* ── Page ── */
 const GalleryPage = () => {
   useEffect(() => {
-    document.title = "Gallery | JMS Plumbing Services — Real Work, Real Customers";
+    document.title = "Work Gallery | JMS Plumbing Services | Sunrise, FL";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
-      meta.setAttribute("content", "See real plumbing work completed by JMS Plumbing Services throughout Broward, Miami-Dade, and Palm Beach Counties. Photos and reviews from real South Florida customers.");
+      meta.setAttribute("content", "See real plumbing work and customer reviews from JMS Plumbing across South Florida. Licensed plumber serving Broward, Miami-Dade & Palm Beach Counties.");
     } else {
       const newMeta = document.createElement("meta");
       newMeta.name = "description";
-      newMeta.content = "See real plumbing work completed by JMS Plumbing Services throughout Broward, Miami-Dade, and Palm Beach Counties. Photos and reviews from real South Florida customers.";
+      newMeta.content = "See real plumbing work and customer reviews from JMS Plumbing across South Florida. Licensed plumber serving Broward, Miami-Dade & Palm Beach Counties.";
       document.head.appendChild(newMeta);
     }
 

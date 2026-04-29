@@ -24,12 +24,12 @@ const ContactPage = () => {
   const [showThankYou, setShowThankYou] = useState(false);
 
   useEffect(() => {
-    document.title = "Contact JMS Plumbing Services | Licensed Plumber in Sunrise, FL";
+    document.title = "Contact JMS Plumbing Services | Sunrise, FL | (954) 910-6883";
     const meta = document.querySelector('meta[name="description"]');
     if (meta)
       meta.setAttribute(
         "content",
-        "Contact JMS Plumbing Services for plumbing repairs, drain cleaning, gas line services, and emergency plumbing throughout Broward, Miami-Dade, and Palm Beach Counties. Call (954) 910-6883."
+        "Get a free plumbing quote from JMS Plumbing Services. Call (954) 910-6883 or fill out our form. Serving Broward, Miami-Dade & Palm Beach Counties."
       );
 
     // Inject LocalBusiness JSON-LD

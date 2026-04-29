@@ -13,10 +13,10 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "JMS Plumbing Services LLC | Expert Plumber in Sunrise, FL";
+    document.title = "JMS Plumbing Services | Licensed Plumber in Sunrise, FL";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
-      meta.setAttribute("content", "Family-owned plumbing services in Sunrise, FL serving South Florida's Tri-County area. Drain cleaning, gas lines, remodels & 24/7 emergency plumbing. Call (954) 910-6883.");
+      meta.setAttribute("content", "Licensed family-owned plumber in Sunrise, FL. Drain cleaning, gas lines, remodels & 24/7 emergency plumbing across South Florida. Call (954) 910-6883.");
     }
 
     // LocalBusiness + WebSite JSON-LD
