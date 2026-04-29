@@ -80,7 +80,7 @@ const Hero = () => {
               <img
                 src={heroImg}
                 alt="Professional JMS plumber at work in a modern Florida home"
-                className="w-full h-[400px] lg:h-[500px] object-cover object-[center_25%]"
+                className="w-full h-[400px] lg:h-[500px] object-cover object-[75%_30%]"
                 width={1200}
                 height={800}
                 loading="eager"
