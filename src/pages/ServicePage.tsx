@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import drainCleaningHero from "@/assets/drain-cleaning-hero.webp";
-import gasLineHero from "@/assets/gas-line-hero.webp";
+import gasLineHero from "@/assets/gas-line-pipes.jpg";
 import backflowHero from "@/assets/backflow-prevention-hero.webp";
 import plumbingRepairsHero from "@/assets/plumbing-repairs-hero.webp";
 import repipingHero from "@/assets/repiping-hero.webp";
