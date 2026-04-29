@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import VintageOrnament from "@/components/VintageOrnament";
 import CertificationsTicker from "@/components/CertificationsTicker";
 import heroImg from "@/assets/jms-van-hero.webp";
-import teamVanImg from "@/assets/plumbing-team-van2.webp";
+import teamVanImg from "@/assets/team-van.jpg";
 import plumberSinkImg from "@/assets/plumber-fixing-sink.webp";
 import { useT } from "@/i18n/LanguageContext";
 
