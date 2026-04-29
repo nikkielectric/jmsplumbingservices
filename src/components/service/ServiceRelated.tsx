@@ -6,7 +6,7 @@ import type { RelatedService } from "@/data/servicePages";
 import { useT } from "@/i18n/LanguageContext";
 
 import drainImg from "@/assets/drain-cleaning-card.webp";
-import gasImg from "@/assets/gas-line-card.webp";
+import gasImg from "@/assets/gas-line-pipes.jpg";
 import repairImg from "@/assets/plumbing-repairs-card.webp";
 import remodelImg from "@/assets/plumbing-remodels-card.webp";
 import backflowImg from "@/assets/backflow-prevention-card.webp";
