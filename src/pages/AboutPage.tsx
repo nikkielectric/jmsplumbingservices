@@ -7,7 +7,7 @@ import VintageOrnament from "@/components/VintageOrnament";
 import CertificationsTicker from "@/components/CertificationsTicker";
 import heroImg from "@/assets/jms-van-hero.webp";
 import teamVanImg from "@/assets/team-van.jpg";
-import plumberSinkImg from "@/assets/plumber-fixing-sink.webp";
+import plumberSinkImg from "@/assets/plumber-copper-pipes.jpg";
 import { useT } from "@/i18n/LanguageContext";
 
 const fadeUp = {
