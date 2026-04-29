@@ -29,17 +29,16 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          {/* Legacy slug redirects — keep above the dynamic /:slug route */}
-          <Route path="/garbage-disposal" element={<Navigate to="/backflow-prevention" replace />} />
-          <Route path="/:slug" element={<ServicePage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            {/* Legacy slug redirects — keep above the dynamic /:slug route */}
+            <Route path="/garbage-disposal" element={<Navigate to="/backflow-prevention" replace />} />
+            <Route path="/:slug" element={<ServicePage />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

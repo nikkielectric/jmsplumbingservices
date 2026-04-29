@@ -23,7 +23,7 @@ const Contact = () => {
     try {
       await submitToFormspree({
         _subject: 'New Lead — Homepage Quote Form',
-        "Form Source": 'Homepage — {t("contact.formTitle")}',
+        "Form Source": `Homepage — ${t("contact.formTitle")}`,
         Name: form.name,
         Email: form.email,
         Phone: form.phone,

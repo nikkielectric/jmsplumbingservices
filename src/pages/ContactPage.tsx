@@ -446,7 +446,7 @@ const ContactPage = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="text-primary font-semibold text-sm tracking-widest uppercase font-body">
-                WHERE WE WORK
+                {t("cp.area.eyebrow")}
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-foreground mt-3 mb-6">
                 {t("cp.area.h2.part1")}{" "}
