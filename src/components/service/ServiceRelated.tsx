@@ -12,7 +12,7 @@ import remodelImg from "@/assets/plumbing-remodels-card.webp";
 import backflowImg from "@/assets/Backflow Prevention Service.jpg";
 import emergencyImg from "@/assets/Emergency Plumbing Service.jpg";
 import waterHeaterImg from "@/assets/Water heater service.JPG";
-import septicImg from "@/assets/septic-leach-card.webp";
+import septicImg from "@/assets/Septic Service.jpg";
 import fixtureImg from "@/assets/fixture-repairs-card.webp";
 
 const imageMap: Record<string, string> = {
