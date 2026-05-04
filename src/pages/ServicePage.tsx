@@ -7,7 +7,7 @@ import plumbingRepairsHero from "@/assets/Plumbing Repairs Service.jpg";
 import repipingHero from "@/assets/repiping-hero.webp";
 import remodelsHero from "@/assets/plumbing-remodels-card.webp";
 import emergencyHero from "@/assets/Emergency Plumbing Service.jpg";
-import waterHeaterHero from "@/assets/water-heaters-card.webp";
+import waterHeaterHero from "@/assets/Water heater service.JPG";
 import septicLeachHero from "@/assets/septic-leach-card.webp";
 import toiletFaucetHero from "@/assets/fixture-repairs-card.webp";
 import { servicePages, useLocalizedServicePages } from "@/data/servicePages";
