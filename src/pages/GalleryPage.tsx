@@ -47,6 +47,7 @@ interface PhotoReview {
   text: string;
   rating: number;
   image: string;
+  objectPosition?: string;
 }
 
 interface TextReview {
@@ -87,6 +88,7 @@ const photoReviews: PhotoReview[] = [
     text: "Excellent Service!! Reliable, honest. They fixed our plumbing problem perfectly. Was very knowledgeable and would only call JMS Plumbing Services for future issues!",
     rating: 5,
     image: galleryReview6Img,
+    objectPosition: "top",
   },
   {
     name: "Evan S.",
@@ -165,6 +167,7 @@ const PhotoReviewCard = ({ review, index }: { review: PhotoReview; index: number
           src={review.image}
           alt={`Plumbing work completed for ${review.name}`}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          style={{ objectPosition: review.objectPosition ?? "center" }}
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
