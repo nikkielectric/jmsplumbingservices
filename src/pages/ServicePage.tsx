@@ -9,7 +9,7 @@ import remodelsHero from "@/assets/plumbing-remodels-card.webp";
 import emergencyHero from "@/assets/emergency-plumbing-service.jpg";
 import waterHeaterHero from "@/assets/water-heater-service.jpg";
 import septicLeachHero from "@/assets/septic-service.jpg";
-import toiletFaucetHero from "@/assets/fixture-repairs-card.webp";
+import toiletFaucetHero from "@/assets/fixture-repairs-service.jpg";
 import { servicePages, useLocalizedServicePages } from "@/data/servicePages";
 
 const heroImages: Record<string, string> = {

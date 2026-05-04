@@ -9,7 +9,7 @@ import backflowImg from "@/assets/backflow-prevention-service.jpg";
 import emergencyImg from "@/assets/emergency-plumbing-service.jpg";
 import waterHeaterImg from "@/assets/water-heater-service.jpg";
 import septicImg from "@/assets/septic-service.jpg";
-import toiletFaucetImg from "@/assets/fixture-repairs-card.webp";
+import toiletFaucetImg from "@/assets/fixture-repairs-service.jpg";
 import { useT } from "@/i18n/LanguageContext";
 
 const Services = () => {

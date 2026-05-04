@@ -13,7 +13,7 @@ import backflowImg from "@/assets/backflow-prevention-service.jpg";
 import emergencyImg from "@/assets/emergency-plumbing-service.jpg";
 import waterHeaterImg from "@/assets/water-heater-service.jpg";
 import septicImg from "@/assets/septic-service.jpg";
-import fixtureImg from "@/assets/fixture-repairs-card.webp";
+import fixtureImg from "@/assets/fixture-repairs-service.jpg";
 
 const imageMap: Record<string, string> = {
   "/drain-cleaning": drainImg,
