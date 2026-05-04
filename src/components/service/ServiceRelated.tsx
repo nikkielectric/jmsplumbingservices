@@ -11,7 +11,7 @@ import repairImg from "@/assets/Plumbing Repairs Service.jpg";
 import remodelImg from "@/assets/plumbing-remodels-card.webp";
 import backflowImg from "@/assets/Backflow Prevention Service.jpg";
 import emergencyImg from "@/assets/Emergency Plumbing Service.jpg";
-import waterHeaterImg from "@/assets/Water heater service.JPG";
+import waterHeaterImg from "@/assets/Water heater service.jpg";
 import septicImg from "@/assets/Septic Service.jpg";
 import fixtureImg from "@/assets/fixture-repairs-card.webp";
 
