@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client";
+import { Analytics } from "@vercel/analytics/react";
 import App from "./App.tsx";
 import "./index.css";
 
@@ -24,4 +25,9 @@ Node.prototype.insertBefore = function <T extends Node>(
   return originalInsertBefore.call(this, newNode, referenceNode) as T;
 };
 
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(
+  <>
+    <App />
+    <Analytics />
+  </>
+);
