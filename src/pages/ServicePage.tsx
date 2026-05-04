@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import drainCleaningHero from "@/assets/drain-cleaning-hero.webp";
 import gasLineHero from "@/assets/gas-line-pipes.jpg";
 import backflowHero from "@/assets/backflow-preventer.webp";
-import plumbingRepairsHero from "@/assets/plumbing-repairs-hero.webp";
+import plumbingRepairsHero from "@/assets/Plumbing Repairs Service.jpg";
 import repipingHero from "@/assets/repiping-hero.webp";
 import remodelsHero from "@/assets/plumbing-remodels-card.webp";
 import emergencyHero from "@/assets/emergency-leak.png";

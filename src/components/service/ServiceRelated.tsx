@@ -7,7 +7,7 @@ import { useT } from "@/i18n/LanguageContext";
 
 import drainImg from "@/assets/drain-cleaning-card.webp";
 import gasImg from "@/assets/gas-line-pipes.jpg";
-import repairImg from "@/assets/plumbing-repairs-card.webp";
+import repairImg from "@/assets/Plumbing Repairs Service.jpg";
 import remodelImg from "@/assets/plumbing-remodels-card.webp";
 import backflowImg from "@/assets/backflow-preventer.webp";
 import emergencyImg from "@/assets/emergency-leak.png";

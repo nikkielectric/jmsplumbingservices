@@ -11,7 +11,7 @@ import drainCleaningImg from "@/assets/drain-cleaning-hero.webp";
 import galleryReview1Img from "@/assets/gallery-review-1.webp";
 import gasLineImg from "@/assets/gas-line-hero.webp";
 import galleryReview2Img from "@/assets/gallery-review-2.webp";
-import plumbingRepairsImg from "@/assets/plumbing-repairs-hero.webp";
+import plumbingRepairsImg from "@/assets/Plumbing Repairs Service.jpg";
 
 import galleryReview3Img from "@/assets/gallery-review-3.webp";
 import galleryReview4Img from "@/assets/gallery-review-4.webp";
