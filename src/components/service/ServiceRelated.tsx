@@ -6,10 +6,10 @@ import type { RelatedService } from "@/data/servicePages";
 import { useT } from "@/i18n/LanguageContext";
 
 import drainImg from "@/assets/drain-cleaning-card.webp";
-import gasImg from "@/assets/gas-line-pipes.jpg";
+import gasImg from "@/assets/Gas Line Service.jpg";
 import repairImg from "@/assets/Plumbing Repairs Service.jpg";
 import remodelImg from "@/assets/plumbing-remodels-card.webp";
-import backflowImg from "@/assets/backflow-preventer.webp";
+import backflowImg from "@/assets/Backflow Prevention Service.jpg";
 import emergencyImg from "@/assets/Emergency Plumbing Service.jpg";
 import waterHeaterImg from "@/assets/water-heaters-card.webp";
 import septicImg from "@/assets/septic-leach-card.webp";

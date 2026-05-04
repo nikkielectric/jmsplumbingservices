@@ -9,7 +9,7 @@ import ImmersiveShowcase from "@/components/gallery/ImmersiveShowcase";
 // Existing project photos used as gallery images
 import drainCleaningImg from "@/assets/drain-cleaning-hero.webp";
 import galleryReview1Img from "@/assets/gallery-review-1.webp";
-import gasLineImg from "@/assets/gas-line-hero.webp";
+import gasLineImg from "@/assets/Gas Line Service.jpg";
 import galleryReview2Img from "@/assets/gallery-review-2.webp";
 import plumbingRepairsImg from "@/assets/Plumbing Repairs Service.jpg";
 
