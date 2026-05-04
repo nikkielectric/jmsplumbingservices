@@ -6,13 +6,13 @@ import type { RelatedService } from "@/data/servicePages";
 import { useT } from "@/i18n/LanguageContext";
 
 import drainImg from "@/assets/drain-cleaning-card.webp";
-import gasImg from "@/assets/Gas Line Service.jpg";
-import repairImg from "@/assets/Plumbing Repairs Service.jpg";
+import gasImg from "@/assets/gas-line-service.jpg";
+import repairImg from "@/assets/plumbing-repairs-service.jpg";
 import remodelImg from "@/assets/plumbing-remodels-card.webp";
-import backflowImg from "@/assets/Backflow Prevention Service.jpg";
-import emergencyImg from "@/assets/Emergency Plumbing Service.jpg";
-import waterHeaterImg from "@/assets/Water heater service.jpg";
-import septicImg from "@/assets/Septic Service.jpg";
+import backflowImg from "@/assets/backflow-prevention-service.jpg";
+import emergencyImg from "@/assets/emergency-plumbing-service.jpg";
+import waterHeaterImg from "@/assets/water-heater-service.jpg";
+import septicImg from "@/assets/septic-service.jpg";
 import fixtureImg from "@/assets/fixture-repairs-card.webp";
 
 const imageMap: Record<string, string> = {

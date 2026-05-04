@@ -9,16 +9,16 @@ import ImmersiveShowcase from "@/components/gallery/ImmersiveShowcase";
 // Existing project photos used as gallery images
 import drainCleaningImg from "@/assets/drain-cleaning-hero.webp";
 import galleryReview1Img from "@/assets/gallery-review-1.webp";
-import gasLineImg from "@/assets/Gas Line Service.jpg";
+import gasLineImg from "@/assets/gas-line-service.jpg";
 import galleryReview2Img from "@/assets/gallery-review-2.webp";
-import plumbingRepairsImg from "@/assets/Plumbing Repairs Service.jpg";
+import plumbingRepairsImg from "@/assets/plumbing-repairs-service.jpg";
 
 import galleryReview3Img from "@/assets/gallery-review-3.webp";
 import galleryReview4Img from "@/assets/gallery-review-4.webp";
 import galleryReviewJoeSImg from "@/assets/gallery-review-joe-s.webp";
 import galleryReview6Img from "@/assets/gallery-review-6.webp";
 import repipingImg from "@/assets/repiping-hero.webp";
-import emergencyImg from "@/assets/Emergency Plumbing Service.jpg";
+import emergencyImg from "@/assets/emergency-plumbing-service.jpg";
 import plumberFixingSinkImg from "@/assets/plumber-fixing-sink.webp";
 import teamVanImg from "@/assets/plumbing-team-van.webp";
 

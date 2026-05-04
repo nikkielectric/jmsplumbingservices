@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import drainCleaningHero from "@/assets/drain-cleaning-hero.webp";
-import gasLineHero from "@/assets/Gas Line Service.jpg";
-import backflowHero from "@/assets/Backflow Prevention Service.jpg";
-import plumbingRepairsHero from "@/assets/Plumbing Repairs Service.jpg";
+import gasLineHero from "@/assets/gas-line-service.jpg";
+import backflowHero from "@/assets/backflow-prevention-service.jpg";
+import plumbingRepairsHero from "@/assets/plumbing-repairs-service.jpg";
 import repipingHero from "@/assets/repiping-hero.webp";
 import remodelsHero from "@/assets/plumbing-remodels-card.webp";
-import emergencyHero from "@/assets/Emergency Plumbing Service.jpg";
-import waterHeaterHero from "@/assets/Water heater service.jpg";
-import septicLeachHero from "@/assets/Septic Service.jpg";
+import emergencyHero from "@/assets/emergency-plumbing-service.jpg";
+import waterHeaterHero from "@/assets/water-heater-service.jpg";
+import septicLeachHero from "@/assets/septic-service.jpg";
 import toiletFaucetHero from "@/assets/fixture-repairs-card.webp";
 import { servicePages, useLocalizedServicePages } from "@/data/servicePages";
 
