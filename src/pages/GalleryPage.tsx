@@ -18,7 +18,7 @@ import galleryReview4Img from "@/assets/gallery-review-4.webp";
 import galleryReviewJoeSImg from "@/assets/gallery-review-joe-s.webp";
 import galleryReview6Img from "@/assets/gallery-review-6.webp";
 import repipingImg from "@/assets/repiping-hero.webp";
-import emergencyImg from "@/assets/emergency-plumbing-hero.webp";
+import emergencyImg from "@/assets/Emergency Plumbing Service.jpg";
 import plumberFixingSinkImg from "@/assets/plumber-fixing-sink.webp";
 import teamVanImg from "@/assets/plumbing-team-van.webp";
 
