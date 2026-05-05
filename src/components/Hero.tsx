@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-plumber.webp";
 import VintageOrnament from "./VintageOrnament";
 import { useT } from "@/i18n/LanguageContext";
-import WaterDroplets from "./WaterDroplets";
 
 const Hero = () => {
   const t = useT();
@@ -14,7 +13,6 @@ const Hero = () => {
   ];
   return (
     <section className="relative pt-24 lg:pt-44 bg-secondary vintage-grain vintage-vignette">
-      <WaterDroplets />
       {/* Main hero content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-20">
