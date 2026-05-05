@@ -98,6 +98,14 @@
 
 /* Vintage paper texture overlay */
 @layer utilities {
+  @keyframes waveFlow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .wave-slow { animation: waveFlow 22s linear infinite; }
+  .wave-medium { animation: waveFlow 15s linear infinite; }
+  .wave-fast { animation: waveFlow 10s linear infinite; }
+
   .vintage-grain {
     position: relative;
   }

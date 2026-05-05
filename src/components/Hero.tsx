@@ -13,6 +13,24 @@ const Hero = () => {
   ];
   return (
     <section className="relative pt-24 lg:pt-44 bg-secondary vintage-grain vintage-vignette">
+      {/* Water wave animation */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute bottom-[30%] left-0 w-[200%] opacity-[0.045] wave-slow">
+          <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full">
+            <path d="M0,80 C180,120 360,40 540,80 C720,120 900,40 1080,80 C1260,120 1380,60 1440,80 L1440,160 L0,160 Z" fill="hsl(38 35% 94% / 1)" />
+          </svg>
+        </div>
+        <div className="absolute bottom-[15%] left-0 w-[200%] opacity-[0.03] wave-medium">
+          <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full">
+            <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,160 L0,160 Z" fill="hsl(184 72% 38% / 1)" />
+          </svg>
+        </div>
+        <div className="absolute bottom-[45%] left-0 w-[200%] opacity-[0.025] wave-fast">
+          <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full">
+            <path d="M0,100 C360,40 720,120 1080,80 C1260,60 1380,100 1440,80 L1440,160 L0,160 Z" fill="hsl(38 35% 94% / 1)" />
+          </svg>
+        </div>
+      </div>
       {/* Main hero content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-20">
