@@ -42,6 +42,7 @@ export interface ServicePageData {
   paragraph3: string;
   signsHeading: string;
   signs: ServiceSign[];
+  extraSection?: { heading: string; paragraphs: string[] };
   diyHeading: string;
   diyParagraphs: string[];
   expectHeading: string;

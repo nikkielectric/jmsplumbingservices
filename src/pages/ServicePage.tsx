@@ -176,6 +176,7 @@ const ServicePage = () => {
               paragraph3={data.paragraph3}
               signsHeading={data.signsHeading}
               signs={data.signs}
+              extraSection={data.extraSection}
               diyHeading={data.diyHeading}
               diyParagraphs={data.diyParagraphs}
               expectHeading={data.expectHeading}

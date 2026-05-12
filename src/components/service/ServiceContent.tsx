@@ -10,6 +10,7 @@ interface ServiceContentProps {
   paragraph3: string;
   signsHeading: string;
   signs: ServiceSign[];
+  extraSection?: { heading: string; paragraphs: string[] };
   diyHeading: string;
   diyParagraphs: string[];
   expectHeading: string;
@@ -25,6 +26,7 @@ const ServiceContent = ({
   paragraph3,
   signsHeading,
   signs,
+  extraSection,
   diyHeading,
   diyParagraphs,
   expectHeading,
@@ -69,6 +71,25 @@ const ServiceContent = ({
           ))}
         </div>
       </motion.div>
+
+      {/* Extra section (page-specific, optional) */}
+      {extraSection && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h3 className="text-xl sm:text-2xl font-display font-bold text-foreground mb-4">
+            {extraSection.heading}
+          </h3>
+          <div className="space-y-4 text-muted-foreground font-body leading-relaxed">
+            {extraSection.paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+        </motion.div>
+      )}
 
       {/* Why Not DIY */}
       <motion.div
