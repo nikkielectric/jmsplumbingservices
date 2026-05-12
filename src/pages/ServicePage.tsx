@@ -181,6 +181,7 @@ const ServicePage = () => {
               diyParagraphs={data.diyParagraphs}
               expectHeading={data.expectHeading}
               steps={data.steps}
+              postExpectSection={data.postExpectSection}
             />
 
             {/* Right column — sticky sidebar */}

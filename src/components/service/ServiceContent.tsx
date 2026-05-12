@@ -15,6 +15,7 @@ interface ServiceContentProps {
   diyParagraphs: string[];
   expectHeading: string;
   steps: ServiceStep[];
+  postExpectSection?: { heading: string; paragraphs: string[] };
 }
 
 const stepIcons = [Phone, ClipboardCheck, Sparkles];
@@ -31,6 +32,7 @@ const ServiceContent = ({
   diyParagraphs,
   expectHeading,
   steps,
+  postExpectSection,
 }: ServiceContentProps) => {
   return (
     <div className="space-y-12">
@@ -138,6 +140,24 @@ const ServiceContent = ({
           })}
         </div>
       </motion.div>
+      {/* Post-expect section (page-specific, optional) */}
+      {postExpectSection && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h3 className="text-xl sm:text-2xl font-display font-bold text-foreground mb-4">
+            {postExpectSection.heading}
+          </h3>
+          <div className="space-y-4 text-muted-foreground font-body leading-relaxed">
+            {postExpectSection.paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 };

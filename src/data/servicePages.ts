@@ -50,6 +50,7 @@ export interface ServicePageData {
   testimonials: ServiceTestimonial[];
   faqHeading: string;
   faqs: ServiceFAQ[];
+  postExpectSection?: { heading: string; paragraphs: string[] };
   relatedServices: RelatedService[];
   ctaHeading: string;
   ctaSubtext: string;
