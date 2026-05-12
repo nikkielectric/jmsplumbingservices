@@ -37,6 +37,7 @@ const App = () => (
             <Route path="/gallery" element={<GalleryPage />} />
             {/* Legacy slug redirects — keep above the dynamic /:slug route */}
             <Route path="/garbage-disposal" element={<Navigate to="/backflow-prevention" replace />} />
+            <Route path="/photo-gallery" element={<Navigate to="/gallery" replace />} />
             <Route path="/:slug" element={<ServicePage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -1,23 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Static pages -->
   <url>
-    <loc>https://jmsplumbingservices.com/</loc>
+    <loc>https://www.jmsplumbingservicesllc.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jmsplumbingservices.com/about</loc>
+    <loc>https://www.jmsplumbingservicesllc.com/about</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jmsplumbingservices.com/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jmsplumbingservices.com/gallery</loc>
-    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.jmsplumbingservicesllc.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.jmsplumbingservicesllc.com/gallery</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Service pages -->
+  <url>
+    <loc>https://www.jmsplumbingservicesllc.com/drain-cleaning</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jmsplumbingservicesllc.com/gas-line-services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jmsplumbingservicesllc.com/plumbing-repairs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jmsplumbingservicesllc.com/plumbing-remodels</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jmsplumbingservicesllc.com/backflow-prevention</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jmsplumbingservicesllc.com/emergency-plumbing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jmsplumbingservicesllc.com/water-heaters</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jmsplumbingservicesllc.com/septic-leach-fields</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jmsplumbingservicesllc.com/toilet-faucet-pipe-repairs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://jmsplumbingservices.com/sitemap.xml
+Sitemap: https://www.jmsplumbingservicesllc.com/sitemap.xml
