@@ -21,11 +21,11 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-[3fr_1fr_1fr_1fr] gap-10 lg:gap-24 mb-12">
           {/* Brand */}
           <div>
-            <img src={jmsLogoFooter} alt="JMS Plumbing Services LLC logo — licensed plumber in Sunrise, FL" className="h-20 w-auto mb-3" />
+            <img src={jmsLogoFooter} alt="JMS Plumbing Services LLC logo — licensed plumber in Sunrise, FL" className="h-20 w-auto mb-3" width={80} height={80} />
             <div className="mb-4">
               <span className="font-display text-xl font-bold text-cream">JMS Plumbing Services LLC</span>
             </div>
-            <p className="text-cream/50 text-sm font-body leading-relaxed mb-6">
+            <p className="text-cream/70 text-sm font-body leading-relaxed mb-6">
               {t("footer.tagline")}
             </p>
             <div className="flex flex-col gap-2">
@@ -56,7 +56,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {services.map((s) => (
                 <li key={s.name}>
-                  <a href={s.href} className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
+                  <a href={s.href} className="text-cream/70 text-sm font-body hover:text-cream transition-colors">
                     {s.name}
                   </a>
                 </li>
@@ -75,7 +75,7 @@ const Footer = () => {
                 { label: t("nav.contact"), href: "/contact" },
               ].map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-cream/50 text-sm font-body hover:text-cream transition-colors">
+                  <a href={l.href} className="text-cream/70 text-sm font-body hover:text-cream transition-colors">
                     {l.label}
                   </a>
                 </li>
@@ -98,16 +98,16 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="border-t border-cream/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-cream/30 text-xs font-body">
+          <p className="text-cream/50 text-xs font-body">
             © {new Date().getFullYear()} JMS Plumbing Services LLC. {t("footer.rights")}
           </p>
-          <p className="text-cream/30 text-xs font-body">
+          <p className="text-cream/50 text-xs font-body">
             {t("footer.builtBy")}{" "}
             <a href="https://www.wisdomstudios.co" target="_blank" rel="noopener noreferrer" className="text-cream/60 hover:text-cream transition-colors">
               Wisdom Studios
             </a>
           </p>
-          <div className="flex items-center gap-2 text-cream/40 text-xs font-body">
+          <div className="flex items-center gap-2 text-cream/60 text-xs font-body">
             <Phone className="w-3 h-3" />
             <span>{t("footer.haveEmergency")}</span>
             <a href="tel:9549106883" className="text-cream/60 font-semibold hover:text-cream transition-colors">

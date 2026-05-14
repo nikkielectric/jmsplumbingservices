@@ -63,6 +63,8 @@ const ServiceArea = () => {
                   src={jmsLogoPin}
                   alt="JMS Plumbing Services headquarters location pin in Sunrise, FL on the service area map"
                   className="w-12 h-12 lg:w-16 lg:h-16 drop-shadow-lg"
+                  width={64}
+                  height={64}
                 />
                 <div className="w-2 h-2 rounded-full bg-secondary shadow-md mt-1" />
               </motion.div>

@@ -44,6 +44,8 @@ const CertificationsTicker = () => {
                 src={cert.src}
                 alt={cert.alt}
                 loading="lazy"
+                width={56}
+                height={56}
                 className="h-12 lg:h-14 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
               />
             </div>

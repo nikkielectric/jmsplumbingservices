@@ -88,6 +88,8 @@ const Navbar = () => {
               src={jmsLogo}
               alt="JMS Plumbing Services LLC"
               className="h-14 w-auto"
+              width={56}
+              height={56}
             />
             <div className="flex flex-col leading-tight">
               <span className="font-display text-xl font-bold text-cream tracking-tight">
@@ -132,6 +134,8 @@ const Navbar = () => {
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden text-cream"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
           >
             {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
